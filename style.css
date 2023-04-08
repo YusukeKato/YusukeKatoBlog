@@ -1,15 +1,15 @@
-body {
+html {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 60%;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
 }
 
 @media screen and (max-width: 999px) {
-  font-size: 120%;
-}
-@media screen and (max-width: 640px) {
-  font-size: 150%;
+  html {
+    width: 90%;
+    font-size: 200%;
+  }
 }
