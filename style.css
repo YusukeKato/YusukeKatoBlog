@@ -7,6 +7,10 @@ html {
   word-break: break-all;
 }
 
+.img {
+  text-align: center;
+}
+
 pre {
   white-space: pre-wrap;
 }
