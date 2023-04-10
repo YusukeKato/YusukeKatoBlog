@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML数式表示テスト/YusukeKatoBlog</title>
+    <link rel="icon" type="image/jpg" href="./BlueTreeIcon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" }},
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+      "HTML-CSS": { matchFontHeight: false },
+      displayAlign: "left",
+      displayIndent: "2em"
+    });
+    </script>
+  </head>
+  <body>
+    <h1>HTML数式表示テスト</h1>
+    <p>2023年4月10日（月）</p>
+    <p>　数式を表示するテストです。
+    HTMLのheadタグ内に以下を記述します。</p>
+    <pre>
+    <code>
+  &lt;script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
+  &lt;/script&gt;
+  &lt;script type="text/x-mathjax-config"&gt;
+    MathJax.Hub.Config({
+      TeX: { equationNumbers: { autoNumber: "AMS" }},
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+      "HTML-CSS": { matchFontHeight: false },
+      displayAlign: "left",
+      displayIndent: "2em"
+    });
+  &lt;/script&gt;
+    </code>
+    </pre>
+    <p>　TeXの要領で数式を記述します。</p>
+    <pre>
+    <code>
+  \[
+    x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+  \]
+    </code>
+    </pre>
+    <p>
+    　以下のように表示されます。
+    \[
+      x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+    \]
+    </p>
+    <a href="http://www.ic.daito.ac.jp/~mizutani/html/mathexpress.html">参考 : Webの数式表現</a>
+    <p></p>
+    <p>　いい感じに表示されました。
+    今日も満足度は高いです。
+    HTMLを直書きするのはどうなんだろうと思いつつも、
+    いい感じに表示はされているので、
+    問題はなさそうだと思っております。
+    このブログで数式を記述することがあるのかどうか。
+    時代に逆行している気もしています。
+    そんな感じです。
+    それでは、また。</p>
+    <a href="./index.html">ホームへ戻る</a>
+    <div class="img">
+    <img src="BlueTreeIcon.jpg">
+    </div>
+  </body>
+</html>
