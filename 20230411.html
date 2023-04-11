@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9H7QJT6XG');
+    </script>
+    <meta charset="utf-8">
+    <title>シェル芸botで遊ぼう（Bash）/YusukeKatoBlog</title>
+    <link rel="icon" type="image/jpg" href="./BlueTreeIcon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+  </head>
+  <body>
+    <h1>シェル芸botで遊ぼう</h1>
+    <p>2023年4月11日（月）</p>
+    <h2>はじめに</h2>
+    <p>　Twitterの<a href="https://twitter.com/minyoruminyon">シェル芸bot</a>で遊ぶ方法を紹介します。</p>
+
+    <h2>遊び方</h2>
+    <p>　シェル芸botは、ハッシュタグ「#シェル芸」をつけてBashスクリプトをツイートすると、
+    自動で実行して出力結果を教えてくれます。
+    たとえば、以下のようなツイートをすると、出力結果「テスト」を引用リツイートで返してくれます
+    （ただし、自分のアカウントが、シェル芸botアカウントにフォローされている必要があります）。</p>
+    <pre>
+    <code>
+  echo テスト
+  #シェル芸
+    </code>
+    </pre>
+    
+    <h2>画像生成</h2>
+    <p>　シェル芸botは画像生成もできます。
+    imagesディレクトリの中にpngやjpg、gifの画像を配置すると、
+    その画像を添付してツイートしてくれます。
+    たとえば、以下のようなツイートをすると、
+    「テスト」と書かれた画像を引用リツイートで返してくれます。</p>
+    <pre>
+    <code>
+  textimg "テスト" -o images/a.png
+  #シェル芸
+    </code>
+    </pre>
+
+    <h2>Python</h2>
+    <p>　シェル芸botではPythonスクリプトも実行できます。
+    たとえば、以下のようなツイートをすると、
+    出力結果「テスト」を引用リツイートで返してくれます。
+    Pythonの豊富なライブラリも利用できるので、
+    遊び方は無限大です。</p>
+    <pre>
+    <code>
+  python3 -c "print('テスト')"
+  #シェル芸
+    </code>
+    </pre>
+
+    <h2>C/C++</h2>
+    <p>　シェル芸botではC言語やC++言語も実行できます。
+    たとえば、以下のようなツイートをすると、
+    出力結果「テスト」を引用リツイートで返してくれます。
+    高速に処理したいときなどに役立ちます。</p>
+    <pre>
+    <code>
+  cat&lt;&lt;EOF&gt;a.cpp
+  #include &lt;bits/stdc++.h&gt;
+  int main() {
+    printf("テスト\n");
+  }
+  EOF
+  g++ a.cpp
+  ./a.out
+    </code>
+    </pre>
+
+    <h2>おわりに</h2>
+    <p>　シェル芸botの遊び方を紹介しました。</p>
+
+    <a href="./index.html">ホームへ戻る</a>
+    <div class="img">
+    <img src="BlueTreeIcon.jpg">
+    </div>
+  </body>
+</html>
