@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9H7QJT6XG');
+    </script>
+    <meta charset="utf-8">
+    <title>ChatGPTでシェル芸勉強会の問題が解きたい / Yusuke Kato Blog</title>
+    <link rel="icon" type="image/jpg" href="./BlueTreeIcon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+  </head>
+  <body>
+    <h1>ChatGPTでシェル芸勉強会の問題が解きたい</h1>
+    <p>2023年4月12日（水）</p>
+    <h2>はじめに</h2>
+    <p>　月額20ドルを支払ってGPT-4が利用できるようになったので、
+    ChatGPTにシェル芸勉強会の問題を解いていただこうと思います。
+    シェル芸勉強会の問題をお借りします。すみません。
+    今回は第63回シェル芸勉強会の問1と問2に挑戦していただきます。
+    何卒よろしくお願いいたします。</p>
+
+    <h2>リンク</h2>
+    <ul>
+      <li>利用モデル : <a href="https://openai.com/research/gpt-4">GPT-4</a></li>
+      <li>YouTube : <a href="https://youtu.be/zEmqu1UP3SY">第63回シェル芸勉強会</a></li>
+      <li>参考ページ : <a href="https://engineers.ntt.com/entry/2023/03/09/091735">第63回ビッグハンドタウンシェル芸勉強会の問題と解説</a></li>
+      <li>実行環境 : <a href="https://websh.jiro4989.com/">websh</a></li>
+    </ul>
+
+    <h2>問1 : 九九の合計</h2>
+    <h3>私が入力した文章</h3>
+    <pre>
+    <code>
+ワンライナーのBashスクリプトで九九の掛け算（1×1～9×9まで）の答えの合計を求めてください。
+    </code>
+    </pre>
+    <h3>ChatGPTが書いたBashスクリプト</h3>
+    <pre>
+    <code>
+sum=0; for i in {1..9}; do for j in {1..9}; do sum=$((sum + i * j)); done; done; echo $sum
+    </code>
+    </pre>
+    <h3>実行結果</h3>
+    <pre>
+    <code>
+2025
+    </code>
+    </pre>
+    <h3>私の感想</h3>
+    <p>　ワンライナーと言えるかは怪しいですが、普通に解いていただけて、とても嬉しいです。
+    デバッグをする必要もなく、一発で実行可能なスクリプトを書いていただけました。
+    「GPT-4が凄い！」という噂は間違いではないのかもしれません。
+    この調子でもう一問、解いていただきましょう。<p>
+
+    <h2>問2 : おつりの出し方</h2>
+    <h3>私が入力した文章</h3>
+    <pre>
+    <code>
+ワンライナーのBashスクリプトで、9132円の支払いに10000円札で払ったときのおつりの出し方を求めてください。
+    </code>
+    </pre>
+    <h3>ChatGPTが書いたBashスクリプト</h3>
+    <pre>
+    <code>
+change=$((10000 - 9132)); echo "おつり: ${change}円"; echo "5000円札: $((change / 5000))"; change=$((change % 5000)); echo "1000円札: $((change / 1000))"; change=$((change % 1000)); echo "500円硬貨: $((change / 500))"; change=$((change % 500)); echo "100円硬貨: $((change / 100))"; change=$((change % 100)); echo "50円硬貨: $((change / 50))"; change=$((change % 50)); echo "10円硬貨: $((change / 10))"; change=$((change % 10)); echo "5円硬貨: $((change / 5))"; change=$((change % 5)); echo "1円硬貨: $((change))"
+    </code>
+    </pre>
+    <h3>実行結果</h3>
+    <pre>
+    <code>
+おつり: 868円
+5000円札: 0
+1000円札: 0
+500円硬貨: 1
+100円硬貨: 3
+50円硬貨: 1
+10円硬貨: 1
+5円硬貨: 1
+1円硬貨: 3
+    </code>
+    </pre>
+    <h3>私の感想</h3>
+    <p>　かなりの力技で問題を解いていただきました。
+    ワンライナーと言えるかは分かりませんが、
+    普通に解いていただけて、とても嬉しい気持ちです。
+    今回もエラーが出ることはなく、すんなり実行できました。
+    もっといろんな問題で試してみたいですね。</p>
+
+    <h2>おわりに</h2>
+    <p>　ChatGPTに第63回シェル芸勉強会の問1と問2を解いていただきました。
+    普通に解いていただけて嬉しい限りです。
+    二問を解いただけではまだ何も分かりませんが、
+    GPT-4はかなり便利な気がするので、
+    様々な場面で利用していきたい所存です。
+    それでは、ここまで読んでいただき、ありがとうございました。
+    シェル芸とChatGPTに心から感謝申し上げます。
+    それでは、また、よろしくお願いいたします。</p>
+
+    <a href="./index.html">ホームへ戻る</a>
+    <div class="img">
+    <img src="BlueTreeIcon.jpg">
+    </div>
+  </body>
+</html>
