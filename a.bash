@@ -27,6 +27,8 @@ for filename in files2:
   f.write('  <priority>0.8</priority>\n')
   f.write('</url>\n')
   f.write('\n')
+f.write('</urlset>\n')
+f.write('\n')
 f.close()"
 echo "create sitemap.xml"
 
