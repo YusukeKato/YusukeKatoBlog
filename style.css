@@ -7,6 +7,10 @@ html {
   word-break: break-all;
 }
 
+hr {
+  border-top: 1px dashed #aaa;
+}
+
 .img {
   text-align: center;
 }
