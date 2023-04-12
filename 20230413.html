@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9H7QJT6XG');
+    </script>
+    <meta charset="utf-8">
+    <title>Bashでsitemap.xmlを自動生成 / Yusuke Kato Blog</title>
+    <link rel="icon" type="image/jpg" href="./BlueTreeIcon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+  </head>
+  <body>
+    <h1>Bashスクリプトからsitemap.xmlを生成</h1>
+    <p>2023年4月13日（木）</p>
+    <hr>
+    <h2>はじめに</h2>
+    <p>　このブログにsitemap.xmlを置きたいのですが、
+    手作業で用意するのはとても面倒です。
+    せっかくなのでBashのスクリプトからsitemap.xmlを生成できるようにします。
+    よろしくお願いいたします。</p>
+
+    <hr>
+    <h2>Bashスクリプト</h2>
+    <p>　Bashスクリプト（Python）を用意しました。
+    これをコマンドから実行したり、
+    自動で実行したりすると、
+    sitemap.xmlを生成することができます。
+    ぜひ使ってみてくださいませ。</p>
+    <pre>
+    <code>
+python -c "import os
+files = os.listdir('./')
+files2 = [filename for filename in files if 'html' in filename]
+f = open('sitemap.xml', 'w', encoding='UTF-8')
+f.write('<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n')
+f.write('<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n')
+f.write('\n')
+f.write('<url>\n')
+f.write('<loc>https://yusukekato.jp/</loc>\n')
+f.write('<priority>1.0</priority>\n')
+f.write('</url>\n')
+f.write('\n')
+for filename in files2:
+  f.write('<url>\n')
+  f.write('  <loc>https://yusukekato.jp/'+filename+'</loc>\n')
+  f.write('  <priority>0.8</priority>\n')
+  f.write('</url>\n')
+  f.write('\n')
+f.write('</urlset>\n')
+f.write('\n')
+f.close()"
+    </code>
+    </pre>
+
+    <hr>
+    <h2>おわりに</h2>
+    <p>　sitemap.xmlを自動生成（？）するBashスクリプトを紹介しました。</p>
+
+    <hr>
+    <a href="./index.html">ホームへ戻る</a>
+    <div class="img">
+    <img src="BlueTreeIcon.jpg">
+    </div>
+  </body>
+</html>
