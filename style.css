@@ -11,6 +11,11 @@ hr {
   border-top: 1px dashed #aaa;
 }
 
+iframe {
+  border: 1px dashed #aaa;
+  width: 100%;
+}
+
 .img {
   text-align: center;
 }
