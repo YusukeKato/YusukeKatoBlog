@@ -23,10 +23,8 @@ iframe {
 
 pre {
   white-space: pre-wrap;
-}
-
-code {
   width: 90%;
+  font-size: 120%;
 }
 
 @media screen and (max-width: 999px) {
@@ -36,7 +34,7 @@ code {
   }
 
   iframe {
-    height: 300px;
+    height: 400px;
   }
 }
 
@@ -47,6 +45,6 @@ code {
   }
 
   iframe {
-    height: 300px;
+    height: 400px;
   }
 }
