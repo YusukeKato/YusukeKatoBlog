@@ -24,10 +24,8 @@ iframe {
 pre {
   white-space: pre-wrap;
   font-size: 120%;
-}
-
-.codeClass {
   width: 90%;
+  text-align: center;
 }
 
 @media screen and (max-width: 999px) {
