@@ -2,12 +2,12 @@ cp ./*.html ../
 cp ./*.gif ../
 cp ./*.png ../
 cp ./*.jpg ../
-cp ./style.css ../
+cp ./*.css ../
 echo "cp ./*.html ../"
 echo "cp ./*.gif ../"
 echo "cp ./*.png ../"
 echo "cp ./*.jpg ../"
-echo "cp ./style.css ../"
+echo "cp ./*.css ../"
 
 python -c "import os
 files = os.listdir('./')
