@@ -14,8 +14,8 @@ hr {
 iframe {
   border: 1px dashed #aaa;
   width: 100%;
-  height: 500px;
-  font-size: 100%;
+  height: 300px;
+  font-size: 60%;
 }
 
 .img {
@@ -33,7 +33,8 @@ pre {
   }
 
   iframe {
-    font-size: 150%;
+    height: 500px;
+    font-size: 100%;
   }
 }
 
@@ -44,6 +45,7 @@ pre {
   }
 
   iframe {
+    height: 500px;
     font-size: 200%;
   }
 }
