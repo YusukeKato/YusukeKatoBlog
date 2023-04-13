@@ -14,6 +14,7 @@ hr {
 iframe {
   border: 1px dashed #aaa;
   width: 100%;
+  height: 
 }
 
 .img {
@@ -26,7 +27,14 @@ pre {
 
 @media screen and (max-width: 999px) {
   html {
-    width: 90%;
+    width: 92%;
+    font-size: 150%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  html {
+    width: 94%;
     font-size: 200%;
   }
 }
