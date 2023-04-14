@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9H7QJT6XG');
+    </script>
+    <meta charset="utf-8">
+    <meta name="description" content="iframeタグを利用して、記事の一覧を、ページの任意の位置に表示します。iframeタグを利用すると、html内に、htmlを埋め込むことができます。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページ最下部に記事一覧を表示（HTML、iframe） / Yusuke Kato Blog</title>
+    <link rel="icon" type="image/png" href="https://yusukekato.jp/favicon.png">
+    <link rel="shortcut icon" href="https://yusukekato.jp/favicon.ico">
+    <link rel="stylesheet" href="https://yusukekato.jp/style.css">
+  </head>
+  <body>
+    <h1>ページ最下部に記事一覧を表示（HTML、iframe）</h1>
+    <p>2023年4月9日（日）</p>
+    <hr>
+    <h2>はじめに</h2>
+    <p>　html内でiframeタグを利用して、最新記事や注目記事の一覧を、ページの最下部に表示します。</p>
+
+    <hr>
+    <h2>iframeタグ</h2>
+    <p>　以下のようにiframeタグを記述します。
+    <a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/latest.html">latest.html</a>
+    は事前に用意しておきます。
+    つまり、iframeタグを利用すると、任意のhtmlを任意の位置に埋め込むことができます。</p>
+<div class="codeClass"><pre><code>
+&lt;iframe src="https://yusukekato.jp/latest.html"&gt;latest article list&lt;/iframe&gt;
+</code></pre></div>
+
+    <hr>
+    <h2>おわりに</h2>
+    <p>　html内でiframeタグを利用して、記事の一覧を表示できるようになりました。</p>
+
+    <hr>
+    <div class="iframeClass">
+    <iframe src="https://yusukekato.jp/latest.html">latest article list</iframe>
+    </div>
+    <p></p>
+
+    <hr>
+    <div class="iframeClass">
+    <iframe src="https://yusukekato.jp/featured.html">featured article list</iframe>
+    </div>
+    <p></p>
+
+    <hr>
+    <a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
+    <div class="img">
+    <img src="https://yusukekato.jp/BlueTreeIcon.jpg">
+    </div>
+  </body>
+</html>
