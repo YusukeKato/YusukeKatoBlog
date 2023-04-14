@@ -12,11 +12,13 @@ hr {
 }
 
 iframe {
-  margin-left: auto;
-  margin-right: auto;
   border: 1px dashed #aaa;
   width: 96%;
   height: 300px;
+}
+
+.iframeClass {
+  text-align: center;
 }
 
 .img {
