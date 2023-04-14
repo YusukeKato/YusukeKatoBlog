@@ -29,6 +29,10 @@ pre {
   font-size: 120%;
 }
 
+.codeClass {
+  border: 1px dashed #aaa;
+}
+
 @media screen and (max-width: 999px) {
   html {
     width: 96%;
