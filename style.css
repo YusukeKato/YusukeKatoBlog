@@ -40,6 +40,11 @@ pre {
   background-color: #EEE;
 }
 
+ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 @media screen and (max-width: 999px) {
   html {
     width: 94%;
