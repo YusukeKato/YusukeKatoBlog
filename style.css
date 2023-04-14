@@ -74,7 +74,7 @@ ul li {
 @media screen and (max-width: 999px) {
   html {
     width: 94%;
-    font-size: 100%;
+    font-size: 90%;
   }
 
   iframe {
@@ -96,7 +96,7 @@ ul li {
 @media screen and (max-width: 599px) {
   html {
     width: 94%;
-    font-size: 100%;
+    font-size: 90%;
   }
 
   iframe {
