@@ -14,3 +14,20 @@ ul li {
   padding-bottom: 8px;
 }
 
+.aButton {
+  display: block;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 0px;
+  margin: auto;
+  background: #FFFFFF;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+}
+
+.aButton:hover {
+  background: #DDDDDD;
+}
