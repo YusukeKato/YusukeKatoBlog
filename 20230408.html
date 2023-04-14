@@ -50,13 +50,9 @@
     <p>　このブログでは、シェル芸の記事やロボット関係の記事も書いていきたいと思ってます。
     ということでちょっとテストします。
     以下のシェル芸は長い猫を時計の針のように回転させるものです。</p>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 p=.png;c=convert;longcat -o a$p;$c xc:[500x500] b$p;for((i=360;i<720;i+=10));do $c a$p -rotate +$i c$p;t=$(echo "($i-540)*3.14/180"|bc -l);$c b$p c$p -gravity center -geometry +$(echo "-99*s($t)"|bc -l)+$(echo "99*c($t)"|bc -l) -composite i$i$p;done; $c i*$p images/a.gif
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <p>　このシェル芸を実行して生成したGIF画像が以下のものです。</p>
     <div class="img">
     <img src="https://yusukekato.jp/20230408.gif">

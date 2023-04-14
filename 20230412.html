@@ -38,29 +38,17 @@
     <hr>
     <h2>問1 : 九九の合計</h2>
     <h3>私が入力した文章</h3>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 ワンライナーのBashスクリプトで九九の掛け算（1×1～9×9まで）の答えの合計を求めてください。
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>ChatGPTが書いたBashスクリプト</h3>
-    <div code="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 sum=0; for i in {1..9}; do for j in {1..9}; do sum=$((sum + i * j)); done; done; echo $sum
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>実行結果</h3>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 2025
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>私の感想</h3>
     <p>　ワンライナーと言えるかは怪しいですが、普通に解いていただけて、とても嬉しいです。
     デバッグをする必要もなく、一発で実行可能なスクリプトを書いていただけました。
@@ -70,25 +58,15 @@ sum=0; for i in {1..9}; do for j in {1..9}; do sum=$((sum + i * j)); done; done;
     <hr>
     <h2>問2 : おつりの出し方</h2>
     <h3>私が入力した文章</h3>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 ワンライナーのBashスクリプトで、9132円の支払いに10000円札で払ったときのおつりの出し方を求めてください。
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>ChatGPTが書いたBashスクリプト</h3>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 change=$((10000 - 9132)); echo "おつり: ${change}円"; echo "5000円札: $((change / 5000))"; change=$((change % 5000)); echo "1000円札: $((change / 1000))"; change=$((change % 1000)); echo "500円硬貨: $((change / 500))"; change=$((change % 500)); echo "100円硬貨: $((change / 100))"; change=$((change % 100)); echo "50円硬貨: $((change / 50))"; change=$((change % 50)); echo "10円硬貨: $((change / 10))"; change=$((change % 10)); echo "5円硬貨: $((change / 5))"; change=$((change % 5)); echo "1円硬貨: $((change))"
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>実行結果</h3>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 おつり: 868円
 5000円札: 0
 1000円札: 0
@@ -98,9 +76,7 @@ change=$((10000 - 9132)); echo "おつり: ${change}円"; echo "5000円札: $((c
 10円硬貨: 1
 5円硬貨: 1
 1円硬貨: 3
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>私の感想</h3>
     <p>　かなりの力技で問題を解いていただきました。
     ワンライナーと言えるかは分かりませんが、
@@ -111,29 +87,17 @@ change=$((10000 - 9132)); echo "おつり: ${change}円"; echo "5000円札: $((c
     <hr>
     <h2>おまけ問題 : 円周率</h2>
     <h3>私が入力した文章</h3>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 ワンライナーのBashスクリプトで円周率を求めてください。
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>ChatGPTが書いたBashスクリプト</h3>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 echo "scale=10; 4*a(1)" | bc -l
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>実行結果</h3>
-    <div class="codeClass">
-    <pre>
-    <code>
+<div class="codeClass"><pre><code>
 3.1415926532
-    </code>
-    </pre>
-    </div>
+</code></pre></div>
     <h3>私の感想</h3>
     <p>　はい。</p>
 
