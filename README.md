@@ -1,2 +1,2 @@
 # YusukeKatoBlog
-yusukekato.jp
+https://yusukekato.jp/
