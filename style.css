@@ -24,6 +24,8 @@ iframe {
 pre {
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   width: 90%;
   white-space: pre-wrap;
   font-size: 120%;
