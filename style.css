@@ -62,6 +62,7 @@ ul li {
   text-decoration: none;
   text-align: left;
   border: 1px dashed #DDDDDD;
+  border-radius: 10px;
 }
 
 .aButton:hover {
