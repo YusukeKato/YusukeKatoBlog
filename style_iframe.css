@@ -6,7 +6,7 @@ html {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
-  background-color: #EEEEEE;
+  background-color: #FFFFFF;
 }
 
 ul li {
@@ -22,7 +22,7 @@ ul li {
   padding-left: 8px;
   padding-right: 0px;
   margin: auto;
-  background: #EEEEEE;
+  background: #FFFFFF;
   color: #000000;
   text-decoration: none;
   text-align: left;
