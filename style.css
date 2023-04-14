@@ -38,7 +38,7 @@ pre {
 @media screen and (max-width: 999px) {
   html {
     width: 96%;
-    font-size: 180%;
+    font-size: 100%;
   }
 
   iframe {
@@ -49,7 +49,7 @@ pre {
 @media screen and (max-width: 599px) {
   html {
     width: 96%;
-    font-size: 200%;
+    font-size: 100%;
   }
 
   iframe {
