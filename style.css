@@ -37,7 +37,7 @@ pre {
 
 .codeClass {
   border: 1px dashed #AAA;
-  background-color: #EEE;
+  background-color: #EEEEEE;
 }
 
 ul li {
@@ -47,17 +47,17 @@ ul li {
 
 .aButton {
   display: block;
-  width: 100px;
+  width: 100%;
   padding: 15px 0;
   margin: auto;
   background: #EEEEEE;
-  color: #FFFFFF;
+  color: #999999;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
 }
 
 .aButton:hover {
-  background: #DDDDDD;
+  background: #CCCCCC;
 }
 
 @media screen and (max-width: 999px) {
