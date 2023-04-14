@@ -36,7 +36,8 @@ pre {
 }
 
 .codeClass {
-  border: 1px dashed #aaa;
+  border: 1px dashed #AAA;
+  background-color: #EEE;
 }
 
 @media screen and (max-width: 999px) {
