@@ -41,8 +41,8 @@ pre {
 }
 
 ul li {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 @media screen and (max-width: 999px) {
@@ -54,6 +54,11 @@ ul li {
   iframe {
     height: 300px;
   }
+
+  ul li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -64,5 +69,10 @@ ul li {
 
   iframe {
     height: 300px;
+  }
+
+  ul li {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
