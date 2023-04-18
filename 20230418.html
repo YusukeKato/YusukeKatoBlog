@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W9H7QJT6XG');
+    </script>
+    <meta charset="utf-8">
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>シェル・ワンライナー160本ノックに挑戦 / Yusuke Kato Blog</title>
+  </head>
+  <body>
+    <h1>シェル・ワンライナー160本ノックに挑戦</h1>
+    <p>2023年4月18日（火）</p>
+    <hr>
+
+    <hr>
+    <h2>はじめに</h2>
+    <p>　シェル芸を嗜む者の必読書である『シェル・ワンライナー160本ノック』に挑戦します。
+    タイトルに『半年以内に習得』とあるので、
+    できれば半年以内に解き切りたいと考えております。
+    一度はPythonワンライナーという邪道に走ったこともありましたが、
+    今日からは心を入れ替えて、
+    シェルのワンライナーで生きていこうと思います。
+    何卒よろしくお願いいたします。</p>
+
+    <hr>
+    <h2>問題1 : ファイル名の検索</h2>
+    <p>　ファイル名の一覧から「.exe」の拡張子を持つファイルだけ抜き出します。</p>
+    <h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+cat files.txt | grep [.]exe$
+</code></pre></div>
+    <h3>私の感想</h3>
+    <p>　変なところに「.exe」が入っている場合があるので、
+    ファイル名の最後に「.exe」がついているファイルだけ抜き出すようにしました。
+    grep以外で解く方法は思いつきませんでした（awkをgrepみたいに使えばいけそう？）。
+    別解によるとsedでも解けるとのこと。
+    なるほど。勉強になりますね。</p>
+
+    <hr>
+    <h2>おわりに</h2>
+    <p>　書籍『シェル・ワンライナー160本ノック』に挑戦しました。</p>
+
+    <hr>
+    <div class="iframeClass">
+    <iframe src="https://yusukekato.jp/latest.html">latest article list</iframe>
+    </div>
+    <p></p>
+
+    <hr>
+    <div class="iframeClass">
+    <iframe src="https://yusukekato.jp/featured.html">featured article list</iframe>
+    </div>
+    <p></p>
+
+    <hr>
+    <a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
+    <p>　加藤祐介ブログは<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">MIT LICENSE</a>で公開されています。</p>
+    <div class="img">
+    <img src="https://yusukekato.jp/BlueTreeIcon.jpg">
+    </div>
+  </body>
+</html>
