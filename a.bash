@@ -3,11 +3,13 @@ cp ./*.gif ../
 cp ./*.png ../
 cp ./*.jpg ../
 cp ./*.css ../
+cp ./*.ico ../
 echo "cp ./*.html ../"
 echo "cp ./*.gif ../"
 echo "cp ./*.png ../"
 echo "cp ./*.jpg ../"
 echo "cp ./*.css ../"
+echo "cp ./*.ico ../"
 
 python -c "import os
 files = os.listdir('./')
