@@ -19,7 +19,7 @@ iframe {
 }
 
 .formClass {
-  height: 1000px;
+  height: 900px;
 }
 
 .iframeClass {
@@ -85,6 +85,10 @@ ul li {
     height: 400px;
   }
 
+  .formClass {
+    height: 1200px;
+  }
+
   ul li {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -105,6 +109,10 @@ ul li {
 
   iframe {
     height: 400px;
+  }
+
+  .formClass {
+    height: 1200px;
   }
 
   ul li {
