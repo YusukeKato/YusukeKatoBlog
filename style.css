@@ -14,8 +14,12 @@ hr {
 iframe {
   border: 1px solid #CCCCCC;
   border-radius: 10px;
-  width: 96%;
-  height: 400px;
+  width: 94%;
+  height: 350px;
+}
+
+.formClass {
+  height: 1000px;
 }
 
 .iframeClass {
