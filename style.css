@@ -15,7 +15,7 @@ iframe {
   border: 1px solid #CCCCCC;
   border-radius: 10px;
   width: 94%;
-  height: 350px;
+  height: 300px;
 }
 
 .formClass {
@@ -82,7 +82,7 @@ ul li {
   }
 
   iframe {
-    height: 400px;
+    height: 300px;
   }
 
   .formClass {
@@ -108,7 +108,7 @@ ul li {
   }
 
   iframe {
-    height: 400px;
+    height: 350px;
   }
 
   .formClass {
