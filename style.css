@@ -74,6 +74,7 @@ ul li {
   border-radius: 10px;
   text-decoration: underline;
   text-decoration-color:#000000;
+  border-width: 1px;
 }
 
 .aButton:hover {
