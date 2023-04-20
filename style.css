@@ -67,14 +67,11 @@ ul li {
   margin-top: 4px;
   margin-bottom: 4px;
   background: #FFFFFF;
-  color: #1A0DAB;
+  color: #000000;
   text-decoration: none;
   text-align: left;
   border: 1px dashed #CCCCCC;
   border-radius: 6px;
-  text-decoration: underline;
-  text-decoration-color: #1A0DAB;
-  border-width: 1px;
 }
 
 .aButton:hover {
