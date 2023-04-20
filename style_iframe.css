@@ -33,3 +33,15 @@ ul li {
 .aButton:hover {
   background: #DDDDDD;
 }
+
+@media screen and (max-width: 999px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  html {
+    font-size: 80%;
+  }
+}
