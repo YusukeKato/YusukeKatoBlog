@@ -81,7 +81,7 @@ awkさえ使いこなせたら何でもできる気がします。
 
 <hr>
 <h2>問題4 : 特定のファイルの削除</h2>
-<p>　中に10と書かれているファイルだけ削除します。</p>
+<p>　中に「10」と書かれているファイルだけ削除します。</p>
 <h3>私の回答</h3>
 <div class="codeClass"><pre><code>
 ls -U | awk '{printf("%s ",$1);system("cat "$1)}' | awk '$2=="10"{printf("rm %s\n",$1)}' | bash
@@ -96,6 +96,21 @@ ls -U | awk '{printf("%s ",$1);system("cat "$1)}' | awk '$2=="10"{printf("rm %s\
 ちなみに、私の考えたワンライナーだと、完了までに30分くらいかかります。
 </p>
 <a href="https://orebibou.com/ja/home/201707/20170723_001/" class="aButton">参考 : awkでOSのコマンドを実行させる</a>
+
+<hr>
+<h2>問題5 : 設定ファイルからの情報抽出</h2>
+<p>　ntp.confからサーバの名前を抽出します。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+cat ntp.conf | grep ^pool | awk '{print $2}'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　awkに慣れてきたので、この問題は簡単に解けました。
+少しずつawkが好きになってきました。
+今回はgrepを使いましたが、全部awkでもいいかもしれません。
+将来的には好きなプログラミング言語にawkを入れられるよう、努力して参ります。
+あと、awkはAWKと表記したほうがいいのでしょうか。
+</p>
 
 <hr>
 <h2>おわりに</h2>
