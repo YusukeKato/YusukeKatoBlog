@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9H7QJT6XG');
+</script>
+<meta charset="utf-8">
+<meta name="description" content="シェル芸（Bash）でAtCoderの問題を解いていこうと思います。今回、挑戦させていただくのは、「AtCoder Beginners Selection」という初心者向けの過去問（10問）です。できるかぎりBashのワンライナーで解いていこうと思いますので、応援よろしくお願いいたします。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./favicon.png">
+<link rel="stylesheet" href="./style.css">
+<title>シェル芸（Bash）でAtCoder Beginners Selectionを解きたい / Yusuke Kato Blog</title>
+</head>
+<body>
+<h1>シェル芸でAtCoder Beginners Selectionを解きたい</h1>
+<p>2023年4月20日（木）</p>
+<hr>
+
+<hr>
+<h2>はじめに</h2>
+<p>　シェル芸（Bash）でAtCoderの問題を解いていこうと思います。
+今回、挑戦させていただくのは、<a href="https://atcoder.jp/contests/abs">AtCoder Beginners Selection</a>という初心者向けの過去問（10問）です。
+特に縛りなどはありませんが、できるだけBashのワンライナーで解きたい気持ちがあります。
+何卒よろしくお願いいたします。</p>
+
+<hr>
+<h2>Welcome to AtCoder</h2>
+<p>　三つの整数と一つの文字列が与えられるので、整数の合計値と文字列を並べて出力します。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+echo $(cat) | awk '{printf("%d %s\n",$1+$2+$3,$4)}'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　標準入力の受け取り方が鬼門でした。
+もちろんreadコマンドを使えば簡単ですが、それではワンライナーになりにくいです。
+そして、逆に考えれば、入力さえ受け取れたら、あとはどうにでもなるということです。
+ということで、awkで頑張りましょう。Bashというかawkです。
+ありがとうございました。</p>
+
+<hr>
+<h2>Product</h2>
+<p>　二つの整数の積が偶数か奇数か判定します。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+echo $(cat) | awk '$1*$2%2==0{print "Even"}$1*$2%2==1{print "Odd"}'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　この問題もawkで解きました。
+awkなら何でもできちゃいますね。
+Bashよりもawkが便利であることを証明する記事になるかもしれません。
+ということで、次の問題からはできるだけawkを使わずに解きたいと思います。
+シェル芸っぽいワンライナーを目指して頑張りますので、
+何卒よろしくお願いいたします。</p>
+
+<hr>
+<h2>おわりに</h2>
+<p>　シェル芸（Bash）で「AtCoder Beginners Selection」の問題を解きました。</p>
+
+<hr>
+<div class="iframeClass">
+<iframe src="https://yusukekato.jp/latest.html">latest article list</iframe>
+</div>
+<p></p>
+
+<hr>
+<div class="iframeClass">
+<iframe src="https://yusukekato.jp/featured.html">featured article list</iframe>
+</div>
+<p></p>
+
+<hr>
+<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
+<p>　加藤祐介ブログは<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">MIT LICENSE</a>で公開されています。</p>
+<p>　(c) 2023 Yusuke Kato</p>
+<div class="img">
+<img src="https://yusukekato.jp/BlueTreeIcon.jpg">
+</div>
+
+</body>
+</html>
