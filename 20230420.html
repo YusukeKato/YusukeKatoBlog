@@ -77,6 +77,25 @@ Bashと比べてawkのほうが速かったりするのでしょうか。
 私の環境にて、雑にtimeコマンドで計測したところ、awkのほうが速そうです。</p>
 
 <hr>
+<h2>問3 : Shift only</h2>
+<h3>問題内容</h3>
+<p>　与えられたN個の整数が何回2で割れるか数えます。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+echo $(cat) | awk '{for(i=2;i<$1+2;i++){a[i]=$i};flag=0;for(j=0;j&lt;999;j++){for(i=2;i&lt;$1+2;i++){if(a[i]%2==0){a[i]/=2}else{flag=1}}if(flag==1){print j;break}}}'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　awkでごり押ししました。
+awk以外に解く方法があるのでしょうか。
+あと、問題文をそのままシミュレーションして解きましたが、
+もっと他に良い解き方がある気がします。
+以下の記事によるとfactorを使うと、シェル芸みたいに解けるみたいです。
+勉強になりました。
+ありがとうございます。</p>
+<a href="https://qiita.com/yuizumi/items/d55f9dfe56fa2bf12d94" class="aButton">参考 : AtCoderに登録したら解くべき精選過去問10問をbashで解いてみた</a>
+
+
+<hr>
 <h2>おわりに</h2>
 <p>　シェル芸（Bash）で「AtCoder Beginners Selection」の問題を解きました。</p>
 
