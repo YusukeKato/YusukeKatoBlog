@@ -9,12 +9,26 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-W9H7QJT6XG');
 </script>
+<!-- SNS Card -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />
+<meta property="og:image" content="https://yusukekato.jp/summary.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@yusukekato_main" />
+<meta name="twitter:image" content="https://yusukekato.jp/summary_large_image.png" />
+<!-- 変更 -->
+<meta name="twitter:title" content="シェル芸（Bash）でAtCoder Beginners Selectionを解きたい / Yusuke Kato Blog" />
+<meta property="og:url" content="https://yusukekato.jp/20230420.html" />
+<meta property="og:title" content="シェル芸（Bash）でAtCoder Beginners Selectionを解きたい / Yusuke Kato Blog" />
+<meta property="og:description" content="加藤祐介のブログです。ROSやUnity、AtCoder、シェル芸botなどで遊ばせていただいております。ロボットやシェル芸、競技プログラミングなどの記事を書いています。大学ではロボットについて勉強していました。備忘録的な文章ではありますが、何卒よろしくお願いいたします。" />
+<meta name="twitter:description" content="加藤祐介のブログです。ROSやUnity、AtCoder、シェル芸botなどで遊ばせていただいております。ロボットやシェル芸、競技プログラミングなどの記事を書いています。大学ではロボットについて勉強していました。備忘録的な文章ではありますが、何卒よろしくお願いいたします。" />
+<title>シェル芸（Bash）でAtCoder Beginners Selectionを解きたい / Yusuke Kato Blog</title>
+<!-- main -->
 <meta charset="utf-8">
 <meta name="description" content="シェル芸（Bash）でAtCoderの問題を解いていこうと思います。今回、挑戦させていただくのは、「AtCoder Beginners Selection」という初心者向けの過去問（10問）です。できるかぎりBashのワンライナーで解いていこうと思いますので、応援よろしくお願いいたします。">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="./favicon.png">
 <link rel="stylesheet" href="./style.css">
-<title>シェル芸（Bash）でAtCoder Beginners Selectionを解きたい / Yusuke Kato Blog</title>
 </head>
 <body>
 <h1>シェル芸（Bash）でAtCoder Beginners Selectionを解きたい</h1>
@@ -89,7 +103,7 @@ echo $(cat) | awk '{for(i=2;i<$1+2;i++){a[i]=$i};flag=0;for(j=0;j&lt;999;j++){fo
 awk以外に解く方法があるのでしょうか。
 あと、問題文をそのままシミュレーションして解きましたが、
 もっと他に良い解き方がある気がします。
-以下の記事によるとfactorを使うと、シェル芸みたいに解けるみたいです。
+以下の記事によればfactorを使うと、シェル芸のように解けるみたいです。
 勉強になりました。
 ありがとうございます。</p>
 <a href="https://qiita.com/yuizumi/items/d55f9dfe56fa2bf12d94" class="aButton">参考 : AtCoderに登録したら解くべき精選過去問10問をbashで解いてみた</a>
