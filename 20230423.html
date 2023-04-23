@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9H7QJT6XG');
+</script>
+<!-- SNS Card -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />
+<meta property="og:image" content="https://yusukekato.jp/summary.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@yusukekato_main" />
+<meta name="twitter:image" content="https://yusukekato.jp/summary_large_image.png" />
+<!-- 変更 -->
+<meta name="twitter:title" content="第64回シェル芸勉強会メモ / Yusuke Kato Blog" />
+<meta property="og:url" content="https://yusukekato.jp/20230423.html" />
+<meta property="og:title" content="第64回シェル芸勉強会メモ / Yusuke Kato Blog" />
+<meta property="og:description" content="2023年4月23日に開催された第64回シェル芸勉強会にオンラインで参加させていただきました。そのときの記録をメモとして記事にしておこうと思います。ChatGPTの回答もあります。何卒よろしくお願いいたします。" />
+<meta name="twitter:description" content="2023年4月23日に開催された第64回シェル芸勉強会にオンラインで参加させていただきました。そのときの記録をメモとして記事にしておこうと思います。ChatGPTの回答もあります。何卒よろしくお願いいたします。" />
+<title>第64回シェル芸勉強会メモ（ChatGPT回答あり） / Yusuke Kato Blog</title>
+<meta name="description" content="2023年4月23日に開催された第64回シェル芸勉強会にオンラインで参加させていただきました。そのときの記録をメモとして記事にしておこうと思います。ChatGPTの回答もあります。何卒よろしくお願いいたします。">
+<!-- main -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./favicon.png">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<h1>第64回シェル芸勉強会メモ（ChatGPT回答あり）</h1>
+<p>2023年4月23日（日）</p>
+<hr>
+
+<hr>
+<h2>はじめに</h2>
+<p>　2023年4月23日に開催された第64回シェル芸勉強会にオンラインで参加させていただきました。
+そのときの記録をメモとして記事にしておこうと思います。
+あと、解けそうな問題はChatGPT（GPT-4）にも解いていただこうと思います。
+何卒よろしくお願いいたします。</p>
+
+<hr>
+<h2>問1 : メール解析</h2>
+<h3>問題内容</h3>
+<p>　メールの内容から必要な情報だけ抜き出します。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+cat S*/*64/*.txt|sed 's/-/ /g'|sed 's/:/ /g'|sed 's/:&gt;//g'|sed 's/Re //g'|sort -k9|awk '{c[NR]=$3;d[NR]=$4;g[NR]=$7;h[NR]=$8;i[NR]=$9}END{for(j=1;j&lt;length(i);j++){if(i[j]==i[j-1]){printf("%s %s %s %d\n",i[j],g[j-1]"-&gt;"h[j-1],g[j]"-&gt;"h[j],(c[j]-c[j-1])*24+d[j]-d[j-1])}}}'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　awkでごり押ししました。
+まず、sedでメール内容を整形して、時刻を比較したいメール同士が並ぶようにsortで並べ替えを行います。
+そして、awkでメール内容をすべて配列に入れて、時刻の差分を計算、必要な情報だけ出力しました。
+ちなみに、私の回答は不完全なので、分と秒を考慮できていません。
+まだまだ勉強が足りていない気がしますね。
+精進します。</p>
+
+<hr>
+<h2>問2 : 乱数生成</h2>
+<h3>問題内容</h3>
+<p>　正規分布に従う乱数を生成します。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+echo | awk 'BEGIN{srand();a=0}{for(i=0;i&lt;12;i++)a+=rand()}END{printf("%lf\n",a-6)}'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　私は正規分布が分からないので、0～1の乱数を12個足して6を引いた値を出力しました。
+解説で紹介されていた「cat /dev/urandom」から乱数を生成する方法が勉強になりました。
+これから乱数を生成するときは使ってみようと思います。
+数値だけではなくアルファベットの文字列もランダムに生成できるとのこと。
+便利ですね。ありがとうございます。</p>
+<h3>ChatGPT（GPT-4）の回答</h3>
+<div class="codeClass"><pre><code>
+awk 'BEGIN {srand(); u1=rand(); u2=rand(); z0=sqrt(-2*log(u1))*cos(2*3.14159265359*u2); print z0}'
+</code></pre></div>
+<p>　Box-Muller変換を使っているらしいです。</p>
+
+<hr>
+<h2>問3 : 行列の転置</h2>
+<h3>問題内容</h3>
+<p>　与えられた行列が対称行列か判定します。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+cat S*/*64/mat | python3 -c 'import numpy as np;A=[input().split() for _ in range(5)];A=np.array(A);AT=A.T;r="YES" if np.array_equal(A,AT) else "NO";print(r)'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　awkで行列を扱うのは地獄になりそうだったので、PythonのNumpyを使って解きました。
+解説ではdatamashコマンドが紹介されていて勉強になりました。
+まだまだ知らないコマンドがたくさんありますね。
+便利なコマンドは少しずつ覚えておきたい所存です。
+また、二次元配列の入力に関しては以下の記事を参考にさせていただきました。
+ありがとうございます。</p>
+<a href="https://qiita.com/naz_/items/9eed47f5483679fa66b1" class="aButton">参考 : 競技プログラミングをPython3で解く</a>
+<h3>ChatGPT（GPT-4）の回答</h3>
+<div class="codeClass"><pre><code>
+cat S*/*64/mat | awk '{for(j=1;j&lt;=5;j++)m[NR,j]=$j}END{sym=1;for(i=1;i&lt;=5;i++){for(j=1;j&lt;=5;j++){if(m[i,j]!=m[j,i]){sym=0;break}}if(!sym)break}print sym?"Symmetric":"Not symmetric"}'
+</code></pre></div>
+<p>　awkで解いていただきました。</p>
+
+<hr>
+<h2>問4 : k-means法</h2>
+<h3>問題内容</h3>
+<p>　k-means法をシェル芸で実装してみます。</p>
+<h3>私の回答（小問1）</h3>
+<div class="codeClass"><pre><code>
+cat S*/*64/nums.0 | sort -k2 | awk '{a[$2]+=$1;b[$2]+=1}END{for(i=0;i&lt;length(a);i++)printf("%d %lf\n",i,a[i]/b[i])}' > mean.1
+</code></pre></div>
+<h3>私の感想（小問1）</h3>
+<p>　awkが便利すぎますね。
+ファイルの中身をsortを使ってクラスターごとに並べ替えます。
+そして、awkでクラスターごとの合計を配列に入れて、最後に平均をとっています。
+一次元配列で済む問題ならawkで十分戦える気がします。
+もっとawkを勉強していきたい気持ちです。
+勉強になりました。
+小問2はワンライナーではしんどくなったので解説を見てなるほどなぁ～と感心していました。
+ありがとうございます。
+あと、ChatGPTにBashのワンライナーでk-means法の実装をお願いしたところ、
+「PythonやRを使ってください。」と怒られてしまいました。すみません。</p>
+
+<hr>
+<h2>問5 : オイラーのφ関数</h2>
+<h3>問題内容</h3>
+<p>　オイラーのφ関数をBashのワンライナーで実装します。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+n=8;echo $n | factor | sed 's/.*://g;s/ /\n/g' | uniq | awk -F, -v N=$n 'BEGIN{a=N}NR1&gt;{a*=(1-1/$1)}END{printf("%lf\n",a)}'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　オイラーのφ関数というものを初めて知りました。
+awkにBash側の変数が渡せなくて困っていましたが、Fオプション付けたらなんとかなりました。
+以下の記事を参考にさせていただきました。
+ありがとうございます。
+こんなに単純な関数なのに、互いに素な自然数の個数が出てくるのは不思議ですね。
+数学の神秘を体感しました。
+勉強になりました。
+楽しかったです。</p>
+<a href="https://ksomemo.github.io/contents/qiita/awk%E3%81%AE%E4%B8%AD%E3%81%A7%E3%82%B7%E3%82%A7%E3%83%AB%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%A4%89%E6%95%B0%E3%82%92%E6%89%B1%E3%81%86.html" class="aButton">参考 : awkの中でシェルで作成した変数を扱う</a>
+<h3>ChatGPT（GPT-4）の回答</h3>
+<div class="codeClass"><pre><code>
+n=8; phi_n=0; gcd () { [ $2 -eq 0 ] && echo $1 || gcd $2 $(($1 % $2)); }; for ((i=1; i&lt;=n; i++)); do if [[ $(gcd $i $n) == 1 ]]; then ((phi_n++)); fi; done; echo $phi_n
+</code></pre></div>
+<p>　gcd関数から実装していただけました。</p>
+
+<hr>
+<h2>問6 : 互いに素な自然数の列挙</h2>
+<h3>問題内容</h3>
+<p>　「seq 100 |」から始めて、各行の数字に対して、互いに素な自然数を列挙します。</p>
+<h3>私の回答</h3>
+<div class="codeClass"><pre><code>
+seq 100 | awk 'function gcd(a,b){while(b!=0){r=a%b;a=b;b=r}return a}{printf("%d : ",$1);for(i=1;i&lt;=$1;i++){if(gcd(i,$1)== "1"){printf("%d ",i)}};printf("\n")}'
+</code></pre></div>
+<h3>私の感想</h3>
+<p>　gcd関数（最大公約数を求める関数）はChatGPTに実装していただきました。
+互いに素な自然数がまだあまり理解できていませんが、
+とりあえず解けたので良しとしましょう。
+それにしてもChatGPTは便利ですね。
+ある程度の無理を言っても許してくれる懐の深さも備えています。
+最大公約数が1なら互いに素であると言えるということだけは理解できました（おそらく）。
+勉強になりました。ありがとうございます。</p>
+
+<hr>
+<h2>おわりに</h2>
+<p>　第63回シェル芸勉強会についてメモを書きました。
+シェル芸の得手不得手が少し理解できた気がします。
+また、今まで知らなかったコマンドにも出会えたので良かったです。
+ChatGPTにもご協力いただいて、とても勉強になりました。
+次回も参加させていただきたいと思います。
+一度くらいは現地参加もしてみたいですね。
+ということで、誠にありがとうございました。
+またよろしくお願いいたします。
+次回も楽しみにしています。</p>
+
+<hr>
+<div class="iframeClass">
+<iframe src="https://yusukekato.jp/latest.html">latest article list</iframe>
+</div>
+<p></p>
+
+<hr>
+<div class="iframeClass">
+<iframe src="https://yusukekato.jp/featured.html">featured article list</iframe>
+</div>
+<p></p>
+
+<hr>
+<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
+<p>　加藤祐介ブログは<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">MIT LICENSE</a>で公開されています。</p>
+<p>　(c) 2023 Yusuke Kato</p>
+<div class="img">
+<img src="https://yusukekato.jp/BlueTreeIcon.jpg">
+</div>
+
+</body>
+</html>
