@@ -48,6 +48,7 @@ gtag('config', 'G-W9H7QJT6XG');
 
 <hr>
 <h2>問題1 : ファイル名の検索</h2>
+<h3>問題内容</h3>
 <p>　ファイル名の一覧から「.exe」の拡張子を持つファイルだけ抜き出します。</p>
 <h3>私の回答</h3>
 <div class="codeClass"><pre><code>
@@ -62,6 +63,7 @@ grep以外で解く方法は思いつきませんでした（awkをgrepみたい
 
 <hr>
 <h2>問題2 : 画像変換の一括変換</h2>
+<h3>問題内容</h3>
 <p>　ディレクトリ内にあるpng画像をjpg画像に一括で変換します。</p>
 <h3>私の回答</h3>
 <div class="codeClass"><pre><code>
@@ -76,6 +78,7 @@ timeはシンプルで素敵なコマンドです。
 
 <hr>
 <h2>問題3 : ファイル名の一括変更</h2>
+<h3>問題内容</h3>
 <p>　ディレクトリ内にある1000000個のファイルの名前を一括で変更します。</p>
 <h3>私の回答</h3>
 <div class="codeClass"><pre><code>
@@ -94,6 +97,7 @@ awkさえ使いこなせたら何でもできる気がします。
 
 <hr>
 <h2>問題4 : 特定のファイルの削除</h2>
+<h3>問題内容</h3>
 <p>　中に「10」と書かれているファイルだけ削除します。</p>
 <h3>私の回答</h3>
 <div class="codeClass"><pre><code>
@@ -111,6 +115,7 @@ ls -U | awk '{printf("%s ",$1);system("cat "$1)}' | awk '$2=="10"{printf("rm %s\
 
 <hr>
 <h2>問題5 : 設定ファイルからの情報抽出</h2>
+<h3>問題内容</h3>
 <p>　ntp.confからサーバの名前を抽出します。</p>
 <h3>私の回答</h3>
 <div class="codeClass"><pre><code>
@@ -125,6 +130,7 @@ cat ntp.conf | grep ^pool | awk '{print $2}'
 
 <hr>
 <h2>問題6 : 端末に模様を描く</h2>
+<h3>問題内容</h3>
 <p>　awkのfor文などを利用して模様を描画します。</p>
 <h3>私の回答</h3>
 <div class="codeClass"><pre><code>
@@ -140,7 +146,8 @@ revコマンドとtacコマンドがそれぞれ用意されているのがお�
 
 <hr>
 <h2>問題7 : 消費税</h2>
-<p>　</p>
+<h3>問題内容</h3>
+<p>　税込みの値段を計算します。</p>
 <h3>私の回答</h3>
 <div class="codeClass"><pre><code>
 cat kakeibo.txt | awk '{if($1>"20191000"){if(match($2,"*")){print $2,int($3*1.08)}else{print $2,int($3*1.10)}}else{print $2,int($3*1.08)}}' | awk 'BEGIN{sum=0}{sum+=$2}END{print sum}'
