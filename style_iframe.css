@@ -30,7 +30,7 @@ ul li {
   text-decoration: none;
   text-align: left;
   border: 1px dashed #CCCCCC;
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 .aButton:hover {
