@@ -8,14 +8,24 @@ html {
 }
 
 hr {
-  border-top: 1px solid #CCCCCC;
+  border-top: 1px solid #c2edff;
 }
 
 iframe {
-  border: 1px solid #CCCCCC;
+  border: 1px solid #c2edff;
   border-radius: 0px;
   width: 100%;
   height: 350px;
+}
+
+h1 {
+  background: #c2edff;
+  padding: 0.5em;
+}
+
+h2 {
+  background: #c2edff;
+  padding: 0.5em;
 }
 
 .formClass {
@@ -45,9 +55,9 @@ pre {
 }
 
 .codeClass {
-  border: 1px dashed #AAA;
+  border: 1px solid #AAA;
   border-radius: 0px;
-  background-color: #EEEEEE;
+  background-color: #c2edff;
 }
 
 ul li {
@@ -70,12 +80,12 @@ ul li {
   color: #000000;
   text-decoration: none;
   text-align: left;
-  border: 1px dashed #CCCCCC;
+  border: 1px solid #c2edff;
   border-radius: 0px;
 }
 
 .aButton:hover {
-  background: #DDDDDD;
+  background: #c2edff;
 }
 
 @media screen and (max-width: 999px) {
