@@ -14,6 +14,11 @@ ul li {
   padding-bottom: 8px;
 }
 
+h2 {
+  background: #c2edff;
+  padding: 0.5em;
+}
+
 .aButton {
   display: block;
   width: 94%;
@@ -29,12 +34,12 @@ ul li {
   color: #000000;
   text-decoration: none;
   text-align: left;
-  border: 1px dashed #CCCCCC;
+  border: 1px solid #c2edff;
   border-radius: 0px;
 }
 
 .aButton:hover {
-  background: #DDDDDD;
+  background: #c2edff;
 }
 
 @media screen and (max-width: 999px) {
