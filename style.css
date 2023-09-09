@@ -12,7 +12,7 @@ hr {
 }
 
 iframe {
-  border: 1px solid #c2edff;
+  border: 3px solid #c2edff;
   border-radius: 0px;
   width: 100%;
   height: 350px;
@@ -55,9 +55,9 @@ pre {
 }
 
 .codeClass {
-  border: 1px solid #AAA;
+  border: 1px solid #EEEEEE;
   border-radius: 0px;
-  background-color: #c2edff;
+  background-color: #EEEEEE;
 }
 
 ul li {
@@ -80,12 +80,12 @@ ul li {
   color: #000000;
   text-decoration: none;
   text-align: left;
-  border: 1px solid #c2edff;
+  border: 1px solid #EEEEEE;
   border-radius: 0px;
 }
 
 .aButton:hover {
-  background: #c2edff;
+  background: #EEEEEE;
 }
 
 @media screen and (max-width: 999px) {
