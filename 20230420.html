@@ -69,9 +69,7 @@ gtag('config', 'G-W9H7QJT6XG');
 <h3>問題内容</h3>
 <p>　三つの整数と一つの文字列が与えられるので、整数の合計値と文字列を並べて出力します。</p>
 <h3>私の回答</h3>
-<div class="codeClass"><pre><code>
-echo $(cat) | awk '{printf("%d %s\n",$1+$2+$3,$4)}'
-</code></pre></div>
+<div class="codeClass"><pre><code>awk '{printf("%d %s\n",$1+$2+$3,$4)}'</code></pre></div>
 <h3>私の感想</h3>
 <p>　標準入力の受け取り方が鬼門でした。
 もちろんreadコマンドを使えば簡単ですが、それではワンライナーになりにくいです。
@@ -84,9 +82,7 @@ echo $(cat) | awk '{printf("%d %s\n",$1+$2+$3,$4)}'
 <h3>問題内容</h3>
 <p>　二つの整数の積が偶数か奇数か判定します。</p>
 <h3>私の回答</h3>
-<div class="codeClass"><pre><code>
-echo $(cat) | awk '$1*$2%2==0{print "Even"}$1*$2%2==1{print "Odd"}'
-</code></pre></div>
+<div class="codeClass"><pre><code>awk '$1*$2%2==0{print "Even"}$1*$2%2==1{print "Odd"}'</code></pre></div>
 <h3>私の感想</h3>
 <p>　この問題もawkで解きました。
 awkなら何でもできちゃいますね。
@@ -100,9 +96,7 @@ Bashよりもawkが便利であることを証明する記事になるかもし�
 <h3>問題内容</h3>
 <p>　三つの0か1でできた文字列が与えられるので、1の個数を出力します。</p>
 <h3>私の回答</h3>
-<div class="codeClass"><pre><code>
-echo $(cat) | sed -E 's/(.)/\1\n/g' | awk 'BEGIN{a=0}$1=="1"{a+=1}END{print a}'
-</code></pre></div>
+<div class="codeClass"><pre><code>sed -E 's/(.)/\1\n/g' | awk 'BEGIN{a=0}$1=="1"{a+=1}END{print a}'</code></pre></div>
 <h3>私の感想</h3>
 <p>　さっそくawkを使いました。
 uniqのcオプションでカウントしようと思いましたが、いい感じに数えられなかったので諦めました。
@@ -116,9 +110,7 @@ Bashと比べてawkのほうが速かったりするのでしょうか。
 <h3>問題内容</h3>
 <p>　与えられたN個の整数が何回2で割れるか数えます。</p>
 <h3>私の回答</h3>
-<div class="codeClass"><pre><code>
-echo $(cat) | awk '{for(i=2;i<$1+2;i++){a[i]=$i};flag=0;for(j=0;j&lt;999;j++){for(i=2;i&lt;$1+2;i++){if(a[i]%2==0){a[i]/=2}else{flag=1}}if(flag==1){print j;break}}}'
-</code></pre></div>
+<div class="codeClass"><pre><code>echo $(cat) | awk '{for(i=2;i<$1+2;i++){a[i]=$i};flag=0;for(j=0;j&lt;999;j++){for(i=2;i&lt;$1+2;i++){if(a[i]%2==0){a[i]/=2}else{flag=1}}if(flag==1){print j;break}}}'</code></pre></div>
 <h3>私の感想</h3>
 <p>　awkでごり押ししました。
 awk以外に解く方法があるのでしょうか。

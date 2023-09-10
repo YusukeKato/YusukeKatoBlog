@@ -71,8 +71,7 @@
     自動で実行したりすると、
     sitemap.xmlを生成することができます。
     ぜひ使ってみてくださいませ。</p>
-<div class="codeClass"><pre><code>
-python -c "import os
+<div class="codeClass"><pre><code>python -c "import os
 files = os.listdir('./')
 files2 = [filename for filename in files if 'html' in filename]
 f = open('sitemap.xml', 'w', encoding='UTF-8')
@@ -92,8 +91,7 @@ for filename in files2:
   f.write('\n')
 f.write('&lt;/urlset&gt;\n')
 f.write('\n')
-f.close()"
-</code></pre></div>
+f.close()"</code></pre></div>
 
     <hr>
     <h2>おわりに</h2>
