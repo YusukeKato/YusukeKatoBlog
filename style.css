@@ -7,6 +7,29 @@ html {
   word-break: break-all;
 }
 
+header {
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header .headline{
+  font-size: 32px;
+}
+
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
 hr {
   border-top: 1px solid #c2edff;
 }
@@ -84,7 +107,30 @@ ul li {
   border-radius: 0px;
 }
 
+.bButton {
+  display: block;
+  width: 94%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background: #FFFFFF;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #EEEEEE;
+  border-radius: 0px;
+}
+
 .aButton:hover {
+  background: #EEEEEE;
+}
+
+.bButton:hover {
   background: #EEEEEE;
 }
 
@@ -112,6 +158,12 @@ ul li {
     padding-bottom: 10px;
     padding-left: 5px;
   }
+
+  .bButton {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -134,6 +186,12 @@ ul li {
   }
 
   .aButton {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+  }
+
+  .bButton {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
