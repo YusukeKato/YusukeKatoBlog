@@ -154,6 +154,10 @@ body p{
     font-size: 80%;
   }
 
+  p {
+    width: 100%;
+  }
+
   iframe {
     height: 350px;
   }
@@ -184,6 +188,10 @@ body p{
   html {
     width: 94%;
     font-size: 80%;
+  }
+
+  p {
+    width: 100%;
   }
 
   iframe {
