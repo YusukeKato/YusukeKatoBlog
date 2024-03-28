@@ -79,6 +79,22 @@ for markdown_file in markdown_files:
     write_lines.append('</ul>\n')
     write_lines.append('</header>\n')
 
+    # 本文の処理
+
+    # footer生成
+    write_lines.append('<footer>\n')
+    write_lines.append('<hr>\n')
+    write_lines.append('<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>\n')
+    write_lines.append('<p>　加藤祐介ブログは<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">MIT LICENSE</a> で公開されています。</p>\n')
+    write_lines.append('<p>　(c) 2023-2024 Yusuke Kato</p>\n')
+    write_lines.append('<div class="img">\n')
+    write_lines.append('<img src="https://yusukekato.jp/BlueTreeIcon.jpg">\n')
+    write_lines.append('</div>\n')
+
+    write_lines.append('\n')
+    write_lines.append('</body>\n')
+    write_lines.append('</html>\n')
+
     # 書き込み
     with open(markdown_file + '.html', 'w', encoding='UTF-8') as fw:
         fw.writelines(write_lines)
