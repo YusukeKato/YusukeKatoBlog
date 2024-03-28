@@ -7,6 +7,26 @@
 </url>
 
 <url>
+  <loc>https://yusukekato.jp/latest.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230408.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230409.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230418.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
   <loc>https://yusukekato.jp/20230411.html</loc>
   <priority>0.8</priority>
 </url>
@@ -17,7 +37,47 @@
 </url>
 
 <url>
-  <loc>https://yusukekato.jp/20230408.html</loc>
+  <loc>https://yusukekato.jp/20231003.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/md2html.py</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230423.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/featured.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/template.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/about.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230913.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230910.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230909.html</loc>
   <priority>0.8</priority>
 </url>
 
@@ -27,7 +87,27 @@
 </url>
 
 <url>
+  <loc>https://yusukekato.jp/20230422.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
   <loc>https://yusukekato.jp/index.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230413.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/form.html</loc>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://yusukekato.jp/20230420.html</loc>
   <priority>0.8</priority>
 </url>
 

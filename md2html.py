@@ -18,11 +18,12 @@ for markdown_file in markdown_files:
 
     # 読み込み
     with open(markdown_file, 'r', encoding='UTF-8') as fr:
-        read_lines = fr.readlines()
+        read_lines = [rl.rstrip() for rl in fr.readlines()]
 
     # 書き込み用
     write_lines = []
 
+    # head生成
     write_lines.append('<!DOCTYPE html>\n')
     write_lines.append('<html lang="ja">\n')
     write_lines.append('<head>\n')
@@ -42,6 +43,41 @@ for markdown_file in markdown_files:
     write_lines.append('<meta name="twitter:site" content="@yusukekato_main" />\n')
     write_lines.append('<meta name="twitter:image" content="https://yusukekato.jp/summary_large_image.png" />\n')
     write_lines.append('<!-- 変更 -->\n')
+    write_lines.append('<meta name="twitter:title" content="' + read_lines[0] + ' / Yusuke Kato Blog" />\n')
+    write_lines.append('<meta property="og:url" content="https://yusukekato.jp/' + markdown_file + '.html" />\n')
+    write_lines.append('<meta property="og:title" content="' + read_lines[0] + ' / Yusuke Kato Blog" />\n')
+    write_lines.append('<meta property="og:description" content="' + read_lines[1] + '" />\n')
+    write_lines.append('<meta name="twitter:description" content="' + read_lines[1] + '" />\n')
+    write_lines.append('<title>' + read_lines[0] + ' / Yusuke Kato Blog</title>\n')
+    write_lines.append('<meta name="description" content="' + read_lines[1] + '" />\n')
+    write_lines.append('<!-- main -->\n')
+    write_lines.append('<meta charset="utf-8">\n')
+    write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
+    write_lines.append('<link rel="icon" href="./favicon.png">\n')
+    write_lines.append('<link rel="stylesheet" href="./style.css">\n')
+    write_lines.append('</head>\n')
+    write_lines.append('\n')
+
+    write_lines.append('<body>\n')
+    write_lines.append('\n')
+
+    # header生成
+    write_lines.append('<header>\n')
+    write_lines.append('<h1 class="headline">\n')
+    write_lines.append('<a>加藤祐介ブログ</a>\n')
+    write_lines.append('</h1>\n')
+    write_lines.append('<ul class="nav-list">\n')
+    write_lines.append('<li class="nav-list-item">\n')
+    write_lines.append('<a href="https://yusukekato.jp/" class="bButton">HOME</a>\n')
+    write_lines.append('</li>\n')
+    write_lines.append('<li class="nav-list-item">\n')
+    write_lines.append('<a href="https://yusukekato.jp/about.html" class="bButton">ABOUT</a>\n')
+    write_lines.append('</li>\n')
+    write_lines.append('<li class="nav-list-item">\n')
+    write_lines.append('<a href="https://yusukekato.jp/form.html" class="bButton">CONTACT</a>\n')
+    write_lines.append('</li>\n')
+    write_lines.append('</ul>\n')
+    write_lines.append('</header>\n')
 
     # 書き込み
     with open(markdown_file + '.html', 'w', encoding='UTF-8') as fw:
