@@ -16,52 +16,17 @@
 </url>
 
 <url>
+<loc>https://yusukekato.jp/html/form.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
 <loc>https://yusukekato.jp/html/about.html</loc>
 <priority>0.8</priority>
 </url>
 
 <url>
-<loc>https://yusukekato.jp/html/2023/0412.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0420.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0423.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0413.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0422.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0913.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0408.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0418.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0411.html</loc>
+<loc>https://yusukekato.jp/html/2024/0330.html</loc>
 <priority>0.8</priority>
 </url>
 
@@ -71,12 +36,7 @@
 </url>
 
 <url>
-<loc>https://yusukekato.jp/html/2023/0909.html</loc>
-<priority>0.8</priority>
-</url>
-
-<url>
-<loc>https://yusukekato.jp/html/2023/0410.html</loc>
+<loc>https://yusukekato.jp/html/2023/0913.html</loc>
 <priority>0.8</priority>
 </url>
 
@@ -86,12 +46,32 @@
 </url>
 
 <url>
-<loc>https://yusukekato.jp/html/2023/0409.html</loc>
+<loc>https://yusukekato.jp/html/2023/0909.html</loc>
 <priority>0.8</priority>
 </url>
 
 <url>
-<loc>https://yusukekato.jp/html/form.html</loc>
+<loc>https://yusukekato.jp/html/2023/0423.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://yusukekato.jp/html/2023/0412.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://yusukekato.jp/html/2023/0411.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://yusukekato.jp/html/2023/0410.html</loc>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://yusukekato.jp/html/2023/0408.html</loc>
 <priority>0.8</priority>
 </url>
 

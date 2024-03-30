@@ -3,6 +3,8 @@
 import os
 import re
 
+print('start: generate index.html')
+
 # markdownのファイル名を全て取得
 markdown_files = []
 with open('./markdown_list2.txt', 'r', encoding='UTF-8') as fr:
@@ -114,14 +116,16 @@ for i in range(len(html_files)):
         read_lines = [rl.rstrip() for rl in fr.readlines()]
 
     # タイトル取得
-    title = read_lines[1][9:]
+    title = read_lines[1][8:]
 
     # 記事一覧生成
     write_lines.append('<a href="https://yusukekato.jp/' + html_files[i] + '" class="aButton">' + title + '</a>\n')
 
     # 年月を更新
-    tmp_year = html_files[i+1][0][5:9]
-    tmp_month = html_files[i+1][0][10:12]
+    if i+1 == len(html_files):
+        break
+    tmp_year = html_files[i+1][5:9]
+    tmp_month = html_files[i+1][10:12]
     if not year == tmp_year or not month == tmp_month:
         heading_flag = True
         year = tmp_year
@@ -144,3 +148,6 @@ write_lines.append('</html>\n')
 # 書き込み
 with open('../html/index.html', 'w', encoding='UTF-8') as fw:
     fw.writelines(write_lines)
+
+print('output: ../html/index.html')
+print('finish: generate index.html')

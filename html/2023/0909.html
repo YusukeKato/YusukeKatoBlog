@@ -17,13 +17,13 @@ gtag('config', 'G-W9H7QJT6XG');
 <meta name="twitter:site" content="@yusukekato_main" />
 <meta name="twitter:image" content="https://yusukekato.jp/images/summary_large_image.png" />
 <!-- 変更 -->
-<meta name="twitter:title" content="ng="ja"> / Yusuke Kato Blog" />
+<meta name="twitter:title" content="Windows と Ubuntu のデュアルブート / Yusuke Kato Blog" />
 <meta property="og:url" content="https://yusukekato.jp/../html/2023/0909.html" />
-<meta property="og:title" content="ng="ja"> / Yusuke Kato Blog" />
-<meta property="og:description" content="" />
-<meta name="twitter:description" content="" />
-<title>ng="ja"> / Yusuke Kato Blog</title>
-<meta name="description" content="" />
+<meta property="og:title" content="Windows と Ubuntu のデュアルブート / Yusuke Kato Blog" />
+<meta property="og:description" content="WindowsがインストールされているPCにUbuntuをデュアルブートします。" />
+<meta name="twitter:description" content="WindowsがインストールされているPCにUbuntuをデュアルブートします。" />
+<title>Windows と Ubuntu のデュアルブート / Yusuke Kato Blog</title>
+<meta name="description" content="WindowsがインストールされているPCにUbuntuをデュアルブートします。" />
 <!-- main -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,138 +48,56 @@ gtag('config', 'G-W9H7QJT6XG');
 </ul>
 </header>
 
-<h1>ng="ja"></h1>
-<p>記事投稿日: ogle tag (gtag.js) --></p>
-<p>最終更新日: sync src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script></p>
-<p>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-W9H7QJT6XG');
-</script>
-<!-- SNS Card -->
-<meta property="og:type" content="article" />
-<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />
-<meta property="og:image" content="https://yusukekato.jp/summary.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@yusukekato_main" />
-<meta name="twitter:image" content="https://yusukekato.jp/summary_large_image.png" />
-<!-- 変更 -->
-<meta name="twitter:title" content="Windows と Ubuntu のデュアルブート" />
-<meta property="og:url" content="https://yusukekato.jp/" />
-<meta property="og:title" content="Windows と Ubuntu のデュアルブート" />
-<meta property="og:description" content="Windows がインストールされているPCに Ubuntu をデュアルブートします。" />
-<meta name="twitter:description" content="Windows がインストールされているPCに Ubuntu をデュアルブートします。" />
-<title>Windows と Ubuntu のデュアルブート / Yusuke Kato Blog</title>
-<meta name="description" content="Windows がインストールされているPCに Ubuntu をデュアルブートします。">
-<!-- main -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="./favicon.png">
-<link rel="stylesheet" href="./style.css">
-</head>
-<body>
-</p>
-<p><header>
-<h1 class="headline">
-<a>加藤祐介ブログ</a>
-</h1>
-<ul class="nav-list">
-<li class="nav-list-item">
-<a href="https://yusukekato.jp/" class="bButton">HOME</a>
-</li>
-<li class="nav-list-item">
-<a href="https://yusukekato.jp/about.html" class="bButton">ABOUT</a>
-</li>
-<li class="nav-list-item">
-<a href="https://yusukekato.jp/form.html" class="bButton">CONTACT</a>
-</li>
-</ul>
-</header>
-</p>
-<p><hr>
-<hr>
-</p>
-<p><h1>Windows と Ubuntu のデュアルブート</h1>
-<p>2023年9月9日（土）</p>
-<hr>
-</p>
-<p><hr>
+<h1>Windows と Ubuntu のデュアルブート</h1>
+<p>記事投稿日: 2023年9月9日（土）</p>
+<p>最終更新日: 2024年3月30日（土）</p>
 <h2>はじめに</h2>
-<p>大学入学時に購入したPCが放置されていたので、Ubuntu をインストールしてみました。
-元々は Windows 10 がインストールされていて、そこに Ubuntu 22.04 LTS をデュアルブートした形です。
-デュアルブートの方法については、検索すれば山ほど情報が出てきますが、一応メモとして残しておきます。</p>
+<p>大学入学時に購入したPCが放置されていたのでUbuntuをインストールしてみました。
+元々はWindows 10がインストールされていて、そこにUbuntu 22.04 LTSをデュアルブートした形です。
+デュアルブートの方法については検索すれば山ほど情報が出てきますが一応メモとして残しておきます。
 </p>
-<p><h2>用意するもの</h2>
+<h2>用意するもの</h2>
 <ul>
-  <li>Windows がインストールされているPC</li>
-  <li>USBメモリ</li>
+<li>Windows がインストールされているPC</li>
+<li>USBメモリ</li>
 </ul>
-<p>私は Windows 10 のPCに Ubuntu 22.04 LTS をデュアルブートしましたが、バージョンが変わってもだいたい同じだと思います。</p>
+<p>私はWindows 10のPCにUbuntu 22.04 LTS をデュアルブートしましたが、バージョンが変わってもだいたい同じだと思います。
 </p>
-<p><h2>1. Ubuntu用のストレージを確保</h2>
-<p>まず、Ubuntu で使用するストレージを確保します。
-下記のページを参考にして、Windows が使用しているディスクを縮小して空き容量を生み出します。
-最低でも100GBは空き容量を確保しましょう。</p>
+<h2>1. Ubuntu用のストレージを確保</h2>
+<p>>まずUbuntuで使用するストレージを確保します。
+下記のページを参考にしてWindowsが使用しているディスクを縮小して空き容量を生み出します。
+最低でも100GBは空き容量を確保しましょう。
 </p>
-<p><a href="https://www.dell.com/support/kbdoc/ja-jp/000131253/dell%E8%A3%BD-pc-%E3%81%A7-ubuntu-%E3%81%8A%E3%82%88%E3%81%B3-windows-8-%E3%81%BE%E3%81%9F%E3%81%AF-windows-10-%E3%82%92-%E3%83%87%E3%83%A5%E3%82%A2%E3%83%AB-%E3%83%96%E3%83%BC%E3%83%88-%E3%81%A8%E3%81%97%E3%81%A6-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-%E3%81%99%E3%82%8B-%E6%96%B9%E6%B3%95" class="aButton">DELL製PCのデュアルブート方法</a>
+<a href="https://www.dell.com/support/kbdoc/ja-jp/000131253/dell%E8%A3%BD-pc-%E3%81%A7-ubuntu-%E3%81%8A%E3%82%88%E3%81%B3-windows-8-%E3%81%BE%E3%81%9F%E3%81%AF-windows-10-%E3%82%92-%E3%83%87%E3%83%A5%E3%82%A2%E3%83%AB-%E3%83%96%E3%83%BC%E3%83%88-%E3%81%A8%E3%81%97%E3%81%A6-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-%E3%81%99%E3%82%8B-%E6%96%B9%E6%B3%95" class="aButton">参考：DELL製PCのデュアルブート方法</a>
+<p>縮小可能な領域が十分ではないときは下記のページが参考になります。
 </p>
-<p><p>縮小可能な領域が十分ではないときは下記のページが参考になります。</p>
+<a href="https://www.aomei.jp/articles/can-not-shrink-volume.html" class="aButton">参考：ボリュームが縮小できないときの対処法</a>
+<h2>2. Ubuntuの入手</h2>
+<p>次はUbuntuのイメージファイルをダウンロードしましょう。
+私の場合はUbuntu Desktop 22.04.3 LTSをダウンロードしました。
+下記のリンクからUbuntuのダウンロードページにアクセスできます。
 </p>
-<p><a href="https://www.aomei.jp/articles/can-not-shrink-volume.html" class="aButton">ボリュームが縮小できないときの対処法</a>
-</p>
-<p><h2>2. Ubuntu の入手</h2>
-<p>次に、Ubuntu のイメージファイルをダウンロードしましょう。
-私の場合は Ubuntu Desktop 22.04.3 LTS をダウンロードしました。
-下記のリンクから Ubuntu のダウンロードページにアクセスできます。</p>
-</p>
-<p><a href="https://jp.ubuntu.com/download" class="aButton">Ubuntuのダウンロードページ</a>
-</p>
-<p><h2>3. Rufus でUSBメモリに Ubuntu を書き込み</h2>
-<p>Ubuntu のイメージファイルが入手できたら、Rufus というソフトを使って、USBメモリに書き込んでみましょう。
-下記のリンクから Rufus のダウンロードページへアクセスできます。
-Rufus を起動したら、USBメモリと Ubuntu のイメージファイルを選択します。
+<a href="https://jp.ubuntu.com/download" class="aButton">Ubuntuのダウンロードページ</a>
+<h2>3. RufusでUSBメモリにUbuntuを書き込み</h2>
+<p>Ubuntuのイメージファイルが入手できたら、Rufus というソフトを使ってUSBメモリに書き込んでみましょう。
+下記のリンクからRufusのダウンロードページへアクセスできます。
+Rufus を起動したら、USBメモリとUbuntuのイメージファイルを選択します。
 それ以外の項目はデフォルトのままで大丈夫だと思います。
-書き込み完了まではしばらく時間がかかるので待ちましょう。</p>
+書き込み完了まではしばらく時間がかかるので待ちましょう。
 </p>
-<p><a href="https://forest.watch.impress.co.jp/library/software/rufus/" class="aButton">Rufusのダウンロードページ</a>
+<a href="https://forest.watch.impress.co.jp/library/software/rufus/" class="aButton">Rufusのダウンロードページ</a>
+<h2>4. Ubuntu のインストール</h2>
+<p>それではいよいよPCにUbuntuをインストールします。
+Windowsの設定で「高速スタートアップ」は無効にしておきましょう（おそらく必要な手順）。
+Ubuntuのイメージファイルを書き込んだUSBメモリを挿したままPCを再起動します。
+メーカのロゴが表示されたらF2やF12などを押してBIOSを起動します。
+BIOSの画面でUSBメモリを選択して（頑張って探したら見つかります）、起動しましょう。
+その後、Ubuntuの画面が表示されたら成功です。
+あとは手順に従ってUbuntuをインストールしましょう。
 </p>
-<p><h2>Ubuntu のインストール</h2>
-<p>それではいよいよPCに Ubuntu をインストールします。
-Windows の設定で「高速スタートアップ」は無効にしておきましょう（おそらく必要な手順）。
-Ubuntu のイメージファイルを書き込んだUSBメモリを挿したまま、PCを再起動します。
-メーカのロゴが表示されたら F2 や F12 などを押して BIOS を起動します。
-BIOS の画面でUSBメモリを選択して（頑張って探したら見つかります）、起動しましょう。
-その後、Ubuntu の画面が表示されたら成功です。
-あとは手順に従って Ubuntu をインストールしましょう。
-</p>
-</p>
-<p><hr>
 <h2>おわりに</h2>
 <p>以上でインストール完了です。お疲れ様でした。
-私はこれから ROS 2 Humble で遊ぼうと思います。</p>
-</p>
-<p><hr>
-<div class="iframeClass">
-<iframe src="https://yusukekato.jp/latest.html">latest article list</iframe>
-</div>
-<p></p>
-</p>
-<p><hr>
-<div class="iframeClass">
-<iframe src="https://yusukekato.jp/featured.html">featured article list</iframe>
-</div>
-<p></p>
-</p>
-<p><hr>
-<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
-<p>　加藤祐介ブログは<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">MIT LICENSE</a>で公開されています。</p>
-<p>　(c) 2023 Yusuke Kato</p>
-<div class="img">
-<img src="https://yusukekato.jp/BlueTreeIcon.jpg">
-</div>
-</p>
-<p></body>
-</html>
+私はこれからROS 2 Humbleで遊ぼうと思います。
 </p>
 
 <footer>

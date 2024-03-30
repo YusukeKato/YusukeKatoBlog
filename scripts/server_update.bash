@@ -1,5 +1,5 @@
-# update blog 
-echo 'start: update blog'
+# server update 
+echo 'start: server update'
 cp -r ../html ../..
 mv ../../html/index.html ../..
 cp -r ../images ../..
@@ -10,4 +10,4 @@ echo 'mv ../../html/index.html ../..'
 echo 'cp -r ../images ../..'
 echo 'cp -r ../css ../..'
 echo 'cp ../sitemap.xml ../..'
-echo 'finish: update blog'
+echo 'finish: server update'
