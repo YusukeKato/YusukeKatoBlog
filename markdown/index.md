@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-W9H7QJT6XG');
-</script>
-<!-- SNS Card -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />
-<meta property="og:image" content="https://yusukekato.jp/summary.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@yusukekato_main" />
 <meta name="twitter:title" content="加藤祐介ブログ / Yusuke Kato Blog" />
 <meta name="twitter:image" content="https://yusukekato.jp/summary_large_image.png" />
 <meta property="og:url" content="https://yusukekato.jp/" />
