@@ -2,6 +2,8 @@
 - title=article_title
 - description=article_description
 - date=article_date
+- update=article_update
+- math=false
 
 ## はじめに
 はじめの文章

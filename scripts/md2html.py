@@ -30,6 +30,7 @@ for markdown_file in markdown_files:
     description = read_lines[2][14:]
     date = read_lines[3][7:]
     update = read_lines[4][9:]
+    math_flag = read_lines[5][7:]
 
     # head生成
     write_lines.append('<!DOCTYPE html>\n')
@@ -63,6 +64,10 @@ for markdown_file in markdown_files:
     write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
     write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
     write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css">\n')
+    if math_flag == 'true': # 数式を使用する場合
+        write_lines.append('<script id="MathJax-script" async\n')
+        write_lines.append('  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">\n')
+        write_lines.apeend('</script>\n')
     write_lines.append('</head>\n')
     write_lines.append('<body>\n')
 
@@ -94,7 +99,7 @@ for markdown_file in markdown_files:
         i += 1
         if i >= len(read_lines):
             break
-        elif i < 5: # メタデータは飛ばす
+        elif i < 6: # メタデータは飛ばす
             continue
         elif read_lines[i] == '': # 空行は飛ばす
             continue
@@ -153,7 +158,7 @@ for markdown_file in markdown_files:
                     i += 2
                 elif re.match('.+\.png', read_lines[i]) or re.match('.+\.jpg', read_lines[i]) or re.match('.+\.gif', read_lines[i]): # 画像を変換
                     write_lines.append('<div class="img">\n')
-                    write_lines.append('<img src="./' + read_lines[i] + '" alt="' + read_lines[i+2] + '">\n')
+                    write_lines.append('<img src="./images/' + read_lines[i] + '" alt="' + read_lines[i+2] + '">\n')
                     write_lines.append('</div>\n')
                     i += 2
                 else: # 文章を変換
