@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9H7QJT6XG');
+</script>
+<!-- SNS Card -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />
+<meta property="og:image" content="https://yusukekato.jp/images/summary.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@yusukekato_main" />
+<meta name="twitter:image" content="https://yusukekato.jp/images/summary_large_image.png" />
+<!-- 変更 -->
+<meta name="twitter:title" content="ROS 2 Humble 公式チュートリアル 01: 環境構築から turtlesim まで / Yusuke Kato Blog" />
+<meta property="og:url" content="https://yusukekato.jp/../html/2023/0910.html" />
+<meta property="og:title" content="ROS 2 Humble 公式チュートリアル 01: 環境構築から turtlesim まで / Yusuke Kato Blog" />
+<meta property="og:description" content="ROS 2 Humbleの公式チュートリアルに従って勉強中です。今回はUbuntu 22.04 LTSにROS 2 Humbleをインストールしてturtlesimを動かすところまでのメモ書きです。" />
+<meta name="twitter:description" content="ROS 2 Humbleの公式チュートリアルに従って勉強中です。今回はUbuntu 22.04 LTSにROS 2 Humbleをインストールしてturtlesimを動かすところまでのメモ書きです。" />
+<title>ROS 2 Humble 公式チュートリアル 01: 環境構築から turtlesim まで / Yusuke Kato Blog</title>
+<meta name="description" content="ROS 2 Humbleの公式チュートリアルに従って勉強中です。今回はUbuntu 22.04 LTSにROS 2 Humbleをインストールしてturtlesimを動かすところまでのメモ書きです。" />
+<!-- main -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://yusukekato.jp/images/favicon.png">
+<link rel="stylesheet" href="https://yusukekato.jp/css/style.css">
+</head>
+<body>
+<header>
+<h1 class="headline">
+<a>加藤祐介ブログ</a>
+</h1>
+<ul class="nav-list">
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/" class="bButton">HOME</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/about.html" class="bButton">ABOUT</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>
+</li>
+</ul>
+</header>
+
+<h1>ROS 2 Humble 公式チュートリアル 01: 環境構築から turtlesim まで</h1>
+<p>記事投稿日: 2023年9月10日（日）</p>
+<p>最終更新日: 2024年3月30日（土）</p>
+<h2>はじめに</h2>
+<p>ROS 2 Humbleの公式チュートリアルに従って勉強中です。
+誰かの役に立つかは分かりませんが、
+チュートリアルの手順や困ったポイントのメモをブログに残しておこうと思います。
+チュートリアルは英語なので、日本語の情報が増えるのは良いことかもしれません。
+</p>
+<a href="https://docs.ros.org/en/humble/Tutorials.html" class="aButton">ROS 2 Humble公式チュートリアル</a>
+<h2>用意するもの</h2>
+<ul>
+<li>Ubuntu 22.04 LTS がインストールされたPC</li>
+</ul>
+<p>WindowsとUbuntuのデュアルブート方法は下記のページをご覧ください。
+</p>
+<a href="https://yusukekato.jp/20230909.html" class="aButton">WindowsとUbuntuのデュアルブート</a>
+<h2>ROS 2 Humbleのインストール</h2>
+<p>Ubuntu 22.04 LTSにROS 2 Humbleをインストールします。
+ありがたいことにROS 2 Humbleを簡単にインストールできるBashスクリプトがあります。
+下記のGitHubリポジトリをcloneして使用させていただきましょう。
+</p>
+<a href="https://github.com/Tiryoh/ros2_setup_scripts_ubuntu" class="aButton">ros2_setup_scripts_ubuntu</a>
+<p>下記のようにコマンドを実行すればインストールできます。
+</p>
+<div class="codeClass"><pre><code>git clone https://github.com/Tiryoh/ros2_setup_scripts_ubuntu.git
+cd ros2_setup_scripts_ubuntu
+./ros2_humble_desktop_main.sh
+</code></pre></div>
+<p>インストールが完了したら下記のコマンドを実行してsetupファイルを読み込んでおきましょう
+（このコマンドは端末を起動するたびに実行する必要があります。~/.bashrcに書いてあれば不要です。）
+</p>
+<div class="codeClass"><pre><code>source /opt/ros/humble/setup.bash
+</code></pre></div>
+<h2>turtlesim のインストール</h2>
+<p>下記のコマンドを実行してturtlesimパッケージをインストールします。
+</p>
+<div class="codeClass"><pre><code>sudo apt update
+sudo apt upgrade
+sudo apt install ros-humble-turtlesim
+</code></pre></div>
+<p>下記のようにros2のサブコマンドpkgを実行するとturtlesimパッケージの情報が表示されます。
+</p>
+<div class="codeClass"><pre><code>ros2 pkg executables turtlesim
+</code></pre></div>
+<p>出力内容↓（turtlesim パッケージの実行ファイル一覧）
+</p>
+<div class="codeClass"><pre><code>turtlesim draw_square
+turtlesim mimic
+turtlesim turtle_teleop_key
+turtlesim turtlesim_node
+</code></pre></div>
+<h2>turtlesim のノードを起動</h2>
+<p>それでは準備が整ったので下記のコマンドでノードを起動します。
+</p>
+<div class="codeClass"><pre><code>ros2 run turtlesim turtlesim_node
+</code></pre></div>
+<p>下図のように青い背景に亀が配置されたウィンドウが表示されたら成功です。
+</p>
+<div class="img">
+<img src="./images/turtlesim.png" alt="turtlesim">
+</div>
+<h2>亀を動かす</h2>
+<p>もう一つ別の端末を開いて下記のコマンドを実行すると、矢印キーで亀を動かすことができます。
+</p>
+<div class="codeClass"><pre><code>ros2 run turtlesim turtle_teleop_key
+</code></pre></div>
+<h2>起動しているノードを確認</h2>
+<p>下記のコマンドを実行すると現在起動しているノードを確認できます。
+</p>
+<div class="codeClass"><pre><code>ros2 node list
+</code></pre></div>
+<p>現在起動しているノードの一覧↓
+</p>
+<div class="codeClass"><pre><code>/teleop_turtle
+/turtlesim
+</code></pre></div>
+<p>また他にもtopicやservice、actionも確認できます。
+</p>
+<div class="codeClass"><pre><code>ros2 topic list
+ros2 service list
+ros2 action list
+</code></pre></div>
+<h2>おわりに</h2>
+<p>以上でROS 2 Humbleの環境構築からturtlesimを動かすまでが完了です。
+まだまだ勉強しなければいけないことは多いですが、とりあえずはROS 2の感覚が掴めた気がします（ホントか？）。
+今回はここまでにしておきます。
+ありがとうございました。
+</p>
+
+<footer>
+<hr>
+<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
+<p>　加藤祐介ブログは<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">MIT LICENSE</a> で公開されています。</p>
+<p>　(c) 2023 - 2024 Yusuke Kato</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">
+</div>
+</footer>
+</body>
+</html>
