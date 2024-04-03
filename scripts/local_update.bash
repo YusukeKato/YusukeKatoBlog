@@ -7,6 +7,9 @@ bash generate_markdown_list.bash
 # markdown to html
 bash md2html.bash
 
+# insert form code
+bash insert_form.bash
+
 # generate html list
 bash generate_html_list.bash
 
