@@ -18,9 +18,9 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST_YUSUKEKATOJP }}
           username: ${{ secrets.SSH_USERNAME_YUSUKEKATOJP }}
-          key: ${{ secrets.SSH_PRIVATE_KEY_YUSUKEKATOJP }}
+          key: ${{ secrets.SSH_PRIVATE_KEY_YUSUKEKATOJP2 }}
           port: ${{ secrets.SSH_PORT_YUSUKEKATOJP }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE_YUSUKEKATOJP }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE_YUSUKEKATOJP2 }}
           debug: true
           script: |
             whoami
