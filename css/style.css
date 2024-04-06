@@ -26,6 +26,29 @@ header .headline{
   font-size: 32px;
 }
 
+.heading-028 {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 1.0rem;
+  letter-spacing: .04em;
+  text-align: center;
+  background: #333;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.heading-028::before {
+  display: block;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: .02em;
+  content: attr(data-label);
+  background: #333;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
 .nav-list {
   text-align: center;
   padding: 10px 0;
