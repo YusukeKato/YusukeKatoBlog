@@ -110,13 +110,19 @@ write_lines.append('\n')
 # 記事一覧
 year = html_files[0][5:9]
 month = html_files[0][10:12]
-heading_flag = True
+year_flag = True
+month_flag = True
 for i in range(len(html_files)):
     # 見出し生成
-    if heading_flag:
+    if year_flag:
         write_lines.append('\n')
-        write_lines.append('<h2>' + year + '年' + month + '月の記事' + '</h2>\n')
-        heading_flag = False
+        write_lines.append('<h2>' + year + '年の記事' + '</h2>\n')
+        year_flag = False
+
+    if month_flag:
+        write_lines.append('\n')
+        write_lines.append('<h3>' + month + '月の記事' + '</h3>\n')
+        month_flag = False
 
     # 読み込み用
     read_lines = []
@@ -136,9 +142,11 @@ for i in range(len(html_files)):
         break
     tmp_year = html_files[i+1][5:9]
     tmp_month = html_files[i+1][10:12]
-    if not year == tmp_year or not month == tmp_month:
-        heading_flag = True
+    if not year == tmp_year:
+        year_flag = True
         year = tmp_year
+    if not month == tmp_month:
+        month_flag = True
         month = tmp_month
 
 # footer生成
