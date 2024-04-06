@@ -1,8 +1,5 @@
-# delete html
-bash delete_html.bash
-
-# delete sitemap.xml
-bash delete_sitemap.bash
+# Create HTML folder
+mkdir ../html
 
 # generate markdown list
 bash generate_markdown_list.bash
@@ -22,5 +19,11 @@ bash generate_index.bash
 # generate sitemap.xml
 bash generate_sitemap.bash
 
+# delete html
+# bash delete_html.bash
+
+# delete sitemap.xml
+# bash delete_sitemap.bash
+
 # delete list
-bash delete_list.bash
+# bash delete_list.bash
