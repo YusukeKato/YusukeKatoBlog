@@ -1,7 +1,5 @@
 # Create HTML folder
-mkdir ../html
-mkdir ../html/2023
-mkdir ../html/2024
+# bash generate_html_folder.bash
 
 # generate markdown list
 bash generate_markdown_list.bash
