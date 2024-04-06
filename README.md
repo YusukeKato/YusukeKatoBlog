@@ -1,5 +1,5 @@
 # YusukeKatoBlog
-https://yusukekato.jp/
+Blog URL: https://yusukekato.jp/
 
 # update
 local PC
