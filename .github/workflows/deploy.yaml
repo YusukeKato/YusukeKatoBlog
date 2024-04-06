@@ -28,6 +28,5 @@ jobs:
           debug: true
           script: |
             cd ~/public_html/yusukekato.jp/YusukeKatoBlog/scripts/
-            git checkout main
             git pull origin main
             bash ./server_update.bash
