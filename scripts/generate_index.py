@@ -79,24 +79,33 @@ write_lines.append('<p>ROS/ROS 2やシェル芸、競技プログラミング、
 write_lines.append('大学ではロボットについて勉強していました。\n')
 write_lines.append('備忘録的な記事をまとめていくのでよろしくお願いします。</p>\n')
 write_lines.append('\n')
-write_lines.append('<h2>ブログについて</h2>\n')
+write_lines.append('<h2>このブログについて</h2>\n')
 write_lines.append('<a href="https://yusukekato.jp/html/about.html" class="aButton">加藤祐介ブログについて</a>\n')
 write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="aButton">加藤祐介ブログのお問い合わせフォーム</a>\n')
 write_lines.append('<a href="https://github.com/YusukeKato/YusukeKatoBlog" class="aButton">加藤祐介ブログのリポジトリ</a>\n')
 write_lines.append('\n')
-write_lines.append('<h2>外部サイトのリンク</h2>\n')
+write_lines.append('<h2>開発したサービス</h2>\n')
+write_lines.append('<a href="https://shellgei-online-judge.com/" class="aButton">シェル芸オンラインジャッジ</a>\n')
+write_lines.append('\n')
+write_lines.append('<h2>SNSアカウント</h2>\n')
 write_lines.append('<a href="https://github.com/YusukeKato" class="aButton">GitHub : YusukeKato</a>\n')
 write_lines.append('<a href="https://twitter.com/y_kato222" class="aButton">Twitter : y_kato222</a>\n')
 write_lines.append('<a href="https://twitter.com/yusukekato_main" class="aButton">Twitter : yusukekato_main</a>\n')
+write_lines.append('\n')
+write_lines.append('<h2>他のブログ</h2>\n')
 write_lines.append('<a href="https://zenn.dev/yusukekato" class="aButton">Zenn : yusukekato</a>\n')
-write_lines.append('<a href="https://kato-robotics.hatenablog.com/" class="aButton">HatenaBlog : YKpages</a>\n')
 write_lines.append('<a href="https://qiita.com/ykpages" class="aButton">Qiita : ykpages</a>\n')
-write_lines.append('<a href="https://note.com/yusuke_kato" class="aButton">note : yusuke_kato</a>\n')
-write_lines.append('<a href="https://kakuyomu.jp/users/yusuke_kato" class="aButton">カクヨム : yusuke_kato</a>\n')
-write_lines.append('<a href="https://atcoder.jp/users/yusuke_kato" class="aButton">AtCoder : yusuke_kato</a>\n')
+write_lines.append('<a href="https://kato-robotics.hatenablog.com/" class="aButton">HatenaBlog : YKpages</a>\n')
 write_lines.append('<a href="https://shellgei.wiki/" class="aButton">シェル芸の非公式WIKI</a>\n')
-write_lines.append('<a href="https://shellgei-online-judge.com/" class="aButton">シェル芸オンラインジャッジ</a>\n')
 write_lines.append('<a href="https://harunachan.com/" class="aButton">ハルナちゃんブログ</a>\n')
+write_lines.append('\n')
+write_lines.append('<h2>趣味の小説</h2>\n')
+write_lines.append('<a href="https://kakuyomu.jp/users/yusuke_kato" class="aButton">カクヨム : yusuke_kato</a>\n')
+write_lines.append('<a href="https://note.com/yusuke_kato" class="aButton">note : yusuke_kato</a>\n')
+write_lines.append('\n')
+write_lines.append('<h2>その他の外部サイト</h2>\n')
+write_lines.append('<a href="https://atcoder.jp/users/yusuke_kato" class="aButton">AtCoder : yusuke_kato</a>\n')
+write_lines.append('\n')
 
 # 記事一覧
 year = html_files[0][5:9]
@@ -106,7 +115,7 @@ for i in range(len(html_files)):
     # 見出し生成
     if heading_flag:
         write_lines.append('\n')
-        write_lines.append('<h2>' + year + '年' + month + '月の記事' + '</h2>\n')
+        write_lines.append('<h2 class="h2-orange">' + year + '年' + month + '月の記事' + '</h2>\n')
         heading_flag = False
 
     # 読み込み用
