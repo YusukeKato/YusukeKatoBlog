@@ -1,4 +1,7 @@
-# 参考: https://qiita.com/caesar2015/items/139da7e6eacd72b030c8
+# 参考1: GitHub Actionsの設定方法
+# https://qiita.com/caesar2015/items/139da7e6eacd72b030c8
+# 参考2: レンタルサーバにsshする方法
+# https://qiita.com/numatti9361/items/5391546e1ef2306517f7
 name: deploy
 on:
   push:
