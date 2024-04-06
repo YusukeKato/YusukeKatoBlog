@@ -6,6 +6,9 @@
 # https://qiita.com/tamorieeeen/items/c24f8285448b607b12dd
 # 参考4: お名前ドットコムのレンタルサーバにsshで接続する方法
 # https://highfivecreate.com/blog/tips/4943.html
+# 参考5: appleboy/ssh-action
+# https://github.com/appleboy/ssh-action
+
 name: deploy
 on:
   push:
@@ -24,5 +27,7 @@ jobs:
           port: ${{ secrets.SSH_PORT_YUSUKEKATOJP }}
           debug: true
           script: |
-            whoami
-            ls -al
+            cd ~/public_html/yusukekato.jp/YusukeKatoBlog/scripts/
+            git checkout main
+            git pull origin main
+            bash ./server_update.bash
