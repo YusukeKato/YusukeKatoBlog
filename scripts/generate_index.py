@@ -55,9 +55,10 @@ write_lines.append('<body>\n')
 
 # header生成
 write_lines.append('<header>\n')
-write_lines.append('<h1 class="headline">\n')
-write_lines.append('<a>加藤祐介ブログ</a>\n')
-write_lines.append('</h1>\n')
+# write_lines.append('<h1 class="headline">\n')
+# write_lines.append('<a>加藤祐介ブログ</a>\n')
+# write_lines.append('</h1>\n')
+write_lines.append('<h1 class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>\n')
 write_lines.append('<ul class="nav-list">\n')
 write_lines.append('<li class="nav-list-item">\n')
 write_lines.append('<a href="https://yusukekato.jp/" class="bButton">HOME</a>\n')
