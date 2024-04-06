@@ -1,0 +1,25 @@
+# 参考: https://qiita.com/caesar2015/items/139da7e6eacd72b030c8
+name: deploy
+on:
+  push:
+    branches:
+      - main 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ssh and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST_YUSUKEKATOJP }}
+          username: ${{ secrets.SSH_USERNAME_YUSUKEKATOJP }
+          key: ${{ secrets.SSH_PRIVATE_KEY_YUSUKEKATOJP }}
+          port: ${{ secrets.SSH_PORT_YUSUKEKATOJP }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE_YUSUKEKATOJP }}
+          debug: true
+          script: |
+            cd ~/public_html/yusukekato.jp/YusukeKatoBlog/
+            git checkout main
+            git pull origin main
+            cd scripts/
+            bash ./server_update.bash
