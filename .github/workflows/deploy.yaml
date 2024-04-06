@@ -23,8 +23,5 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE_YUSUKEKATOJP }}
           debug: true
           script: |
-            cd ~/public_html/yusukekato.jp/YusukeKatoBlog/
-            git checkout main
-            git pull origin main
-            cd scripts/
-            bash ./server_update.bash
+            whoami
+            ls -al
