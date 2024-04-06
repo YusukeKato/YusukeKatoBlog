@@ -22,7 +22,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME_YUSUKEKATOJP }}
           key: ${{ secrets.SSH_PRIVATE_KEY_YUSUKEKATOJP }}
           port: ${{ secrets.SSH_PORT_YUSUKEKATOJP }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE_YUSUKEKATOJP }}
           debug: true
           script: |
             whoami
