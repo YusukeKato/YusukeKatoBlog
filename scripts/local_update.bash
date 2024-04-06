@@ -1,6 +1,9 @@
 # delete html
 bash delete_html.bash
 
+# delete sitemap.xml
+bash delete_sitemap.bash
+
 # generate markdown list
 bash generate_markdown_list.bash
 
