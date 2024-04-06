@@ -4,6 +4,8 @@
 # https://qiita.com/numatti9361/items/5391546e1ef2306517f7
 # 参考3: Deploy Keysの設定
 # https://qiita.com/tamorieeeen/items/c24f8285448b607b12dd
+# 参考4: お名前ドットコムのレンタルサーバにsshで接続する方法
+# https://highfivecreate.com/blog/tips/4943.html
 name: deploy
 on:
   push:
