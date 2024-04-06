@@ -2,6 +2,8 @@
 # https://qiita.com/caesar2015/items/139da7e6eacd72b030c8
 # 参考2: レンタルサーバにsshする方法
 # https://qiita.com/numatti9361/items/5391546e1ef2306517f7
+# 参考3: Deploy Keysの設定
+# https://qiita.com/tamorieeeen/items/c24f8285448b607b12dd
 name: deploy
 on:
   push:
