@@ -80,6 +80,7 @@ write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="aButto
 write_lines.append('<a href="https://github.com/YusukeKato/YusukeKatoBlog" class="aButton">加藤祐介ブログのリポジトリ</a>\n')
 write_lines.append('\n')
 write_lines.append('<h2>私について</h2>\n')
+write_lines.append('<h3>自己紹介</h3>\n')
 write_lines.append('<p>ROS/ROS 2やシェル芸、競技プログラミング、ゲーム製作などで日々遊んでいます。\n')
 write_lines.append('大学ではロボットについて勉強していました。\n')
 write_lines.append('現在もロボット開発に携わらせていただいてます。\n')
