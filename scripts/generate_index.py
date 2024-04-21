@@ -49,7 +49,7 @@ write_lines.append('<!-- main -->\n')
 write_lines.append('<meta charset="utf-8">\n')
 write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
 write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=1">\n')
+write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=2">\n')
 write_lines.append('</head>\n')
 write_lines.append('<body>\n')
 
