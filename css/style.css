@@ -73,11 +73,15 @@ iframe {
 }
 
 h1 {
-  background: #c2edff;
+/*  background: #c2edff; */
+  background: #333;
+  color: #FFF;
   padding: 0.5em;
 }
 
 h2 {
+  background: #333;
+  color: #FFF;
   background: #c2edff;
   padding: 0.5em;
 }
