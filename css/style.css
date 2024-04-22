@@ -51,14 +51,14 @@ header .headline{
 
 .nav-list {
   text-align: center;
-  padding: 5px 0;
-  margin: 0 auto;
+  padding: 10px 0;
+  margin: 0 10px;
 }
 
 .nav-list-item {
   list-style: none;
   display: inline-block;
-  margin: 0 auto;
+  margin: 0 10px;
 }
 
 hr {
