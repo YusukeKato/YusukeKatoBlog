@@ -51,14 +51,14 @@ header .headline{
 
 .nav-list {
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
   margin: 0 auto;
 }
 
 .nav-list-item {
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 auto;
 }
 
 hr {
@@ -152,7 +152,7 @@ ul li {
   color: #000000;
   text-decoration: none;
   text-align: left;
-  border: 2px solid #EEEEEE;
+  border: 1px solid #DDDDDD;
   border-radius: 0px;
 }
 
@@ -171,7 +171,7 @@ ul li {
   color: #000000;
   text-decoration: none;
   text-align: center;
-  border: 2px solid #EEEEEE;
+  border: 1px solid #DDDDDD;
   border-radius: 0px;
 }
 
