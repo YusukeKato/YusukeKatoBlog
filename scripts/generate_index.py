@@ -49,7 +49,7 @@ write_lines.append('<!-- main -->\n')
 write_lines.append('<meta charset="utf-8">\n')
 write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
 write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=4">\n')
+write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=5">\n')
 write_lines.append('</head>\n')
 write_lines.append('<body>\n')
 
@@ -154,7 +154,7 @@ for i in range(len(html_files)):
 # footer生成
 write_lines.append('\n')
 write_lines.append('<footer>\n')
-write_lines.append('<hr>\n')
+write_lines.append('<hr class="BlackLine">\n')
 write_lines.append('<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>\n')
 write_lines.append('<p>　加藤祐介ブログは<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">MIT LICENSE</a> で公開されています。</p>\n')
 write_lines.append('<p>　Copyright Since 2023 (C) YusukeKato All rights reserved.</p>\n')
