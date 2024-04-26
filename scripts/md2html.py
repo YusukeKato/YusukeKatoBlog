@@ -63,7 +63,10 @@ for markdown_file in markdown_files:
     write_lines.append('<meta charset="utf-8">\n')
     write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
     write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=5">\n')
+    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=6">\n')
+    write_lines.append('<link rel="preconnect" href="https://fonts.googleapis.com">\n')
+    write_lines.append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n')
+    write_lines.append('<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">\n')
     if math_flag == 'true': # 数式を使用する場合
         write_lines.append('<script id="MathJax-script" async\n')
         write_lines.append('  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">\n')
