@@ -171,6 +171,7 @@ ul li {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 0;
+  margin-left: 0;
 }
 
 .aButton {
@@ -248,9 +249,8 @@ body p{
   }
 
   ul li {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   .aButton {
@@ -285,9 +285,8 @@ body p{
   }
 
   ul li {
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   .aButton {
