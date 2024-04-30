@@ -168,8 +168,8 @@ code {
 }
 
 ul li {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .aButton {
@@ -247,8 +247,9 @@ body p{
   }
 
   ul li {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
   }
 
   .aButton {
@@ -283,8 +284,9 @@ body p{
   }
 
   ul li {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
   }
 
   .aButton {
