@@ -51,8 +51,8 @@ header .headline{
   letter-spacing: .04em;
   text-align: center;
   background: #333;
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top:40px;
+  padding-bottom:40px;
 }
 
 .heading-028::before {
@@ -63,8 +63,8 @@ header .headline{
   letter-spacing: .02em;
   content: attr(data-label);
   background: #333;
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top:40px;
+  padding-bottom:40px;
 }
 
 .heading-028-2 {
@@ -76,6 +76,7 @@ header .headline{
   background: #333;
   padding-top:40px;
   padding-bottom:40px;
+  padding-left: 30%;
 }
 
 .heading-028-2::before {
@@ -88,6 +89,7 @@ header .headline{
   background: #333;
   padding-top:40px;
   padding-bottom:40px;
+  padding-left: 30%;
 }
 
 .nav-list {
@@ -344,8 +346,26 @@ body p{
   
   .heading-028 {
     font-size: 1.0rem;
+    padding-top:20px;
+    padding-bottom:20px;
   }
   .heading-028::before {
     font-size: 1.8rem;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+  .heading-028-2 {
+    font-size: 1.0rem;
+    text-align: left;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left: 5%;
+  }
+  .heading-028-2::before {
+    font-size: 1.8rem;
+    text-align: left;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left: 5%;
   }
 }
