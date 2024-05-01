@@ -269,7 +269,9 @@ body p{
   }
 
   p {
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   iframe {
@@ -291,6 +293,7 @@ body p{
     padding-bottom: 10px;
     padding-left: 5px;
     margin: auto;
+    margin-top: 3px;
   }
 
   .bButton {
@@ -329,6 +332,10 @@ body p{
   .alldiv {
     width: 100%;
   }
+
+  h3 {
+    margin-left: 5px;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -337,7 +344,9 @@ body p{
   }
 
   p {
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   iframe {
@@ -358,6 +367,7 @@ body p{
     padding-bottom: 10px;
     padding-left: 5px;
     margin: auto;
+    margin-top: 3px;
   }
 
   .bButton {
@@ -395,5 +405,9 @@ body p{
 
   .alldiv {
     width: 100%;
+  }
+
+  h3 {
+    margin-left: 5px;
   }
 }
