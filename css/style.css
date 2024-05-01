@@ -205,13 +205,13 @@ ul li {
   margin-top: 0;
   margin-bottom: 0;
   background: #FFFFFF;
-  color: #0067C0;
+  color: #333;
   text-decoration: none;
   text-align: center;
   /* border: 1px solid #AAA; */
   border-radius: 0px;
   font-size: 1.0em;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .aButton:hover {
@@ -219,8 +219,8 @@ ul li {
 }
 
 .bButton:hover {
-  font-size: 1.2em;
   font-weight: bold;
+  color: #6495ED;
 }
 
 body p{
