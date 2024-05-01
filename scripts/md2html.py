@@ -63,7 +63,7 @@ for markdown_file in markdown_files:
     write_lines.append('<meta charset="utf-8">\n')
     write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
     write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=10">\n')
+    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=11">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.googleapis.com">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n')
     write_lines.append('<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">\n')
