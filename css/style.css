@@ -265,7 +265,6 @@ body p{
 
 @media screen and (max-width: 999px) {
   html {
-    width: 94%;
     font-size: 80%;
   }
 
@@ -310,7 +309,7 @@ body p{
     padding-bottom:20px;
   }
   .heading-028-2 {
-    font-size: 1.0rem;
+    font-size: 0.8rem;
     text-align: left;
     padding-top:20px;
     padding-bottom:20px;
@@ -331,7 +330,6 @@ body p{
 
 @media screen and (max-width: 599px) {
   html {
-    width: 94%;
     font-size: 80%;
   }
 
@@ -376,7 +374,7 @@ body p{
     padding-bottom:20px;
   }
   .heading-028-2 {
-    font-size: 1.0rem;
+    font-size: 0.8rem;
     text-align: left;
     padding-top:20px;
     padding-bottom:20px;
