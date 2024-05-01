@@ -7,6 +7,7 @@ html {
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
+  margin: 0;
 }
 
 body {
@@ -15,14 +16,12 @@ body {
   font-style: normal;
   font-weight: normal;
   color: #666;
+  margin: 0;
 }
 
 .alldiv {
   width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: auto;
 }
 
 p {
@@ -327,7 +326,6 @@ body p{
 
   .alldiv {
     width: 100%;
-    margin: 0;
   }
 }
 
@@ -394,6 +392,5 @@ body p{
 
   .alldiv {
     width: 100%;
-    margin: 0;
   }
 }
