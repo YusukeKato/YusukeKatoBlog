@@ -100,7 +100,7 @@ header .headline{
 .nav-list-item {
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 auto;
 }
 
 hr {
@@ -164,7 +164,7 @@ img {
 
 pre {
   margin-left: 10px;
-  margin-right: auto;
+  margin-right: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
   width: 94%;
@@ -286,9 +286,11 @@ body p{
   }
 
   .aButton {
+    width: 90%;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
+    margin: auto;
   }
 
   .bButton {
@@ -296,6 +298,7 @@ body p{
     padding-bottom: 0px;
     padding-left: 4px;
     padding-right: 4px;
+    margin: auto;
   }
 
   .heading-028 {
@@ -309,14 +312,14 @@ body p{
     padding-bottom:20px;
   }
   .heading-028-2 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: left;
     padding-top:20px;
     padding-bottom:20px;
     padding-left: 5%;
   }
   .heading-028-2::before {
-    font-size: 1.8rem;
+    font-size: 1.0rem;
     text-align: left;
     padding-top:20px;
     padding-bottom:20px;
@@ -354,6 +357,7 @@ body p{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
+    margin: auto;
   }
 
   .bButton {
@@ -361,6 +365,7 @@ body p{
     padding-bottom: 0px;
     padding-left: 4px;
     padding-right: 4px;
+    margin: auto;
   }
   
   .heading-028 {
@@ -374,14 +379,14 @@ body p{
     padding-bottom:20px;
   }
   .heading-028-2 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: left;
     padding-top:20px;
     padding-bottom:20px;
     padding-left: 5%;
   }
   .heading-028-2::before {
-    font-size: 1.8rem;
+    font-size: 1.0rem;
     text-align: left;
     padding-top:20px;
     padding-bottom:20px;
