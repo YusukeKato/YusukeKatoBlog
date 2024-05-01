@@ -57,11 +57,16 @@ write_lines.append('</head>\n')
 write_lines.append('<body>\n')
 
 # header生成
-write_lines.append('<header>\n')
+# write_lines.append('<header>\n')
 # write_lines.append('<h1 class="headline">\n')
 # write_lines.append('<a>加藤祐介ブログ</a>\n')
 # write_lines.append('</h1>\n')
 write_lines.append('<h1 class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>\n')
+# write_lines.append('</header>\n')
+write_lines.append('\n')
+
+# 本文生成
+write_lines.append('<div class="alldiv">\n')
 write_lines.append('<ul class="nav-list">\n')
 write_lines.append('<li class="nav-list-item">\n')
 write_lines.append('<a href="https://yusukekato.jp/" class="bButton">HOME</a>\n')
@@ -73,11 +78,6 @@ write_lines.append('<li class="nav-list-item">\n')
 write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>\n')
 write_lines.append('</li>\n')
 write_lines.append('</ul>\n')
-write_lines.append('</header>\n')
-write_lines.append('\n')
-
-# 本文生成
-write_lines.append('<div class="alldiv">\n')
 write_lines.append('<h2>このブログについて</h2>\n')
 write_lines.append('<a href="https://yusukekato.jp/html/about.html" class="aButton">加藤祐介ブログについて</a>\n')
 write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="aButton">加藤祐介ブログのお問い合わせフォーム</a>\n')
