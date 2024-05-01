@@ -157,7 +157,9 @@ for markdown_file in markdown_files:
                             write_lines.append(read_lines[i].replace('<', '&lt;').replace('>', '&gt;') + '\n')
                     write_lines.append('</code></pre></div>\n')
                 elif re.match('https://www.youtube.com/embed/.+', read_lines[i]): # YouTubeの埋め込み
+                    write_lines.append('<div class="iframeClass">\n')
                     write_lines.append('<iframe width="560" height="315" src="' + read_lines[i] + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>')
+                    write_lines.append('</div>\n')
                 elif re.match('https://.+', read_lines[i]): # URLを変換
                     write_lines.append('<a href="' + read_lines[i] + '" class="aButton">' + read_lines[i+2] + '</a>\n')
                     i += 2
