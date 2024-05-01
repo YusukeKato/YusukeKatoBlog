@@ -3,10 +3,7 @@ html {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: normal;
-  color: #494949;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+  color: #666;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -17,7 +14,15 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: normal;
-  color: #494949;
+  color: #666;
+}
+
+.alldiv {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 p {
@@ -42,7 +47,7 @@ header .headline{
 .heading-028 {
   color: #FFF;
   font-weight: 400;
-  font-size: 1.0rem;
+  font-size: 1.5rem;
   letter-spacing: .04em;
   text-align: center;
   background: #333;
@@ -53,13 +58,36 @@ header .headline{
 .heading-028::before {
   display: block;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   line-height: 1.5;
   letter-spacing: .02em;
   content: attr(data-label);
   background: #333;
   padding-top:20px;
   padding-bottom:20px;
+}
+
+.heading-028-2 {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 1.0rem;
+  letter-spacing: .04em;
+  text-align: left;
+  background: #333;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+.heading-028-2::before {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  letter-spacing: .02em;
+  content: attr(data-label);
+  background: #333;
+  padding-top:40px;
+  padding-bottom:40px;
 }
 
 .nav-list {
@@ -269,6 +297,13 @@ body p{
     padding-left: 4px;
     padding-right: 4px;
   }
+
+  .heading-028 {
+    font-size: 1.0rem;
+  }
+  .heading-028::before {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -305,5 +340,12 @@ body p{
     padding-bottom: 0px;
     padding-left: 4px;
     padding-right: 4px;
+  }
+  
+  .heading-028 {
+    font-size: 1.0rem;
+  }
+  .heading-028::before {
+    font-size: 1.8rem;
   }
 }
