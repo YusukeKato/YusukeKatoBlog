@@ -215,6 +215,7 @@ ul li {
 }
 
 .aButton:hover {
+  color: #6495ED;
   background: #F3F3F3;
 }
 
