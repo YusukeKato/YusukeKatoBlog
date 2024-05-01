@@ -232,15 +232,15 @@ ul li {
 
 .bButton {
   display: block;
-  width: 90%;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
+  width: 96%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
   background: #FFFFFF;
   color: #333;
   text-decoration: none;
