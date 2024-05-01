@@ -63,7 +63,7 @@ for markdown_file in markdown_files:
     write_lines.append('<meta charset="utf-8">\n')
     write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
     write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=13">\n')
+    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=15">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.googleapis.com">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n')
     write_lines.append('<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">\n')
@@ -95,6 +95,7 @@ for markdown_file in markdown_files:
     write_lines.append('\n')
 
     # 本文の処理
+    write_lines.append('<div class="alldiv">\n')
     write_lines.append('<h1>' + title + '</h1>\n')
     write_lines.append('<p>記事投稿日: ' + date + '</p>\n')
     write_lines.append('<p>最終更新日: ' + update + '</p>\n')
@@ -194,6 +195,8 @@ for markdown_file in markdown_files:
     write_lines.append('<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">\n')
     write_lines.append('</div>\n')
     write_lines.append('</footer>\n')
+    write_lines.append('</div> <!-- alldiv -->\n')
+    write_lines.append('<h1 class="heading-028-2" data-label="">加藤祐介ブログはMITライセンスで公開されています。<br>Copyright Since 2023 (C) YusukeKato All Rights Reserved.</h1>\n')
     write_lines.append('</body>\n')
     write_lines.append('</html>\n')
 
