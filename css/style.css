@@ -4,7 +4,6 @@ html {
   font-style: normal;
   font-weight: normal;
   color: #666;
-  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -18,7 +17,6 @@ body {
   font-weight: normal;
   color: #666;
   margin: 0;
-  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -34,7 +32,6 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 98%;
-  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
