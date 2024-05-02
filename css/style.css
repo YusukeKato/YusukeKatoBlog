@@ -4,6 +4,7 @@ html {
   font-style: normal;
   font-weight: normal;
   color: #666;
+  white-space: normal;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -17,6 +18,10 @@ body {
   font-weight: normal;
   color: #666;
   margin: 0;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .alldiv {
@@ -29,6 +34,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 98%;
+  white-space: normal;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -155,9 +161,12 @@ pre {
   font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   width: 94%;
   margin: 0.8rem
-  white-space: pre-wrap;
   font-size: 1.0rem;
   line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 code {
@@ -166,6 +175,7 @@ code {
   font-style: normal;
   font-weight: normal;
   color: #666;
+  white-space: normal;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -180,6 +190,10 @@ code {
   border: 1px solid #AAA;
   border-radius: 0px;
   background-color: #EEEEEE;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 ul li {
@@ -243,6 +257,10 @@ body p{
   color: #666;
   letter-spacing: 0.05em;
   line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 @media screen and (max-width: 999px) {
