@@ -25,6 +25,7 @@ body {
 }
 
 p {
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   margin-left: auto;
   margin-right: auto;
   width: 98%;
@@ -33,91 +34,76 @@ p {
   word-break: break-all;
 }
 
-header {
-  padding: 15px 0;
-  margin: 0 auto;
-  text-align: center;
-}
-
-header .headline{
-  font-size: 32px;
-}
-
 .heading-028 {
-  color: #FFF;
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
+  font-weight: normal;
+  font-size: 1.0rem;
   letter-spacing: .04em;
   text-align: center;
+  color: #FFF;
   background: #333;
-  padding-top:40px;
-  padding-bottom:40px;
+  padding-top: 3.0rem;
+  padding-bottom: 3.0rem;
   margin-top: 0;
   margin-bottom: 0;
 }
-
 .heading-028::before {
   display: block;
-  font-weight: 700;
-  font-size: 2.5rem;
+  font-weight: bold;
+  font-size: 2.0rem;
   line-height: 1.5;
   letter-spacing: .02em;
   content: attr(data-label);
   background: #333;
-  padding-top:40px;
-  padding-bottom:40px;
+  padding-top: 3.0rem;
+  padding-bottom: 3.0rem;
   margin-top: 0;
   margin-bottom: 0;
 }
-
 .heading-028-2 {
-  color: #FFF;
-  font-weight: 400;
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
+  font-weight: normal;
   font-size: 1.0rem;
   letter-spacing: .04em;
   text-align: left;
+  color: #FFF;
   background: #333;
-  padding-top:40px;
-  padding-bottom:40px;
+  padding-top: 3.0rem;
+  padding-bottom: 3.0rem;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 30%;
 }
-
 .heading-028-2::before {
   display: block;
-  font-weight: 700;
-  font-size: 2.5rem;
+  font-weight: bold;
+  font-size: 2.0rem;
   line-height: 1.5;
   letter-spacing: .02em;
   content: attr(data-label);
   background: #333;
-  padding-top:40px;
-  padding-bottom:40px;
+  padding-top: 3.0rem;
+  padding-bottom: 3.0rem;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 30%;
 }
 
 .nav-list {
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   text-align: center;
-  padding: 10px 0;
+  padding: 1.0rem 0;
   margin: 0 auto;
 }
-
 .nav-list-item {
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
-}
-
-hr {
-  border-top: 1px solid #c2edff;
+  margin: 0 1.5rem;
 }
 
 .BlackLine {
-  border-top: 5px double #333;
-  size: 10;
+  border-top: 0.5rem double #333;
 }
 
 iframe {
@@ -128,30 +114,25 @@ iframe {
 }
 
 h1 {
-/*  background: #c2edff; */
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   background: #333;
   color: #FFF;
   padding: 0.5em;
 }
 
 h2 {
-/*  background: #c2edff; */
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   background: #333;
   color: #FFF;
   padding: 0.5em;
 }
 
-.h2-orange {
-  background: #FFCB72;
-  padding: 0.5em;
-}
-
 h3 {
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   padding: 0.25em 0.5em;
-  color: #494949;
+  color: #666;
   background: transparent;
-/*  border-left: solid 5px #7db4e6; */
-  border-left: solid 5px #666;
+  border-left: solid 0.5rem #666;
 }
 
 .formClass {
@@ -171,14 +152,12 @@ img {
 }
 
 pre {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   width: 94%;
+  margin: 0.8rem
   white-space: pre-wrap;
-  font-size: 100%;
-  line-height: 1.7;
+  font-size: 1.0rem;
+  line-height: 1.5;
 }
 
 code {
@@ -186,8 +165,7 @@ code {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: normal;
-  color: #494949;
-/*  font-size: 150%; */
+  color: #666;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -198,15 +176,16 @@ code {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: normal;
-  color: #494949;
-  border: 2px solid #DDDDDD;
+  color: #666;
+  border: 1px solid #AAA;
   border-radius: 0px;
   background-color: #EEEEEE;
 }
 
 ul li {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   padding-left: 0;
   margin-left: 0;
 }
@@ -214,48 +193,43 @@ ul li {
 .aButton {
   display: block;
   width: 96%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
+  font-size; 1.0rem;
+  font-weight: normal;
+  vertical-align: middle;
+  padding: 0.5rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  background: #FFFFFF;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
   color: #0067C0;
+  background: #FFFFFF;
   text-decoration: none;
   text-align: left;
   border: 1px solid #AAA;
   border-radius: 0px;
 }
-
-.bButton {
-  display: block;
-  width: 96%;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  background: #FFFFFF;
-  color: #333;
-  text-decoration: none;
-  text-align: center;
-  /* border: 1px solid #AAA; */
-  border-radius: 0px;
-  font-size: 1.0em;
-  font-weight: bold;
-}
-
 .aButton:hover {
   color: #6495ED;
   background: #F3F3F3;
 }
 
+.bButton {
+  display: block;
+  width: 96%;
+  font-size: 1.0rem;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  color: #333;
+  background: #FFFFFF;
+  text-decoration: none;
+  border-radius: 0px;
+}
 .bButton:hover {
   font-weight: bold;
   color: #6495ED;
@@ -266,14 +240,14 @@ body p{
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: normal;
-  color: #494949;
+  color: #666;
   letter-spacing: 0.05em;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 999px) {
   html {
-    font-size: 80%;
+    font-size: 0.9rem;
   }
 
   .alldiv {
@@ -294,27 +268,21 @@ body p{
     height: 1200px;
   }
 
-  ul li {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
   .aButton {
     width: 90%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    margin-left: auto;
+    padding: 0.8rem;
     margin-right: auto;
-    margin-top: 3px;
-    margin-bottom: 0;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
   }
 
   .bButton {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -323,31 +291,31 @@ body p{
 
   .heading-028 {
     font-size: 1.0rem;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
   }
   .heading-028::before {
     font-size: 1.8rem;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
   }
   .heading-028-2 {
     font-size: 0.8rem;
     text-align: left;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
     padding-left: 5%;
   }
   .heading-028-2::before {
-    font-size: 1.0rem;
+    font-size: 1.5rem;
     text-align: left;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top: 2.0rem;
+    padding-bottom: 2.0rem;
     padding-left: 5%;
   }
 
   h3 {
-    margin-left: 5px;
+    margin-left: 0.5rem;
   }
 
   .codeClass {
@@ -359,85 +327,6 @@ body p{
 
 @media screen and (max-width: 599px) {
   html {
-    font-size: 80%;
-  }
-  
-  .alldiv {
-    width: 100%;
-  }
-
-  p {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  iframe {
-    height: 350px;
-  }
-
-  .formClass {
-    height: 1200px;
-  }
-
-  ul li {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  .aButton {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 3px;
-    margin-bottom: 0;
-  }
-
-  .bButton {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  
-  .heading-028 {
-    font-size: 1.0rem;
-    padding-top:20px;
-    padding-bottom:20px;
-  }
-  .heading-028::before {
-    font-size: 1.8rem;
-    padding-top:20px;
-    padding-bottom:20px;
-  }
-  .heading-028-2 {
     font-size: 0.8rem;
-    text-align: left;
-    padding-top:20px;
-    padding-bottom:20px;
-    padding-left: 5%;
-  }
-  .heading-028-2::before {
-    font-size: 1.0rem;
-    text-align: left;
-    padding-top:20px;
-    padding-bottom:20px;
-    padding-left: 5%;
-  }
-
-  h3 {
-    margin-left: 5px;
-  }
-
-  .codeClass {
-    width: 94%;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
