@@ -4,7 +4,7 @@ html {
   font-style: normal;
   font-weight: normal;
   color: #666;
-  white-space: normal;
+  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -18,7 +18,7 @@ body {
   font-weight: normal;
   color: #666;
   margin: 0;
-  white-space: normal;
+  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -34,7 +34,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 98%;
-  white-space: normal;
+  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -164,7 +164,7 @@ pre {
   padding-left: 0.3rem;
   font-size: 1.0rem;
   line-height: 1.5;
-  white-space: normal;
+  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -177,7 +177,7 @@ code {
   font-weight: normal;
   padding-left: 0.3rem;
   color: #666;
-  white-space: normal;
+  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -193,7 +193,7 @@ code {
   border: 1px solid #AAA;
   border-radius: 0px;
   background-color: #EEEEEE;
-  white-space: normal;
+  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
@@ -260,7 +260,7 @@ body p{
   color: #666;
   letter-spacing: 0.05em;
   line-height: 1.5;
-  white-space: normal;
+  white-space: pre-wrap;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
