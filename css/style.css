@@ -40,7 +40,7 @@ p {
 .heading-028 {
   font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   font-weight: normal;
-  font-size: 1.0rem;
+  font-size: 1.5rem;
   letter-spacing: .04em;
   text-align: center;
   color: #FFF;
@@ -53,7 +53,7 @@ p {
 .heading-028::before {
   display: block;
   font-weight: bold;
-  font-size: 2.0rem;
+  font-size: 2.6rem;
   line-height: 1.5;
   letter-spacing: .02em;
   content: attr(data-label);
