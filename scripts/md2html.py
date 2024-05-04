@@ -207,7 +207,7 @@ for markdown_file in markdown_files:
     write_lines.append('</div>\n')
     write_lines.append('</footer>\n')
     write_lines.append('</div> <!-- alldiv -->\n')
-    write_lines.append('<h1 class="heading-028-2" data-label="">Update : 2024.05.03<br>加藤祐介ブログはMITライセンスで公開されています。<br>Copyright Since 2023 (C) YusukeKato All Rights Reserved.</h1>\n')
+    write_lines.append('<h1 class="heading-028-2" data-label="">Update : 2024.05.04<br>加藤祐介ブログはMITライセンスで公開されています。<br>Copyright Since 2023 (C) YusukeKato All Rights Reserved.</h1>\n')
     write_lines.append('</body>\n')
     write_lines.append('</html>\n')
 
