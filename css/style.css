@@ -264,11 +264,13 @@ body p{
   overflow: hidden;
   width: 480px;
   height: 270px;
+  padding: 0.5rem 1.0rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: auto;
   margin-right: auto;
   background: #fff;
+  border: 1px solid #AAA;
 }
 .slide img {
   display: block;
@@ -278,7 +280,7 @@ body p{
   width: inherit;
   height: inherit;
   left: 100%;
-  animation: slide-anime 20s linear infinite;
+  animation: slide-anime 10s linear infinite;
 }
 .slide-img {
   width: inherit;
@@ -287,11 +289,11 @@ body p{
   margin-right: auto;
 }
 .slide img:nth-of-type(1) {animation-delay: 0s;}
-.slide img:nth-of-type(2) {animation-delay: 10s;}
+.slide img:nth-of-type(2) {animation-delay: 5s;}
 @keyframes slide-anime {
   0% {left: 100%;}
-  4% {left: 0;}
-  46% {left: 0;}
+  4% {left: 3%;}
+  46% {left: 3%;}
   50% {left: -100%;}
   100% {left: -100%;}
 }
@@ -382,11 +384,13 @@ body p{
     overflow: hidden;
     width: 320px;
     height: 180px;
+    padding: 0.5rem 1.0rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
+    border: 1px solid #AAA;
   }
   .slide img {
     display: block;
@@ -396,7 +400,7 @@ body p{
     width: 320px;
     height: 180px;
     left: 100%;
-    animation: slide-anime 20s linear infinite;
+    animation: slide-anime 10s linear infinite;
   }
   .slide-img {
     width: 320px;
@@ -405,11 +409,11 @@ body p{
     margin-right: auto;
   }
   .slide img:nth-of-type(1) {animation-delay: 0s;}
-  .slide img:nth-of-type(2) {animation-delay: 10s;}
+  .slide img:nth-of-type(2) {animation-delay: 5s;}
   @keyframes slide-anime{
     0% {left: 100%;}
-    4% {left: 0;}
-    46% {left: 0;}
+    4% {left: 3.5%;}
+    46% {left: 3.5%;}
     50% {left: -100%;}
     100% {left: -100%;}
   }
