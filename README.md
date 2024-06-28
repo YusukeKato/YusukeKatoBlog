@@ -5,8 +5,10 @@ Blog URL: https://yusukekato.jp/
 
 ### Workflows
 1. Write articles (ex: [markdown/2024/0403.md](https://github.com/YusukeKato/YusukeKatoBlog/blob/main/markdown/2024/0403.md))
-2. `git push` remote repository
-3. Deploying with GitHub Actions
+2. Resize images
+3. Update remote repository
+
+Automatically deployed with GitHub Actions.
 
 ### Resize images
 Execute the following command:
