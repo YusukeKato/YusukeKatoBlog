@@ -17,6 +17,14 @@ cd scripts
 bash resize_images.bash
 ```
 
+### Update remote repository
+Execute the following command:
+```sh
+git add -A
+git commit -m "update"
+git push origin main
+```
+
 ## Repository info.
 
 ### Deploying with GitHub Actions
