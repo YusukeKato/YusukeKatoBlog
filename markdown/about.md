@@ -2,7 +2,7 @@
 - title=加藤祐介ブログ
 - description=加藤祐介ブログについての情報ページです。利用規約や免責事項、プライバシーポリシーについて記載してあります。
 - date=2023年4月14日（金）
-- update=2024年3月29日（金）
+- update=2024年7月12日（金）
 - math=false
 
 ## 加藤祐介ブログについて
@@ -22,6 +22,5 @@
 の元で公開されています。
 
 ## プライバシーポリシー
-加藤祐介ブログでは、Google Search Consoleと、
-Google Analyticsでアクセス解析等を行っているため、
+加藤祐介ブログではGoogle Search ConsoleとGoogle Analyticsでアクセス解析等を行っているため、
 あらかじめ了承ください。
