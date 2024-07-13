@@ -1,6 +1,8 @@
 # YusukeKatoBlog
 Blog URL: https://yusukekato.jp/
 
+LICENSE : https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE
+
 ## How to update blog
 
 ### Workflows
