@@ -295,8 +295,8 @@ body p{
 @keyframes slide-anime {
   0% {left: 100%;}
   4% {left: 3%;}
-  46% {left: 3%;}
-  50% {left: -100%;}
+  29% {left: 3%;}
+  33% {left: -100%;}
   100% {left: -100%;}
 }
 
@@ -416,8 +416,8 @@ body p{
   @keyframes slide-anime{
     0% {left: 100%;}
     4% {left: 3.5%;}
-    46% {left: 3.5%;}
-    50% {left: -100%;}
+    29% {left: 3.5%;}
+    33% {left: -100%;}
     100% {left: -100%;}
   }
 }
