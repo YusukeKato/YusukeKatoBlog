@@ -186,19 +186,24 @@ for markdown_file in markdown_files:
                             write_lines.append(read_lines[i] + '\n')
                     write_lines.append('</p>\n')
 
-    # footer生成
+    # お知らせ生成
     write_lines.append('\n')
     write_lines.append('<h2>お知らせ</h2>\n')
     write_lines.append('<ul>\n')
+    write_lines.append('<li>2024/06/29: セキセイインコ「れもん」が我が家へ</li>\n')
     write_lines.append('<li>2024/05/03: シェル芸オンラインジャッジ一周年</li>\n')
     write_lines.append('<li>2023/05/03: シェル芸オンラインジャッジサービス開始</li>\n')
     write_lines.append('</ul>\n')
     write_lines.append('<div class="slide">\n')
+    write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240629.png" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240503_2.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20230503_2.jpg" class="slide-img">\n')
     write_lines.append('</div>\n')
+    write_lines.append('<a href="https://yusukekato.jp/html/2024/0630.html" class="aButton">セキセイインコの「れもん」が我が家にやってきました！</a>\n')
     write_lines.append('<a href="https://shellgei-online-judge.com/" class="aButton">シェル芸オンラインジャッジ</a>\n')
     write_lines.append('\n')
+
+    # footer生成
     write_lines.append('<footer>\n')
     write_lines.append('<hr class="BlackLine">\n')
     write_lines.append('<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>\n')
@@ -211,9 +216,7 @@ for markdown_file in markdown_files:
     write_lines.append('<h1 class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">\n')
     write_lines.append('加藤祐介ブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>\n')
     write_lines.append('加藤祐介ブログのソフトウェアはMITライセンスで公開されています。<br>\n')
-    write_lines.append('YusukeKatoBlog Work is licensed under CC BY-NC-ND 4.0.<br>')
-    write_lines.append('YusukeKatoBlog Software is licensed under MIT LICENSE.<br>')
-    write_lines.append('Copyright Since 2023 (C) YusukeKato All Rights Reserved.<br><br>\n')
+    write_lines.append('&copy; 2023 YusukeKato All Rights Reserved.<br><br>\n')
     write_lines.append('<img style="height:22px!important;margin-left:2px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""><br>\n')
     write_lines.append('</h1>\n')
 
