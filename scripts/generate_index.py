@@ -90,7 +90,7 @@ write_lines.append('<li>2024/05/03: シェル芸オンラインジャッジ一�
 write_lines.append('<li>2023/05/03: シェル芸オンラインジャッジサービス開始</li>\n')
 write_lines.append('</ul>\n')
 write_lines.append('<div class="slide">\n')
-write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240629.png" class="slide-img">\n')
+write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240629_2.png" class="slide-img">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240503_2.jpg" class="slide-img">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20230503_2.jpg" class="slide-img">\n')
 write_lines.append('</div>\n')
