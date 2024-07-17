@@ -170,7 +170,7 @@ for markdown_file in markdown_files:
                     i += 2
                 elif re.match('.+\.gif', read_lines[i]): # GIF画像を変換
                     write_lines.append('<div class="img">\n')
-                    write_lines.append('<img src="https://yusukekato.jp/images/' + read_lines[i] + '" alt="' + read_lines[i+2] + '">\n')
+                    write_lines.append('<img src="https://yusukekato.jp/images/' + read_lines[i] + '.gif' + '" alt="' + read_lines[i+2] + '">\n')
                     write_lines.append('</div>\n')
                     i += 2
                 else: # 文章を変換
@@ -195,7 +195,7 @@ for markdown_file in markdown_files:
     write_lines.append('<li>2023/05/03: シェル芸オンラインジャッジサービス開始</li>\n')
     write_lines.append('</ul>\n')
     write_lines.append('<div class="slide">\n')
-    write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240629.png" class="slide-img">\n')
+    write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240629_2.png" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240503_2.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20230503_2.jpg" class="slide-img">\n')
     write_lines.append('</div>\n')
