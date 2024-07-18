@@ -63,7 +63,7 @@ for markdown_file in markdown_files:
     write_lines.append('<meta charset="utf-8">\n')
     write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
     write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=47">\n')
+    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=48">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.googleapis.com">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n')
     write_lines.append('<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">\n')
@@ -130,6 +130,7 @@ for markdown_file in markdown_files:
                     i -= 1
                     heading_loop_flag = False
                 elif re.match('^-.+', read_lines[i]): # 箇条書きを変換
+                    write_lines.append('<div class="main-ul">\n')
                     write_lines.append('<ul>\n')
                     write_lines.append('<li>' + read_lines[i][2:] + '</li>\n')
                     ul_loop_flag = True
@@ -143,6 +144,7 @@ for markdown_file in markdown_files:
                         elif re.match('^-.+', read_lines[i]):
                             write_lines.append('<li>' + read_lines[i][2:] + '</li>\n')
                     write_lines.append('</ul>\n')
+                    write_lines.append('</div>\n')
                 elif re.match('^```.*', read_lines[i]): # ソースコードを変換
                     write_lines.append('<div class="codeClass"><pre><code>' + read_lines[i+1].replace('<', '&lt;').replace('>', '&gt;') + '\n')
                     i += 1

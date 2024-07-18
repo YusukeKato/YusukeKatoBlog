@@ -302,13 +302,21 @@ body p{
   100% {left: -100%;}
 }
 
+.main-ul {
+  width: 100%;
+}
+
 @media screen and (max-width: 999px) {
   html {
     font-size: 0.9rem;
   }
 
   .alldiv {
-    width: 98%;
+    width: 100%;
+  }
+
+  .main-ul {
+    width: 96%;
   }
   
   p {
