@@ -210,9 +210,6 @@ for markdown_file in markdown_files:
     write_lines.append('<div class="img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">\n')
     write_lines.append('</div>\n')
-    write_lines.append('</footer>\n')
-
-    write_lines.append('<h1></h1>\n')
     write_lines.append('<ul class="nav-list">\n')
     write_lines.append('<li class="nav-list-item">\n')
     write_lines.append('<a href="https://yusukekato.jp/" class="bButton">HOME</a>\n')
@@ -224,6 +221,7 @@ for markdown_file in markdown_files:
     write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>\n')
     write_lines.append('</li>\n')
     write_lines.append('</ul>\n')
+    write_lines.append('</footer>\n')
 
     write_lines.append('</div> <!-- alldiv -->\n')
 
