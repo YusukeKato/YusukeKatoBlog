@@ -198,7 +198,9 @@ ul li {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   padding-left: 0;
+  padding-right: auto;
   margin-left: 0;
+  margin-right: auto;
 }
 
 .aButton {
@@ -419,10 +421,6 @@ body p{
     29% {left: 3.5%;}
     33% {left: -100%;}
     100% {left: -100%;}
-  }
-
-  .main-ul {
-    width: 90%;
   }
 }
 
