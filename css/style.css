@@ -421,7 +421,7 @@ body p{
     100% {left: -100%;}
   }
 
-  ul li {
+  .main-ul {
     width: 90%;
   }
 }
