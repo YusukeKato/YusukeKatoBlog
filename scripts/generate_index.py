@@ -185,7 +185,6 @@ write_lines.append('<a href="https://yusukekato.jp/" class="aButton">ホーム�
 write_lines.append('<div class="img">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">\n')
 write_lines.append('</div>\n')
-write_lines.append('<hr class="BlackLine">\n')
 write_lines.append('<ul class="nav-list">\n')
 write_lines.append('<li class="nav-list-item">\n')
 write_lines.append('<a href="https://yusukekato.jp/" class="bButton">HOME</a>\n')
