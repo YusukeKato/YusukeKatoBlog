@@ -61,7 +61,7 @@ write_lines.append('<body>\n')
 # write_lines.append('<h1 class="headline">\n')
 # write_lines.append('<a>加藤祐介ブログ</a>\n')
 # write_lines.append('</h1>\n')
-write_lines.append('<h1 class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>\n')
+write_lines.append('<h1 id="top" class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>\n')
 # write_lines.append('</header>\n')
 write_lines.append('\n')
 
@@ -83,7 +83,7 @@ write_lines.append('</ul>\n')
 write_lines.append('\n')
 
 # お知らせ生成
-write_lines.append('<h2>お知らせ</h2>\n')
+write_lines.append('<h2 id="news">お知らせ</h2>\n')
 write_lines.append('<ul>\n')
 write_lines.append('<li>2024/06/29: セキセイインコ「れもん」が我が家へ</li>\n')
 write_lines.append('<li>2024/05/03: シェル芸オンラインジャッジ一周年</li>\n')
@@ -99,12 +99,12 @@ write_lines.append('<a href="https://shellgei-online-judge.com/" class="aButton"
 write_lines.append('\n')
 
 # プロフィール生成
-write_lines.append('<h2>このブログについて</h2>\n')
+write_lines.append('<h2 id="about-blog">このブログについて</h2>\n')
 write_lines.append('<a href="https://yusukekato.jp/html/about.html" class="aButton">加藤祐介ブログについて</a>\n')
 write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="aButton">加藤祐介ブログのお問い合わせフォーム</a>\n')
 write_lines.append('<a href="https://github.com/YusukeKato/YusukeKatoBlog" class="aButton">加藤祐介ブログのリポジトリ</a>\n')
 write_lines.append('\n')
-write_lines.append('<h2>私について</h2>\n')
+write_lines.append('<h2 id="about-me">私について</h2>\n')
 write_lines.append('<h3>自己紹介</h3>\n')
 write_lines.append('<p>ロボットやシェル芸、競技プログラミング、ゲーム製作などで日々遊んでいます。\n')
 write_lines.append('大学ではロボットについて勉強していました。\n')
@@ -136,6 +136,7 @@ write_lines.append('<a href="https://atcoder.jp/users/yusuke_kato" class="aButto
 write_lines.append('\n')
 
 # 記事一覧
+year_arr = []
 year = html_files[0][5:9]
 month = html_files[0][10:12]
 year_flag = True
@@ -143,8 +144,9 @@ month_flag = True
 for i in range(len(html_files)):
     # 見出し生成
     if year_flag:
+        year_arr.append(year)
         write_lines.append('\n')
-        write_lines.append('<h2>' + year + '年の記事' + '</h2>\n')
+        write_lines.append('<h2 id="' + year + '">' + year + '年の記事' + '</h2>\n')
         year_flag = False
 
     if month_flag:
@@ -181,6 +183,7 @@ for i in range(len(html_files)):
 write_lines.append('\n')
 write_lines.append('<footer>\n')
 write_lines.append('<hr class="BlackLine">\n')
+write_lines.append('<a href="#top" class="aButton">ページトップへ移動</a>\n')
 write_lines.append('<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>\n')
 write_lines.append('<div class="img">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">\n')
@@ -200,7 +203,7 @@ write_lines.append('</footer>\n')
 
 write_lines.append('</div> <!-- alldiv -->\n')
 
-write_lines.append('<h1 class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">\n')
+write_lines.append('<h1 id="bottom" class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">\n')
 write_lines.append('加藤祐介ブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>\n')
 write_lines.append('加藤祐介ブログのソフトウェアはMITライセンスで公開されています。<br>\n')
 write_lines.append('&copy; 2023 YusukeKato All Rights Reserved.<br><br>\n')
@@ -209,6 +212,21 @@ write_lines.append('</h1>\n')
 
 write_lines.append('</body>\n')
 write_lines.append('</html>\n')
+
+# 目次を追加
+index_position = 65
+write_lines.insert(index_position, '\n')
+write_lines.insert(index_position+1, '<h2 id="index">目次</h2>\n')
+write_lines.insert(index_position+2, '<ul>\n')
+write_lines.insert(index_position+3, '<li><a href="#news">お知らせ</a></li>\n')
+write_lines.insert(index_position+4, '<li><a href="#index">目次</a></li>\n')
+write_lines.insert(index_position+5, '<li><a href="#about-blog">このブログについて</a></li>\n')
+write_lines.insert(index_position+6, '<li><a href="#about-me">私について</a></li>\n')
+for i in range(len(year_arr)):
+    write_lines.insert(index_position+7+i, '<li><a href="#' + year_arr[i] + '">' + year_arr[i] + '年の記事</a></li>\n')
+write_lines.insert(index_position+7+len(year_arr), '<li><a href="#bottom">ページ最下部へ移動</a></li>\n')
+write_lines.insert(index_position+7+len(year_arr)+1, '</ul>\n')
+write_lines.insert(index_position+7+len(year_arr)+2, '\n')
 
 # 書き込み
 with open('../html/index.html', 'w', encoding='UTF-8') as fw:
