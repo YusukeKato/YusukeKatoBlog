@@ -79,7 +79,7 @@ for markdown_file in markdown_files:
     # write_lines.append('<h1 class="headline">\n')
     # write_lines.append('<a>加藤祐介ブログ</a>\n')
     # write_lines.append('</h1>\n')
-    write_lines.append('<h1 class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>\n')
+    write_lines.append('<h1 id="top" class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>\n')
     # write_lines.append('</header>\n')
     write_lines.append('\n')
 
@@ -208,6 +208,7 @@ for markdown_file in markdown_files:
     # footer生成
     write_lines.append('<footer>\n')
     write_lines.append('<hr class="BlackLine">\n')
+    write_lines.append('<a href="#top" class="aButton">ページトップへ移動</a>\n')
     write_lines.append('<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>\n')
     write_lines.append('<div class="img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">\n')
@@ -227,7 +228,7 @@ for markdown_file in markdown_files:
 
     write_lines.append('</div> <!-- alldiv -->\n')
 
-    write_lines.append('<h1 class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">\n')
+    write_lines.append('<h1 id="bottom" class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">\n')
     write_lines.append('加藤祐介ブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>\n')
     write_lines.append('加藤祐介ブログのソフトウェアはMITライセンスで公開されています。<br>\n')
     write_lines.append('&copy; 2023 YusukeKato All Rights Reserved.<br><br>\n')
