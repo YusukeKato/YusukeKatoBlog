@@ -195,7 +195,7 @@ for markdown_file in markdown_files:
     # お知らせ生成
     write_lines.append('<h2 id="news">お知らせ</h2>\n')
     write_lines.append('<ul>\n')
-    write_lines.append('<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコの「れもん」が我が家にやってきました！</a></li>\n')
+    write_lines.append('<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコ「れもん」我が家へ</a></li>\n')
     write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
     write_lines.append('</ul>\n')
     write_lines.append('<div class="slide">\n')
