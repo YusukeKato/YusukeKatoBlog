@@ -208,7 +208,8 @@ for markdown_file in markdown_files:
     # footer生成
     write_lines.append('<footer>\n')
     write_lines.append('<hr class="BlackLine">\n')
-    write_lines.append('<a href="#top" class="aButton">ページトップへ移動</a>\n')
+    write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="aButton">お問い合わせフォームへ</a>\n')
+    write_lines.append('<a href="#top" class="aButton">ページトップへ</a>\n')
     write_lines.append('<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>\n')
     write_lines.append('<div class="img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">\n')
