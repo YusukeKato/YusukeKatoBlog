@@ -246,9 +246,8 @@ for markdown_file in markdown_files:
     for i in range(len(h2_arr)):
         write_lines.insert(index_position+3+i, '<li><a href="#' + str(i) + '">' + h2_arr[i] + '</a></li>\n')
     write_lines.insert(index_position+3+len(h2_arr), '<li><a href="#news">お知らせ</a></li>\n')
-    write_lines.insert(index_position+3+len(h2_arr)+1, '<li><a href="#bottom">ページ最下部へ移動</a></li>\n')
-    write_lines.insert(index_position+3+len(h2_arr)+2, '</ul>\n')
-    write_lines.insert(index_position+3+len(h2_arr)+3, '\n')
+    write_lines.insert(index_position+3+len(h2_arr)+1, '</ul>\n')
+    write_lines.insert(index_position+3+len(h2_arr)+2, '\n')
 
     # 書き込み
     with open(markdown_file.replace('markdown', 'html').replace('.md', '.html'), 'w', encoding='UTF-8') as fw:
