@@ -100,6 +100,8 @@ for markdown_file in markdown_files:
     write_lines.append('<p>記事投稿日: ' + date + '</p>\n')
     write_lines.append('<p>最終更新日: ' + update + '</p>\n')
     i = 0
+    h2_id = 0
+    h2_arr = []
     while i < len(read_lines):
         i += 1
         if i >= len(read_lines):
@@ -112,7 +114,9 @@ for markdown_file in markdown_files:
             if re.match('^# .+', read_lines[i]):
                 write_lines.append('<h1>' + read_lines[i][2:] + '</h1>\n')
             elif re.match('^## .+', read_lines[i]):
-                write_lines.append('<h2>' + read_lines[i][3:] + '</h2>\n')
+                write_lines.append('<h2 id="' + str(h2_id) + '">' + read_lines[i][3:] + '</h2>\n')
+                h2_id += 1
+                h2_arr.append(read_lines[i][3:])
             elif re.match('^### .+', read_lines[i]):
                 write_lines.append('<h3>' + read_lines[i][4:] + '</h3>\n')
             elif re.match('^#### .+', read_lines[i]):
@@ -190,7 +194,7 @@ for markdown_file in markdown_files:
 
     # お知らせ生成
     write_lines.append('\n')
-    write_lines.append('<h2>お知らせ</h2>\n')
+    write_lines.append('<h2 id="news">お知らせ</h2>\n')
     write_lines.append('<ul>\n')
     write_lines.append('<li>2024/06/29: セキセイインコ「れもん」が我が家へ</li>\n')
     write_lines.append('<li>2024/05/03: シェル芸オンラインジャッジ一周年</li>\n')
@@ -237,6 +241,18 @@ for markdown_file in markdown_files:
 
     write_lines.append('</body>\n')
     write_lines.append('</html>\n')
+
+    # 目次
+    index_position = 53
+    write_lines.insert(index_position, '\n')
+    write_lines.insert(index_position+1, '<h2 id="index">目次</h2>\n')
+    write_lines.insert(index_position+2, '<ul>\n')
+    for i in range(len(h2_arr)):
+        write_lines.insert(index_position+3+i, '<li><a href="#' + str(i) + '">' + h2_arr[i] + '</a></li>\n')
+    write_lines.insert(index_position+3+len(h2_arr), '<li><a href="#news">お知らせ</a></li>\n')
+    write_lines.insert(index_position+3+len(h2_arr)+1, '<li><a href="#bottom">ページ最下部へ移動</a></li>\n')
+    write_lines.insert(index_position+3+len(h2_arr)+2, '</ul>\n')
+    write_lines.insert(index_position+3+len(h2_arr)+3, '\n')
 
     # 書き込み
     with open(markdown_file.replace('markdown', 'html').replace('.md', '.html'), 'w', encoding='UTF-8') as fw:
