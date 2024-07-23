@@ -85,17 +85,14 @@ write_lines.append('\n')
 # お知らせ生成
 write_lines.append('<h2 id="news">お知らせ</h2>\n')
 write_lines.append('<ul>\n')
-write_lines.append('<li>2024/06/29: セキセイインコ「れもん」が我が家へ</li>\n')
-write_lines.append('<li>2024/05/03: シェル芸オンラインジャッジ一周年</li>\n')
-write_lines.append('<li>2023/05/03: シェル芸オンラインジャッジサービス開始</li>\n')
+write_lines.append('<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコの「れもん」が我が家にやってきました！</a></li>\n')
+write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
 write_lines.append('</ul>\n')
 write_lines.append('<div class="slide">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240629_2.jpg" class="slide-img">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240503_2.jpg" class="slide-img">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20230503_2.jpg" class="slide-img">\n')
 write_lines.append('</div>\n')
-write_lines.append('<a href="https://yusukekato.jp/html/2024/0630.html" class="aButton">セキセイインコの「れもん」が我が家にやってきました！</a>\n')
-write_lines.append('<a href="https://shellgei-online-judge.com/" class="aButton">シェル芸オンラインジャッジ</a>\n')
 write_lines.append('\n')
 
 # プロフィール生成
@@ -214,7 +211,7 @@ write_lines.append('</body>\n')
 write_lines.append('</html>\n')
 
 # 目次を追加
-index_position = 65
+index_position = 62
 write_lines.insert(index_position, '\n')
 write_lines.insert(index_position+1, '<h2 id="index">目次</h2>\n')
 write_lines.insert(index_position+2, '<ul>\n')
