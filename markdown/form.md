@@ -15,3 +15,6 @@ https://docs.google.com/forms/d/e/1FAIpQLSefLzdebOIP_14ZVQLnyxOJZz8vPARVgNKyGaFb
 
 加藤祐介ブログのお問い合わせフォーム
 
+## お問い合わせフォーム
+お問い合わせはこちらのフォームからお願いします。
+
