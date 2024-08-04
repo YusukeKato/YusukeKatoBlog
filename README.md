@@ -16,6 +16,9 @@ Automatically deployed with GitHub Actions.
 Execute the following command:
 ```sh
 cd scripts
+# ex: 2024/08/04
+bash resize_images.bash 20240804
+# ex: ALL
 bash resize_images.bash
 ```
 
