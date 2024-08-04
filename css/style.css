@@ -283,7 +283,7 @@ body p{
   width: inherit;
   height: inherit;
   left: 100%;
-  animation: slide-anime 9s linear infinite;
+  animation: slide-anime 15s linear infinite;
 }
 .slide-img {
   width: inherit;
@@ -292,8 +292,8 @@ body p{
   margin-right: auto;
 }
 .slide img:nth-of-type(1) {animation-delay: 0s;}
-.slide img:nth-of-type(2) {animation-delay: 3s;}
-.slide img:nth-of-type(3) {animation-delay: 6s;}
+.slide img:nth-of-type(2) {animation-delay: 5s;}
+.slide img:nth-of-type(3) {animation-delay: 10s;}
 @keyframes slide-anime {
   0% {left: 100%;}
   4% {left: 3%;}
