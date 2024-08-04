@@ -85,6 +85,7 @@ write_lines.append('\n')
 # お知らせ生成
 write_lines.append('<h2 id="news">お知らせ</h2>\n')
 write_lines.append('<ul>\n')
+write_lines.append('<li>2024/08/01: <a href="https://yusukekato.jp/html/2024/0801.html">れもんが我が家に来て一ヶ月</a></li>\n')
 write_lines.append('<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコ「れもん」我が家へ</a></li>\n')
 write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
 write_lines.append('</ul>\n')
@@ -103,10 +104,11 @@ write_lines.append('</details>\n')
 write_lines.append('\n')
 
 # プロフィール生成
-write_lines.append('<h2 id="about-blog">このブログについて</h2>\n')
+write_lines.append('<h2 id="about-blog">加藤祐介ブログの情報</h2>\n')
+write_lines.append('<p>加藤祐介ブログについては下記をご覧ください。</p>\n')
 write_lines.append('<a href="https://yusukekato.jp/html/about.html" class="aButton">加藤祐介ブログについて</a>\n')
 write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="aButton">加藤祐介ブログのお問い合わせフォーム</a>\n')
-write_lines.append('<a href="https://github.com/YusukeKato/YusukeKatoBlog" class="aButton">加藤祐介ブログのリポジトリ</a>\n')
+write_lines.append('<a href="https://github.com/YusukeKato/YusukeKatoBlog" class="aButton">加藤祐介ブログのGitHubリポジトリ</a>\n')
 write_lines.append('\n')
 
 # 記事一覧
