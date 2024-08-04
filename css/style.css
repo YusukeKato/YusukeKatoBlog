@@ -306,6 +306,46 @@ body p{
   width: 100%;
 }
 
+details {
+  width: 94%;
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
+  font-size: 1.0rem;
+  border: 1px solid #aaa;
+  border-radius: 0px;
+  padding: 0.5rem 0.5rem 0;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #F9F9F9;
+}
+
+summary {
+  font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
+  font-weight: normal;
+  font-size: 1.0rem;
+  margin: -0.5rem -0.5rem 0;
+  padding: 0.5rem;
+  background-color: #FFF;
+}
+
+details[open] {
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom:0.2rem
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #F9F9F9;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #F9F9F9;
+}
+
 @media screen and (max-width: 999px) {
   html {
     font-size: 0.9rem;

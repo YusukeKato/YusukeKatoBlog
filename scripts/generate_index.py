@@ -49,7 +49,7 @@ write_lines.append('<!-- main -->\n')
 write_lines.append('<meta charset="utf-8">\n')
 write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
 write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=48">\n')
+write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=49">\n')
 write_lines.append('<link rel="preconnect" href="https://fonts.googleapis.com">\n')
 write_lines.append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n')
 write_lines.append('<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">\n')
@@ -93,6 +93,13 @@ write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_2024062
 write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20240503_2.jpg" class="slide-img">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/news/SOJ_news_20230503_2.jpg" class="slide-img">\n')
 write_lines.append('</div>\n')
+write_lines.append('<details>\n')
+write_lines.append('<summary>過去のお知らせ</summary>\n')
+write_lines.append('<ul>\n')
+write_lines.append('<li>2023/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ開始</a></li>\n')
+write_lines.append('<li>2023/04/08: <a href="https://yusukekato.jp/">加藤祐介ブログ開始</a></li>\n')
+write_lines.append('</ul>\n')
+write_lines.append('</details>\n')
 write_lines.append('\n')
 
 # プロフィール生成
@@ -183,6 +190,10 @@ write_lines.append('</html>\n')
 
 # 目次を追加
 index_position = 62
+for i in range(len(write_lines)):
+    if write_lines[i] == '</details>\n':
+        index_position = i+1
+        break
 write_lines.insert(index_position, '\n')
 write_lines.insert(index_position+1, '<h2 id="index">目次</h2>\n')
 write_lines.insert(index_position+2, '<ul>\n')
