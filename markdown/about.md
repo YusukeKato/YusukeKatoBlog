@@ -63,9 +63,9 @@ https://note.com/yusuke_kato
 note : yusuke_kato
 
 ### その他の外部サイト
-https://atcoder.jp/users/yusuke_kato
+https://atcoder.jp/users/yusukekato
 
-AtCoder : yusuke_kato
+AtCoder : yusukekato
 
 ## 加藤祐介ブログについて
 
