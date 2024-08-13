@@ -1,7 +1,6 @@
 # YusukeKatoBlog
-Blog URL: https://yusukekato.jp/
-
-LICENSE : https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE
+- Blog URL: https://yusukekato.jp/
+- LICENSE : https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE
 
 ## How to update blog
 
@@ -15,6 +14,10 @@ Automatically deployed with GitHub Actions.
 ### Resize images
 Execute the following command:
 ```sh
+# install
+sudo apt install ffmpeg
+sudo apt install imagemagick
+
 cd scripts
 # ex: 2024/08/04
 bash resize_images.bash 20240804
