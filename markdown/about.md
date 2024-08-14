@@ -24,9 +24,9 @@ https://github.com/YusukeKato
 
 GitHub : YusukeKato
 
-https://twitter.com/y_kato222
+https://twitter.com/yusukekato_sub
 
-X/Twitter : y_kato222
+X/Twitter : yusukekato_sub
 
 https://twitter.com/yusukekato_main
 
