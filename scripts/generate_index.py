@@ -113,6 +113,7 @@ write_lines.append('\n')
 
 # シリーズ記事一覧
 write_lines.append('<h2 id="series">シリーズ一覧</h2>\n')
+write_lines.append('<p>各シリーズを下記にまとめてあります。</p>\n')
 series = ["lemon", "alpacahack", "ros2", "cooking", "others"]
 series_name = ["セキセイインコ「れもん」の日記", "AlpacaHackで始めるCTF入門", "ROS 2の記事", "料理日記", "その他"]
 for j in range(len(series)):
@@ -221,7 +222,7 @@ write_lines.insert(index_position+1, '<h2 id="index">目次</h2>\n')
 write_lines.insert(index_position+2, '<ul>\n')
 write_lines.insert(index_position+3, '<li><a href="#news">お知らせ</a></li>\n')
 write_lines.insert(index_position+4, '<li><a href="#index">目次</a></li>\n')
-write_lines.insert(index_position+5, '<li><a href="#about-blog">このブログについて</a></li>\n')
+write_lines.insert(index_position+5, '<li><a href="#about-blog">加藤祐介ブログの情報</a></li>\n')
 write_lines.insert(index_position+6, '<li><a href="#series">シリーズ一覧</a></li>\n')
 for i in range(len(year_arr)):
     write_lines.insert(index_position+7+i, '<li><a href="#' + year_arr[i] + '">' + year_arr[i] + '年の記事</a></li>\n')
