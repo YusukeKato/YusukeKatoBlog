@@ -8,6 +8,11 @@ markdown_files = []
 with open('./markdown_list.txt', 'r', encoding='UTF-8') as fr:
     markdown_files = [rl.rstrip() for rl in fr.readlines()]
 
+# htmlのファイル名を全て取得
+html_files = []
+with open('./html_list2.txt', 'r', encoding='UTF-8') as fr:
+    html_files = [rl.rstrip() for rl in fr.readlines()]
+
 print('start: markdown to html')
 
 # markdownファイルを一つずつ処理
