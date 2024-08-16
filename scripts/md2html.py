@@ -213,6 +213,28 @@ for markdown_file in markdown_files:
     write_lines.append('</details>\n')
     write_lines.append('\n')
 
+    # シリーズ記事一覧
+    write_lines.append('<h2 id="series">シリーズ記事一覧</h2>\n')
+    write_lines.append('<p>各シリーズの記事を下記にまとめてあります。</p>\n')
+    series = ["lemon", "alpacahack", "ros2", "cooking", "others"]
+    series_name = ["セキセイインコ「れもん」の日記", "AlpacaHackで始めるCTF入門", "ROS 2の記事", "料理日記", "その他"]
+    for j in range(len(series)):
+        # 一覧作成
+        write_lines.append('<details>\n')
+        write_lines.append('<summary>' + series_name[j] + '</summary>\n')
+        for i in range(len(html_files)):
+            # 読み込み用
+            read_lines = []
+            # 読み込み
+            with open(markdown_files[i], 'r', encoding='UTF-8') as fr:
+                read_lines = [rl.rstrip() for rl in fr.readlines()]
+            if series[j] in read_lines[6]:
+                title = read_lines[1][8:]
+                write_lines.append('<a href="https://yusukekato.jp/' + html_files[i] + '" class="aButton">' + title + '</a>\n')
+        write_lines.append('</details>\n')
+        write_lines.append('\n')
+
+
     # footer生成
     write_lines.append('<footer>\n')
     write_lines.append('<hr class="BlackLine">\n')
@@ -246,27 +268,6 @@ for markdown_file in markdown_files:
 
     write_lines.append('</body>\n')
     write_lines.append('</html>\n')
-
-    # シリーズ記事一覧
-    write_lines.append('<h2 id="series">シリーズ記事一覧</h2>\n')
-    write_lines.append('<p>各シリーズの記事を下記にまとめてあります。</p>\n')
-    series = ["lemon", "alpacahack", "ros2", "cooking", "others"]
-    series_name = ["セキセイインコ「れもん」の日記", "AlpacaHackで始めるCTF入門", "ROS 2の記事", "料理日記", "その他"]
-    for j in range(len(series)):
-        # 一覧作成
-        write_lines.append('<details>\n')
-        write_lines.append('<summary>' + series_name[j] + '</summary>\n')
-        for i in range(len(html_files)):
-            # 読み込み用
-            read_lines = []
-            # 読み込み
-            with open(markdown_files[i], 'r', encoding='UTF-8') as fr:
-                read_lines = [rl.rstrip() for rl in fr.readlines()]
-            if series[j] in read_lines[6]:
-                title = read_lines[1][8:]
-                write_lines.append('<a href="https://yusukekato.jp/' + html_files[i] + '" class="aButton">' + title + '</a>\n')
-        write_lines.append('</details>\n')
-        write_lines.append('\n')
 
     # 目次
     index_position = 53
