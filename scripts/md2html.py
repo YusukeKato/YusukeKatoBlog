@@ -265,8 +265,8 @@ for markdown_file in markdown_files:
             if series[j] in read_lines[6]:
                 title = read_lines[1][8:]
                 write_lines.append('<a href="https://yusukekato.jp/' + html_files[i] + '" class="aButton">' + title + '</a>\n')
-    write_lines.append('</details>\n')
-    write_lines.append('\n')
+        write_lines.append('</details>\n')
+        write_lines.append('\n')
 
     # 目次
     index_position = 53
