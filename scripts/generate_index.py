@@ -222,10 +222,11 @@ write_lines.insert(index_position+2, '<ul>\n')
 write_lines.insert(index_position+3, '<li><a href="#news">お知らせ</a></li>\n')
 write_lines.insert(index_position+4, '<li><a href="#index">目次</a></li>\n')
 write_lines.insert(index_position+5, '<li><a href="#about-blog">このブログについて</a></li>\n')
+write_lines.insert(index_position+6, '<li><a href="#series">シリーズ一覧</a></li>\n')
 for i in range(len(year_arr)):
-    write_lines.insert(index_position+6+i, '<li><a href="#' + year_arr[i] + '">' + year_arr[i] + '年の記事</a></li>\n')
-write_lines.insert(index_position+6+len(year_arr), '</ul>\n')
-write_lines.insert(index_position+6+len(year_arr)+1, '\n')
+    write_lines.insert(index_position+7+i, '<li><a href="#' + year_arr[i] + '">' + year_arr[i] + '年の記事</a></li>\n')
+write_lines.insert(index_position+7+len(year_arr), '</ul>\n')
+write_lines.insert(index_position+7+len(year_arr)+1, '\n')
 
 # 書き込み
 with open('../html/index.html', 'w', encoding='UTF-8') as fw:
