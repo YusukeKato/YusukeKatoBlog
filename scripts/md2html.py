@@ -8,6 +8,10 @@ markdown_files = []
 with open('./markdown_list.txt', 'r', encoding='UTF-8') as fr:
     markdown_files = [rl.rstrip() for rl in fr.readlines()]
 
+markdown_files2 = []
+with open('./markdown_list2.txt', 'r', encoding='UTF-8') as fr:
+    markdown_files2 = [rl.rstrip() for rl in fr.readlines()]
+
 # htmlのファイル名を全て取得
 html_files = []
 with open('./html_list2.txt', 'r', encoding='UTF-8') as fr:
@@ -235,7 +239,7 @@ for markdown_file in markdown_files:
             # 読み込み用
             read_lines = []
             # 読み込み
-            with open(markdown_files[i], 'r', encoding='UTF-8') as fr:
+            with open(markdown_files2[i], 'r', encoding='UTF-8') as fr:
                 read_lines = [rl.rstrip() for rl in fr.readlines()]
             if series[j] in read_lines[6]:
                 title = read_lines[1][8:]
