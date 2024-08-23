@@ -30,4 +30,5 @@ jobs:
             cd ~/public_html/yusukekato.jp/YusukeKatoBlog/scripts/
             git pull origin main
             bash ./local_update.bash
+            bash ./local_update.bash
             bash ./server_update.bash

@@ -1,8 +1,8 @@
 echo "start: resize images"
 
 # delete
+find ../images | grep "^../images/20.*/" | grep -e "Identifier$" | xargs -I@ rm @
 find ../images | grep "^../images/20.*/"$1 | grep -e ".png.png$" -e ".jpg.png$" -e ".jpg.jpg$" -e ".png.jpg$" -e ".gif.gif$" | xargs -I@ rm @
-find ../images | grep "^../images/20.*/"$1 | grep -e "Zone.Identifier$" | xargs -I@ rm @
 
 # rename
 find ../images | grep "^../images/20.*/"$1 | grep -e ".jpeg$" | sed 's/.jpeg//g' | xargs -I@ mv @".jpeg" @".jpg"
