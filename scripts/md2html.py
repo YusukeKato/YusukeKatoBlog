@@ -176,12 +176,16 @@ for markdown_file in markdown_files:
                     i += 2
                 elif re.match('.+\.png', read_lines[i]) or re.match('.+\.jpg', read_lines[i]): # 画像を変換
                     write_lines.append('<div class="img">\n')
-                    write_lines.append('<img src="https://yusukekato.jp/images/' + read_lines[i] + '.jpg' + '" alt="' + read_lines[i+2] + '">\n')
+                    image_path = read_lines[i][17:]
+                    image_path = image_path[:-1]
+                    write_lines.append('<img src="https://yusukekato.jp/images/' + image_path + '.jpg' + '" alt="' + read_lines[i+2] + '">\n')
                     write_lines.append('</div>\n')
                     i += 2
                 elif re.match('.+\.gif', read_lines[i]): # GIF画像を変換
                     write_lines.append('<div class="img">\n')
-                    write_lines.append('<img src="https://yusukekato.jp/images/' + read_lines[i] + '.gif' + '" alt="' + read_lines[i+2] + '">\n')
+                    image_path = read_lines[i][17:]
+                    image_path = image_path[:-1]
+                    write_lines.append('<img src="https://yusukekato.jp/images/' + image_path + '.gif' + '" alt="' + read_lines[i+2] + '">\n')
                     write_lines.append('</div>\n')
                     i += 2
                 else: # 文章を変換
