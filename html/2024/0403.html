@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9H7QJT6XG');
+</script>
+<!-- SNS Card -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />
+<meta property="og:image" content="https://yusukekato.jp/images/summary.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@yusukekato_main" />
+<meta name="twitter:image" content="https://yusukekato.jp/images/summary_large_image.png" />
+<!-- 変更 -->
+<meta name="twitter:title" content="『Omega Crafter』プレイ日記: チュートリアル編 / Yusuke Kato Blog" />
+<meta property="og:url" content="https://yusukekato.jp/../html/2024/0403.html" />
+<meta property="og:title" content="『Omega Crafter』プレイ日記: チュートリアル編 / Yusuke Kato Blog" />
+<meta property="og:description" content="2024年3月29日にSteamで発売されたPreferred Networksのオープンワールドサバイバルクラフトゲーム『Omega Crafter』をさっそく遊んでみました。" />
+<meta name="twitter:description" content="2024年3月29日にSteamで発売されたPreferred Networksのオープンワールドサバイバルクラフトゲーム『Omega Crafter』をさっそく遊んでみました。" />
+<title>『Omega Crafter』プレイ日記: チュートリアル編 / Yusuke Kato Blog</title>
+<meta name="description" content="2024年3月29日にSteamで発売されたPreferred Networksのオープンワールドサバイバルクラフトゲーム『Omega Crafter』をさっそく遊んでみました。" />
+<!-- main -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://yusukekato.jp/images/favicon.png">
+<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=51">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 id="top" class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>
+
+<div class="alldiv">
+<ul class="nav-list">
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/" class="bButton">HOME</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/about.html" class="bButton">ABOUT</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>
+</li>
+</ul>
+<h1>『Omega Crafter』プレイ日記: チュートリアル編</h1>
+<p>記事投稿日: 2024年4月3日（水）</p>
+<p>最終更新日: 2024年4月3日（水）</p>
+
+<h2 id="index">目次</h2>
+<ul>
+<li><a href="#0">はじめに</a></li>
+<li><a href="#1">ゲーム概要</a></li>
+<li><a href="#2">タイトル画面</a></li>
+<li><a href="#3">キャラクター作成</a></li>
+<li><a href="#4">ワールド作成</a></li>
+<li><a href="#5">プレイ開始</a></li>
+<li><a href="#6">ヘルプ</a></li>
+<li><a href="#7">マップ</a></li>
+<li><a href="#8">ビルド</a></li>
+<li><a href="#9">作業台を設置</a></li>
+<li><a href="#10">素材集め</a></li>
+<li><a href="#11">プログラミング</a></li>
+<li><a href="#12">スキル</a></li>
+<li><a href="#13">街の様子</a></li>
+<li><a href="#14">夜の様子</a></li>
+<li><a href="#15">街グラミーの自動化</a></li>
+<li><a href="#16">敵との遭遇</a></li>
+<li><a href="#17">探索</a></li>
+<li><a href="#18">おわりに</a></li>
+<li><a href="#news">お知らせ</a></li>
+<li><a href="#series">シリーズ記事一覧</a></li>
+</ul>
+
+<h2 id="0">はじめに</h2>
+<p>2024年3月29日にSteamで発売されたPreferred Networksのオープンワールドサバイバルクラフトゲーム『Omega Crafter』をさっそく遊んでみました。
+まだまだ始めたばかりですが、おもしろいゲームでしたのでプレイ日記を書いておこうと思います。
+みなさんもぜひ一緒に遊びましょう！
+</p>
+<h2 id="1">ゲーム概要</h2>
+<p>『Omega Crafter』はプログラミング可能な相棒の「グラミー」を駆使しながらサバイバル生活をエンジョイするゲームです。
+詳しい内容は下記のリンクから公式サイトをご覧ください。
+</p>
+<a href="https://www.preferred.jp/ja/news/pr20240329/" class="aButton">Preferred Networksの公式サイト</a>
+<p>Steamのページは下記のリンクからアクセスできます。
+</p>
+<a href="https://store.steampowered.com/app/2262080/Omega_Crafter/" class="aButton">Steamのページ</a>
+<h2 id="2">タイトル画面</h2>
+<p>Steamで購入した『Omega Crafter』を起動するとタイトル画面が表示されます（ちなみに発売日から一週間は10%割引です）。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_1.png.jpg" alt="タイトル画面">
+</div>
+<p>新しいゲームのタイトル画面を見るとワクワクしますね！
+</p>
+<h2 id="3">キャラクター作成</h2>
+<p>次は操作するキャラクターと相棒のグラミーを作成しました。
+私はいつも「kuro」という名前でゲームを遊んでいます。
+相棒は「tama」です。
+当たり障りのないちょうどよい名前ですね。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_2.png.jpg" alt="キャラクタ作成画面">
+</div>
+<h2 id="4">ワールド作成</h2>
+<p>ゲームを始めるにあたってワールドを作成しました。
+難易度はとりあえず「ノーマル」です（敵の強さが変わるのかしら？）。
+マルチプレイで他の人のワールドに入る場合は「ホスト」ではなく「参加」を選べば良さそうですね。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_3.png.jpg" alt="ワールド作成画面">
+</div>
+<p>ワールド選択画面で先ほど作成したワールドを選択します。
+このときに下記画像のようにフレンドと遊ぶか一人で遊ぶか選べます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_4.png.jpg" alt="ワールド選択画面">
+</div>
+<h2 id="5">プレイ開始</h2>
+<p>ゲームが開始しました。
+グラフィックが綺麗ですね。
+左下にProject Managerであるシャノンさん（？）からのメッセージウィンドウが表示されています。
+とりあえずこのメッセージの通りに進めていけば良さそうです。
+操作はマウスとキーボード（WASDキー）で行います。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_5.png.jpg" alt="プレイ開始画面">
+</div>
+<h2 id="6">ヘルプ</h2>
+<p>キーボードの「H」を押すとヘルプウィンドウが表示されます。
+ここを見れば次に何をすればよいか分かって便利です。
+またタブを切り替えるとスキルのページも確認できます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_6.png.jpg" alt="ヘルプ画面">
+</div>
+<h2 id="7">マップ</h2>
+<p>キーボードの「M」を押すとマップウィンドウが表示されます。
+最初は小さい範囲しか見えませんが、探索を進めていくと徐々にマップが広がっていきます。
+ワクワクしますね！
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_7.png.jpg" alt="マップ画面">
+</div>
+<h2 id="8">ビルド</h2>
+<p>キーボードの「B」を押すとビルドウィンドウが表示されます。
+何やら色々作れるようですが、まずはメッセージに従って「街のシンボル」をビルドしてみます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_8.png.jpg" alt="ビルド画面">
+</div>
+<p>「街のシンボル」を設置しました。
+「街のシンボル」では新たにグラミーを召喚することもできます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_9.png.jpg" alt="街のシンボルを設置">
+</div>
+<h2 id="9">作業台を設置</h2>
+<p>次はクラフトゲームの定番である作業台を作成しました。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_10.png.jpg" alt="作業台を設置">
+</div>
+<p>作業台では様々なアイテムを作成できます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_11.png.jpg" alt="作業台で作成できるアイテム">
+</div>
+<h2 id="10">素材集め</h2>
+<p>クラフトゲームと言えば素材集めですね。
+作業台があっても素材がなくては何も作れないので、とりあえず手動で石と木材を集めます。
+</p>
+<p>石集めの様子↓
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_12.png.jpg" alt="石集め">
+</div>
+<p>木材集めの様子↓
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_13.png.jpg" alt="木材集め">
+</div>
+<h2 id="11">プログラミング</h2>
+<p>『Omega Crafter』の醍醐味であるプログラミングの登場です。
+キーボードの「G」を押すと相棒グラミーのプログラミングウィンドウが表示されます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_14.png.jpg" alt="プログラミング画面1">
+</div>
+<p>あまり触ったことはないのですが、プログラミング言語のScratchみたいな感じでしょうか。
+</p>
+<p>テンプレートのプログラム「伐採」をロードしてからプレイボタン（三角のボタン）を押すと、
+相棒グラミーが近くの木を伐採し始めます。
+素材集めの自動化、感動しますね！
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_15.png.jpg" alt="プログラミングの様子">
+</div>
+<p>最初は何が何やら分かりませんでしたが、テンプレートのプログラムを参考にすれば簡単に自動化できる気がしてきました。
+ワクワクしてきましたね！
+</p>
+<h2 id="12">スキル</h2>
+<p>キャラクターや相棒グラミーのレベルが上がるとスキルポイントが手に入ります。
+このポイントを割り振ることでスキルを取得できるようです。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_16.png.jpg" alt="スキル画面">
+</div>
+<h2 id="13">街の様子</h2>
+<p>チュートリアルを進めていくと加工台やかがり火も設置することになります。
+加工台では弓矢や樹皮などが作成できます。
+かがり火は夜を越すことができてとても便利です。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_17.png.jpg" alt="街の様子">
+</div>
+<h2 id="14">夜の様子</h2>
+<p>夜はとても暗いですね。
+ほとんど何も見えません。
+設定でどうにかなるものなのか、
+かがり火で寝るしかないのか。
+とりあえずはかがり火で夜を越すことにします。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_18.png.jpg" alt="夜の様子">
+</div>
+<h2 id="15">街グラミーの自動化</h2>
+<p>「街のシンボル」で街グラミーを召喚できます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_19.png.jpg" alt="街グラミーの召喚">
+</div>
+<p>街グラミーは下記画像のように設定することで弓矢作成を自動で行ってくれました。
+とてもありがたいですね！
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_20.png.jpg" alt="クラフトの自動化">
+</div>
+<p>街グラミーが弓矢を自動で作ってくれている様子↓
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_21.png.jpg" alt="街グラミーが弓矢を自動で作ってくれている様子">
+</div>
+<h2 id="16">敵との遭遇</h2>
+<p>ワールドを探索していると敵とも遭遇します。
+自分の攻撃に加えて相棒グラミーも攻撃してくれます。
+難易度「ノーマル」だと敵が一体だけなら負ける気がしません（囲まれると大変かも？）。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_22.png.jpg" alt="敵との遭遇">
+</div>
+<h2 id="17">探索</h2>
+<p>オープンワールドの探索はやっぱり楽しいですね。
+少し探索しただけで気になるものがいくつもありました。
+果たしてこのゲームに終わりはあるのでしょうか。
+</p>
+<p>ボスっぽい何か↓
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_23.png.jpg" alt="ボスっぽい何か">
+</div>
+<p>湖の真ん中にいる何か↓
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_24.png.jpg" alt="湖の真ん中にいる何か">
+</div>
+<p>敵のアジトっぽい何か↓
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240403_25.png.jpg" alt="敵のアジトっぽい何か">
+</div>
+<h2 id="18">おわりに</h2>
+<p>『Omega Crafter』おもしろいですね！
+</p>
+<p>まだまだ始めたばかりでプログラミングによる自動化も効率化もほとんど行ってはいませんが、
+グラフィックも綺麗だし、オープンワールドならではの自由度の高さもあって楽しいです。
+引き続き遊んでいきたいと思います。
+プレイ日記も残していくはずなので今後もよろしくお願いします。
+それでは、また。
+</p>
+<h2 id="news">お知らせ</h2>
+<ul>
+<li>2024/08/01: <a href="https://yusukekato.jp/html/2024/0801.html">れもんが我が家に来て一ヶ月</a></li>
+<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコ「れもん」我が家へ</a></li>
+<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>
+</ul>
+<div class="slide">
+<img src="https://yusukekato.jp/images/news/news_20240804.jpg" class="slide-img">
+<img src="https://yusukekato.jp/images/news/news_20240629.jpg" class="slide-img">
+<img src="https://yusukekato.jp/images/news/news_20240503.jpg" class="slide-img">
+</div>
+<details>
+<summary>過去のお知らせ</summary>
+<ul>
+<li>2023/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ開始</a></li>
+<li>2023/04/08: <a href="https://yusukekato.jp/">加藤祐介ブログ開始</a></li>
+</ul>
+</details>
+
+<h2 id="series">シリーズ記事一覧</h2>
+<p>各シリーズの記事を下記にまとめてあります。</p>
+<details>
+<summary>セキセイインコ「れもん」の日記</summary>
+</details>
+
+<details>
+<summary>AlpacaHackで始めるCTF入門</summary>
+</details>
+
+<details>
+<summary>シェル芸</summary>
+</details>
+
+<details>
+<summary>ROS 2</summary>
+</details>
+
+<details>
+<summary>料理日記</summary>
+</details>
+
+<details>
+<summary>その他</summary>
+</details>
+
+<footer>
+<hr class="BlackLine">
+<a href="https://yusukekato.jp/html/form.html" class="aButton">お問い合わせフォームへ</a>
+<a href="#top" class="aButton">ページトップへ</a>
+<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
+<div class="img">
+<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">
+</div>
+<ul class="nav-list">
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/" class="bButton">HOME</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/about.html" class="bButton">ABOUT</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>
+</li>
+</ul>
+</footer>
+</div> <!-- alldiv -->
+<h1 id="bottom" class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+加藤祐介ブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>
+加藤祐介ブログのソフトウェアはMITライセンスで公開されています。<br>
+&copy; 2023 YusukeKato All Rights Reserved.<br><br>
+<img style="height:22px!important;margin-left:2px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""><br>
+</h1>
+</body>
+</html>

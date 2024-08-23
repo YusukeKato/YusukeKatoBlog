@@ -4,6 +4,9 @@
 # generate markdown list
 bash generate_markdown_list.bash
 
+# generate html list 必要？
+bash generate_html_list.bash
+
 # markdown to html
 bash md2html.bash
 
