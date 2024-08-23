@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9H7QJT6XG');
+</script>
+<!-- SNS Card -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />
+<meta property="og:image" content="https://yusukekato.jp/images/summary.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@yusukekato_main" />
+<meta name="twitter:image" content="https://yusukekato.jp/images/summary_large_image.png" />
+<!-- 変更 -->
+<meta name="twitter:title" content="AlpacaHackで始めるCTF入門1：初めてのCTF / Yusuke Kato Blog" />
+<meta property="og:url" content="https://yusukekato.jp/../html/2024/0813.html" />
+<meta property="og:title" content="AlpacaHackで始めるCTF入門1：初めてのCTF / Yusuke Kato Blog" />
+<meta property="og:description" content="個人戦CTFを開催するプラットフォーム「AlpacaHack」に参加してCTFに入門してみようと思います。" />
+<meta name="twitter:description" content="個人戦CTFを開催するプラットフォーム「AlpacaHack」に参加してCTFに入門してみようと思います。" />
+<title>AlpacaHackで始めるCTF入門1：初めてのCTF / Yusuke Kato Blog</title>
+<meta name="description" content="個人戦CTFを開催するプラットフォーム「AlpacaHack」に参加してCTFに入門してみようと思います。" />
+<!-- main -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://yusukekato.jp/images/favicon.png">
+<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=51">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 id="top" class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>
+
+<div class="alldiv">
+<ul class="nav-list">
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/" class="bButton">HOME</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/about.html" class="bButton">ABOUT</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>
+</li>
+</ul>
+<h1>AlpacaHackで始めるCTF入門1：初めてのCTF</h1>
+<p>記事投稿日: 2024年8月13日（火）</p>
+<p>最終更新日: 2024年8月14日（水）</p>
+
+<h2 id="index">目次</h2>
+<ul>
+<li><a href="#0">はじめに</a></li>
+<li><a href="#1">AlpacaHackとは</a></li>
+<li><a href="#2">CTFとは</a></li>
+<li><a href="#3">AlpacaHackにアクセス</a></li>
+<li><a href="#4">さっそく解いてみる</a></li>
+<li><a href="#5">追記（2024/08/14）</a></li>
+<li><a href="#6">おわりに</a></li>
+<li><a href="#7">次回の記事</a></li>
+<li><a href="#news">お知らせ</a></li>
+<li><a href="#series">シリーズ記事一覧</a></li>
+</ul>
+
+<h2 id="0">はじめに</h2>
+<h3>はじめに</h3>
+<p>個人戦CTFを開催するプラットフォーム「AlpacaHack」を通じて本日からCTFに挑戦してみようと思います。
+大学生の頃に競技プログラミングは少し触れたことがあって、いずれはCTFにも挑戦してみたいとは常々考えていました。
+そんな中でタイミング良くAlpacaHackが公開されたのでさっそく挑戦してみようと思います。
+</p>
+<h3>私のCTF環境</h3>
+<div class="main-ul">
+<ul>
+<li>Ubuntu 22.04 LTS</li>
+</ul>
+</div>
+<h2 id="1">AlpacaHackとは</h2>
+<p>AlpacaHackは2024年8月（おそらく）に公開された個人戦CTFを開催するプラットフォームです。
+CTFでは複数人でチームを組んでコンテストに参加するのが一般的っぽいですが、
+AlpacaHackでは個人で参加できます（チーム参加は禁止っぽいです）。
+AtCoderのような競技プログラミングサイトのCTF版という感じでしょうか。
+また、AlpacaHackのコンテストでは簡単な問題から難しい問題までが出題されるので、
+初心者から上級者まで楽しめるそうです。
+</p>
+<a href="https://alpacahack.com/" class="aButton">AlpacaHackのサイトへのリンク</a>
+<h2 id="2">CTFとは</h2>
+<p>CTFは「Capture The Flag（旗取り合戦？）」の略称で、情報セキュリティに関する競技のことを指すようです。
+基本的には与えられた問題を解く速さを競います（他にも競技内容がいろいろあるっぽいです）。
+たとえば、ウェブサイトのシステムのデータが与えられたら、そのシステムの脆弱性を見つけて「flag」と呼ばれる文字列を奪取します。そのflagを提出することで問題クリアとなります（あくまでこれは一例で他にもいろいろな問題の種類があるみたいです）。
+また、競技ではありますが、過去の問題にも挑戦できるので他人と競わなくても問題を解くことができます。
+</p>
+<h2 id="3">AlpacaHackにアクセス</h2>
+<h3>Home</h3>
+<p>それではさっそくAlpacaHackにアクセスし、アカウントを作成してからログインします。
+下記の画像がAlpacaHackのHomeページです。
+Homeでは次に開催するコンテストの日程を確認できます。
+</p>
+<a href="https://alpacahack.com/" class="aButton">AlpacaHackのサイトへのリンク（再掲）</a>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240813_1.png.jpg" alt="AlpacaHackのHomeページ">
+</div>
+<p>Homeのページ最下部では下記の画像のように解いた問題数のユーザランキングも確認できます。
+2024年8月13日現在では18問解いた方が一位です（ちなみに私はまだ3問しか解いていません）。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240813_4.png.jpg" alt="問題を解いた数のランキング">
+</div>
+<h3>CTFs</h3>
+<p>CTFsページでは今後開催されるコンテストと過去のコンテストを確認できます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240813_2.png.jpg" alt="CTFsページ">
+</div>
+<h3>Challenge Archive</h3>
+<p>Challenge Archiveページでは過去問を解くことができます。
+自分が解いた問題はチェックマークが付いています。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240813_3.png.jpg" alt="Challenge Archiveページ">
+</div>
+<h2 id="4">さっそく解いてみる</h2>
+<p>まずはテスト問題的な「Welcome」を解いてみます。
+とはいっても特にやることはなくて、
+この問題の概要に「Here is the flag: Alpaca{Welcome to AlpacaHack!}」と書かれているので、
+flagが「Alpaca{Welcome to AlpacaHack!}」であることが分かります。
+AlpacaHackではflagは「Alpaca{...}」の形式となっているようです。
+正解のflagを入力して「Submit」ボタンを押すと「Solved」と表示されます。
+</p>
+<div class="img">
+<img src="https://yusukekato.jp/images/2024/20240813_5.png.jpg" alt="Welcome">
+</div>
+<h2 id="5">追記（2024/08/14）</h2>
+<p>AlpacaHack開発者のkeymoonさんがCTF入門のために参考になるサイトをXで紹介してくださっていたので、
+私もそれらのサイトを利用してみようと思います。
+皆様もぜひ。
+</p>
+<a href="https://x.com/kymn_/status/1823322202072318163" class="aButton">keymoon（ID:kymn_）さんのポストのリンク</a>
+<h2 id="6">おわりに</h2>
+<p>今日はAlpacaHackで初めてCTFに挑戦してみました。
+とりあえずはどういう流れで問題を解けばいいのかは分かった気がします。
+ただしCTFで必要なセキュリティ関連の知識が全く足りていないので書籍（中島明日香『入門セキュリティコンテスト』）などで勉強しようと思います。
+AlpacaHackは継続的にコンテストを開催するとのことなので、私も細く長く続けていってCTFに慣れていきたいですね。
+それでは、また。
+</p>
+<h2 id="7">次回の記事</h2>
+<p>2024年8月14日の記事です。
+</p>
+<a href="https://yusukekato.jp/html/2024/0814.html" class="aButton">AlpacaHackで始めるCTF入門2：DreamhackでCTF入門</a>
+<h2 id="news">お知らせ</h2>
+<ul>
+<li>2024/08/01: <a href="https://yusukekato.jp/html/2024/0801.html">れもんが我が家に来て一ヶ月</a></li>
+<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコ「れもん」我が家へ</a></li>
+<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>
+</ul>
+<div class="slide">
+<img src="https://yusukekato.jp/images/news/news_20240804.jpg" class="slide-img">
+<img src="https://yusukekato.jp/images/news/news_20240629.jpg" class="slide-img">
+<img src="https://yusukekato.jp/images/news/news_20240503.jpg" class="slide-img">
+</div>
+<details>
+<summary>過去のお知らせ</summary>
+<ul>
+<li>2023/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ開始</a></li>
+<li>2023/04/08: <a href="https://yusukekato.jp/">加藤祐介ブログ開始</a></li>
+</ul>
+</details>
+
+<h2 id="series">シリーズ記事一覧</h2>
+<p>各シリーズの記事を下記にまとめてあります。</p>
+<details>
+<summary>セキセイインコ「れもん」の日記</summary>
+</details>
+
+<details>
+<summary>AlpacaHackで始めるCTF入門</summary>
+</details>
+
+<details>
+<summary>シェル芸</summary>
+</details>
+
+<details>
+<summary>ROS 2</summary>
+</details>
+
+<details>
+<summary>料理日記</summary>
+</details>
+
+<details>
+<summary>その他</summary>
+</details>
+
+<footer>
+<hr class="BlackLine">
+<a href="https://yusukekato.jp/html/form.html" class="aButton">お問い合わせフォームへ</a>
+<a href="#top" class="aButton">ページトップへ</a>
+<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
+<div class="img">
+<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">
+</div>
+<ul class="nav-list">
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/" class="bButton">HOME</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/about.html" class="bButton">ABOUT</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>
+</li>
+</ul>
+</footer>
+</div> <!-- alldiv -->
+<h1 id="bottom" class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+加藤祐介ブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>
+加藤祐介ブログのソフトウェアはMITライセンスで公開されています。<br>
+&copy; 2023 YusukeKato All Rights Reserved.<br><br>
+<img style="height:22px!important;margin-left:2px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""><br>
+</h1>
+</body>
+</html>

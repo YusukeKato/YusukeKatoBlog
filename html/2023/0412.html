@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9H7QJT6XG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-W9H7QJT6XG');
+</script>
+<!-- SNS Card -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />
+<meta property="og:image" content="https://yusukekato.jp/images/summary.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@yusukekato_main" />
+<meta name="twitter:image" content="https://yusukekato.jp/images/summary_large_image.png" />
+<!-- 変更 -->
+<meta name="twitter:title" content="ChatGPTでシェル芸勉強会の問題が解きたい / Yusuke Kato Blog" />
+<meta property="og:url" content="https://yusukekato.jp/../html/2023/0412.html" />
+<meta property="og:title" content="ChatGPTでシェル芸勉強会の問題が解きたい / Yusuke Kato Blog" />
+<meta property="og:description" content="ChatGPT（GPT-4）に第63回シェル芸勉強会の問題を解いてもらいました。月額20ドルを支払ってGPT-4が利用できるようになりました。ChatGPTの実力がどれほどなのか調査するために、今回は第63回シェル芸勉強会の問1と問2に挑戦していただきます。" />
+<meta name="twitter:description" content="ChatGPT（GPT-4）に第63回シェル芸勉強会の問題を解いてもらいました。月額20ドルを支払ってGPT-4が利用できるようになりました。ChatGPTの実力がどれほどなのか調査するために、今回は第63回シェル芸勉強会の問1と問2に挑戦していただきます。" />
+<title>ChatGPTでシェル芸勉強会の問題が解きたい / Yusuke Kato Blog</title>
+<meta name="description" content="ChatGPT（GPT-4）に第63回シェル芸勉強会の問題を解いてもらいました。月額20ドルを支払ってGPT-4が利用できるようになりました。ChatGPTの実力がどれほどなのか調査するために、今回は第63回シェル芸勉強会の問1と問2に挑戦していただきます。" />
+<!-- main -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://yusukekato.jp/images/favicon.png">
+<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=51">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 id="top" class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>
+
+<div class="alldiv">
+<ul class="nav-list">
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/" class="bButton">HOME</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/about.html" class="bButton">ABOUT</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>
+</li>
+</ul>
+<h1>ChatGPTでシェル芸勉強会の問題が解きたい</h1>
+<p>記事投稿日: 2023年4月12日（水）</p>
+<p>最終更新日: 2024年3月30日（土）</p>
+
+<h2 id="index">目次</h2>
+<ul>
+<li><a href="#0">はじめに</a></li>
+<li><a href="#1">リンク</a></li>
+<li><a href="#2">問1 : 九九の合計</a></li>
+<li><a href="#3">問2 : おつりの出し方</a></li>
+<li><a href="#4">おまけ問題 : 円周率</a></li>
+<li><a href="#5">おわりに</a></li>
+<li><a href="#news">お知らせ</a></li>
+<li><a href="#series">シリーズ記事一覧</a></li>
+</ul>
+
+<h2 id="0">はじめに</h2>
+<p>月額20ドルを支払ってGPT-4が利用できるようになったので、
+ChatGPTにシェル芸勉強会の問題を解いていただこうと思います。
+シェル芸勉強会の問題をお借りします（すみません）。
+今回は第63回シェル芸勉強会の問1と問2に挑戦してもらいます。
+</p>
+<h2 id="1">リンク</h2>
+<a href="https://openai.com/research/gpt-4" class="aButton">利用モデル：GPT-4</a>
+<div class="iframeClass">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zEmqu1UP3SY?si=JPZq58-wt_fOvcTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<a href="https://engineers.ntt.com/entry/2023/03/09/091735" class="aButton">第63回ビッグハンドタウンシェル芸勉強会の問題と解説</a>
+<a href="https://websh.jiro4989.com/" class="aButton">実行環境：websh</a>
+<h2 id="2">問1 : 九九の合計</h2>
+<h3>私が入力した文章</h3>
+<div class="codeClass"><pre><code>ワンライナーのBashスクリプトで九九の掛け算（1×1～9×9まで）の答えの合計を求めてください。
+</code></pre></div>
+<h3>ChatGPTが書いたBashスクリプト</h3>
+<div class="codeClass"><pre><code>sum=0; for i in {1..9}; do for j in {1..9}; do sum=$((sum + i * j)); done; done; echo $sum
+</code></pre></div>
+<h3>実行結果</h3>
+<div class="codeClass"><pre><code>2025
+</code></pre></div>
+<h3>私の感想</h3>
+<p>ワンライナーと言えるかは怪しいですが、普通に解いていただけてとても嬉しいです。
+デバッグをする必要もなく、一発で実行可能なスクリプトを出力してもらえました。
+「GPT-4が凄い！」という噂は間違いではないのかもしれません。
+この調子でもう一問、解いていただきましょう。
+</p>
+<h2 id="3">問2 : おつりの出し方</h2>
+<h3>私が入力した文章</h3>
+<div class="codeClass"><pre><code>ワンライナーのBashスクリプトで9132円の支払いに10000円札で払ったときのおつりの出し方を求めてください。
+</code></pre></div>
+<h3>ChatGPTが書いたBashスクリプト</h3>
+<div class="codeClass"><pre><code>change=$((10000 - 9132)); echo "おつり: ${change}円"; echo "5000円札: $((change / 5000))"; change=$((change % 5000)); echo "1000円札: $((change / 1000))"; change=$((change % 1000)); echo "500円硬貨: $((change / 500))"; change=$((change % 500)); echo "100円硬貨: $((change / 100))"; change=$((change % 100)); echo "50円硬貨: $((change / 50))"; change=$((change % 50)); echo "10円硬貨: $((change / 10))"; change=$((change % 10)); echo "5円硬貨: $((change / 5))"; change=$((change % 5)); echo "1円硬貨: $((change))"
+</code></pre></div>
+<h3>実行結果</h3>
+<div class="codeClass"><pre><code>おつり: 868円
+5000円札: 0
+1000円札: 0
+500円硬貨: 1
+100円硬貨: 3
+50円硬貨: 1
+10円硬貨: 1
+5円硬貨: 1
+1円硬貨: 3
+</code></pre></div>
+<h3>私の感想</h3>
+<p>かなりの力技で問題を解いてもらいました。
+ワンライナーと言えるかは分かりませんが、普通に解いていただけてとても嬉しい気持ちです。
+今回もエラーが出ることはなく、すんなり実行できました。
+もっといろんな問題で試してみたいですね。
+</p>
+<h2 id="4">おまけ問題 : 円周率</h2>
+<h3>私が入力した文章</h3>
+<div class="codeClass"><pre><code>ワンライナーのBashスクリプトで円周率を求めてください。
+</code></pre></div>
+<h3>ChatGPTが書いたBashスクリプト</h3>
+<div class="codeClass"><pre><code>echo "scale=10; 4*a(1)" | bc -l
+</code></pre></div>
+<h3>実行結果</h3>
+<div class="codeClass"><pre><code>3.1415926532
+</code></pre></div>
+<h3>私の感想</h3>
+<p>はい。
+</p>
+<h2 id="5">おわりに</h2>
+<p>ChatGPTに第63回シェル芸勉強会の問1と問2を解いてもらいました。
+普通に解いていただけて嬉しい限りです。
+二問を解いただけではまだ何も分かりませんが、
+GPT-4はかなり便利な気がするので様々な場面で利用していきたい所存です。
+それでは、また。
+</p>
+<h2 id="news">お知らせ</h2>
+<ul>
+<li>2024/08/01: <a href="https://yusukekato.jp/html/2024/0801.html">れもんが我が家に来て一ヶ月</a></li>
+<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコ「れもん」我が家へ</a></li>
+<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>
+</ul>
+<div class="slide">
+<img src="https://yusukekato.jp/images/news/news_20240804.jpg" class="slide-img">
+<img src="https://yusukekato.jp/images/news/news_20240629.jpg" class="slide-img">
+<img src="https://yusukekato.jp/images/news/news_20240503.jpg" class="slide-img">
+</div>
+<details>
+<summary>過去のお知らせ</summary>
+<ul>
+<li>2023/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ開始</a></li>
+<li>2023/04/08: <a href="https://yusukekato.jp/">加藤祐介ブログ開始</a></li>
+</ul>
+</details>
+
+<h2 id="series">シリーズ記事一覧</h2>
+<p>各シリーズの記事を下記にまとめてあります。</p>
+<details>
+<summary>セキセイインコ「れもん」の日記</summary>
+</details>
+
+<details>
+<summary>AlpacaHackで始めるCTF入門</summary>
+</details>
+
+<details>
+<summary>シェル芸</summary>
+</details>
+
+<details>
+<summary>ROS 2</summary>
+</details>
+
+<details>
+<summary>料理日記</summary>
+</details>
+
+<details>
+<summary>その他</summary>
+</details>
+
+<footer>
+<hr class="BlackLine">
+<a href="https://yusukekato.jp/html/form.html" class="aButton">お問い合わせフォームへ</a>
+<a href="#top" class="aButton">ページトップへ</a>
+<a href="https://yusukekato.jp/" class="aButton">ホームへ戻る</a>
+<div class="img">
+<img src="https://yusukekato.jp/images/BlueTreeIcon.jpg">
+</div>
+<ul class="nav-list">
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/" class="bButton">HOME</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/about.html" class="bButton">ABOUT</a>
+</li>
+<li class="nav-list-item">
+<a href="https://yusukekato.jp/html/form.html" class="bButton">CONTACT</a>
+</li>
+</ul>
+</footer>
+</div> <!-- alldiv -->
+<h1 id="bottom" class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+加藤祐介ブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>
+加藤祐介ブログのソフトウェアはMITライセンスで公開されています。<br>
+&copy; 2023 YusukeKato All Rights Reserved.<br><br>
+<img style="height:22px!important;margin-left:2px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""><br>
+</h1>
+</body>
+</html>
