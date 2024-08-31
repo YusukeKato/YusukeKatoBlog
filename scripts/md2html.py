@@ -72,7 +72,7 @@ for markdown_file in markdown_files:
     write_lines.append('<meta charset="utf-8">\n')
     write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
     write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=51">\n')
+    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=52">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.googleapis.com">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n')
     write_lines.append('<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">\n')
@@ -197,7 +197,7 @@ for markdown_file in markdown_files:
                     image_path = read_lines[i][24:]
                     image_path = image_path[:-38]
                     write_lines.append('<video controls>\n')
-                    write_lines.append('<source src="https://yusukekato.jp/images/' + image_path + '.mp4' + '" alt="' + read_lines[i+2] + '" type="video/mp4" width="400" />\n')
+                    write_lines.append('<source src="https://yusukekato.jp/images/' + image_path + '.mp4' + '" alt="' + read_lines[i+2] + '" type="video/mp4" />\n')
                     write_lines.append('</video>\n')
                     write_lines.append('</div>\n')
                     i += 2
