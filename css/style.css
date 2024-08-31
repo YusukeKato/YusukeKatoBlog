@@ -154,6 +154,10 @@ img {
   max-width: 94%;
 }
 
+video {
+  max-width: 94%;
+}
+
 pre {
   font-family: "Noto Sans JP", "Meiryo", "Hiragino Maru Gothic ProN W4", "Hiragino Mincho ProN", "Verdana", "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif, sans-serif;
   width: 94%;
