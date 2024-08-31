@@ -197,7 +197,7 @@ for markdown_file in markdown_files:
                     image_path = read_lines[i][24:]
                     image_path = image_path[:-38]
                     write_lines.append('<video controls>\n')
-                    write_lines.append('<source src="https://yusukekato.jp/images/' + image_path + '.mp4' + '" alt="' + read_lines[i+2] + '" type="video/mp4" />\n')
+                    write_lines.append('<source src="https://yusukekato.jp/images/' + image_path + '.mp4' + '" alt="' + read_lines[i+2] + '" type="video/mp4" width="400" />\n')
                     write_lines.append('</video>\n')
                     write_lines.append('</div>\n')
                     i += 2
