@@ -192,6 +192,15 @@ for markdown_file in markdown_files:
                     write_lines.append('<img src="https://yusukekato.jp/images/' + image_path + '.gif' + '" alt="' + read_lines[i+2] + '">\n')
                     write_lines.append('</div>\n')
                     i += 2
+                elif re.match('.+\.mp4', read_lines[i]): # 動画を変換
+                    write_lines.append('<div class="img">\n')
+                    image_path = read_lines[i][24:]
+                    image_path = image_path[:-38]
+                    write_lines.append('<video controls>\n')
+                    write_lines.append('<source src="https://yusukekato.jp/images/' + image_path + '.mp4' + '" alt="' + read_lines[i+2] + '" type="video/mp4" />\n')
+                    write_lines.append('</video>\n')
+                    write_lines.append('</div>\n')
+                    i += 2
                 else: # 文章を変換
                     write_lines.append('<p>' + read_lines[i] + '\n')
                     p_loop_flag = True;
