@@ -283,7 +283,8 @@ for markdown_file in markdown_files:
 
     write_lines.append('<h1 id="bottom" class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">\n')
     write_lines.append('加藤祐介ブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>\n')
-    write_lines.append('加藤祐介ブログのソフトウェアはMITライセンスで公開されています。<br>\n')
+    write_lines.append('加藤祐介ブログのソフトウェアはApache License 2.0で公開されています。<br>\n')
+    write_lines.append('About License: <a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE" class="">GitHub - YusukeKatoBlog/LICENSE</a><br>\n')
     write_lines.append('&copy; 2023 YusukeKato All Rights Reserved.<br><br>\n')
     write_lines.append('<img style="height:22px!important;margin-left:2px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""><br>\n')
     write_lines.append('</h1>\n')

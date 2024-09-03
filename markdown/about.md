@@ -2,13 +2,13 @@
 - title=加藤祐介ブログ
 - description=加藤祐介と加藤祐介ブログについての情報ページです。加藤祐介の自己紹介やリンク集、利用規約、免責事項、プライバシーポリシーについて記載してあります。
 - date=2023年4月14日（金）
-- update=2024年7月23日（火）
+- update=2024年9月03日（火）
 - math=false
 
 ## 加藤祐介について
 
 ### 自己紹介
-ロボットやシェル芸、競技プログラミング、CTF、ゲーム製作などで日々遊んでいます。
+ロボットやシェル芸、シェル芸オンラインジャッジ、競技プログラミング、CTF、ゲーム製作などで日々遊んでいます。
 大学ではロボットについて勉強していました。
 現在もロボット開発に携わらせていただいてます。
 備忘録的な記事をまとめていくのでよろしくお願いします。
@@ -78,7 +78,7 @@ AtCoder : yusukekato
 ### ライセンス
 加藤祐介ブログにおける全ての著作権は加藤祐介が所有します。
 加藤祐介ブログのソースコードは
-<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">MIT Lisence</a>
+<a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">Apache License 2.0</a>
 で公開されています。
 加藤祐介ブログに存在する文章や画像、動画などの全ての著作物は
 <a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">CC BY-NC-ND 4.0</a>
@@ -94,4 +94,3 @@ AtCoder : yusukekato
 https://github.com/YusukeKato/YusukeKatoBlog
 
 加藤祐介ブログのGitHubリポジトリ
-
