@@ -2,6 +2,10 @@
 - Blog URL: https://yusukekato.jp/
 - LICENSE : https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE
 
+# License
+- code(.py, .bash, .html, .css, .yaml, etc): [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+- work(images, text, .jpg, .png, .gif, .mp4, .md, etc): [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.txt)
+
 ## How to update blog
 
 ### Workflows

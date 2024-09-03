@@ -350,6 +350,15 @@ details[open] summary {
   background-color: #F9F9F9;
 }
 
+.white-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.white-link:hover {
+  color: #DDDDDD;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 999px) {
   html {
     font-size: 0.9rem;
