@@ -351,12 +351,10 @@ details[open] summary {
 }
 
 .white-link {
-  color: #FFFFFF;
-  text-decoration: none;
+  color: #FFFFCC;
 }
 .white-link:hover {
-  color: #DDDDDD;
-  text-decoration: none;
+  color: #DDDD99;
 }
 
 @media screen and (max-width: 999px) {
