@@ -85,6 +85,7 @@ write_lines.append('\n')
 # お知らせ生成
 write_lines.append('<h2 id="news">お知らせ</h2>\n')
 write_lines.append('<ul>\n')
+write_lines.append('<li>2024/09/07: <a href="https://yusukekato.jp/html/2024/0907.html">ズグロシロハラインコ「ぽぽ」我が家へ</a></li>\n')
 write_lines.append('<li>2024/08/01: <a href="https://yusukekato.jp/html/2024/0801.html">れもんが我が家に来て一ヶ月</a></li>\n')
 write_lines.append('<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコ「れもん」我が家へ</a></li>\n')
 write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
