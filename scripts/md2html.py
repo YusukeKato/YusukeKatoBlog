@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-
 import os
 import re
+version="1000"
 
 # markdownのファイル名を全て取得
 markdown_files = []
@@ -72,7 +72,7 @@ for markdown_file in markdown_files:
     write_lines.append('<meta charset="utf-8">\n')
     write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
     write_lines.append('<link rel="icon" href="https://yusukekato.jp/images/favicon.png">\n')
-    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version=54">\n')
+    write_lines.append('<link rel="stylesheet" href="https://yusukekato.jp/css/style.css?version='+version+'">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.googleapis.com">\n')
     write_lines.append('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n')
     write_lines.append('<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">\n')
@@ -223,6 +223,7 @@ for markdown_file in markdown_files:
     write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
     write_lines.append('</ul>\n')
     write_lines.append('<div class="slide">\n')
+    write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240907.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240804.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240629.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240503.jpg" class="slide-img">\n')

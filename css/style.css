@@ -287,7 +287,7 @@ body p{
   width: inherit;
   height: inherit;
   left: 100%;
-  animation: slide-anime 15s linear infinite;
+  animation: slide-anime 20s linear infinite;
 }
 .slide-img {
   width: inherit;
@@ -298,11 +298,12 @@ body p{
 .slide img:nth-of-type(1) {animation-delay: 0s;}
 .slide img:nth-of-type(2) {animation-delay: 5s;}
 .slide img:nth-of-type(3) {animation-delay: 10s;}
+.slide img:nth-of-type(4) {animation-delay: 15s;}
 @keyframes slide-anime {
   0% {left: 100%;}
-  4% {left: 3%;}
-  29% {left: 3%;}
-  33% {left: -100%;}
+  3% {left: 3%;}
+  22% {left: 3%;}
+  25% {left: -100%;}
   100% {left: -100%;}
 }
 
