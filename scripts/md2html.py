@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import re
-version="1001"
+version="1002"
 
 # markdownのファイル名を全て取得
 markdown_files = []
