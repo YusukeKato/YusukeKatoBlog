@@ -4,14 +4,18 @@ import re
 version="1002"
 
 def replace_strong(str):
-    strong_flag = True 
-    for i in range(len(str)):
+    strong_flag = True
+    i = 0
+    while i < len(str):
         if str[i] == '`' and strong_flag:
-            str = str[:i] + '<strong>' + str[i:]
+            str = str[:i] + '<strong>' + str[i+1:]
             strong_flag = False
-        elif str[i] == '`' and not strong_flag:
-            str = str[:i] + '</strong>' + str[i:]
+            i=-1
+        elif str[i] == '`' and strong_flag == False:
+            str = str[:i] + '</strong>' + str[i+1:]
             strong_flag = True
+            i=-1
+        i=i+1
     return str
 
 # markdownのファイル名を全て取得
