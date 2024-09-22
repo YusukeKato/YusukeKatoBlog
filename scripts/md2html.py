@@ -3,6 +3,17 @@ import os
 import re
 version="1002"
 
+def replace_strong(str):
+    strong_flag = True 
+    for i in range(len(str)):
+        if str[i] == '`' and strong_flag:
+            str[:i] + '<strong>' + str[i:]
+            strong_flag = False
+        elif str[i] == '`' and not strong_flag:
+            str[:i] + '</strong>' + str[i:]
+            strong_flag = True
+    return str
+
 # markdownのファイル名を全て取得
 markdown_files = []
 with open('./markdown_list.txt', 'r', encoding='UTF-8') as fr:
@@ -202,7 +213,7 @@ for markdown_file in markdown_files:
                     write_lines.append('</div>\n')
                     i += 2
                 else: # 文章を変換
-                    write_lines.append('<p>' + read_lines[i] + '\n')
+                    write_lines.append('<p>' + replace_strong(read_lines[i]) + '\n')
                     p_loop_flag = True;
                     while p_loop_flag:
                         i += 1
@@ -211,7 +222,7 @@ for markdown_file in markdown_files:
                         elif read_lines[i] == '':
                             p_loop_flag = False
                         else:
-                            write_lines.append(read_lines[i] + '\n')
+                            write_lines.append(replace_strong(read_lines[i]) + '\n')
                     write_lines.append('</p>\n')
 
     # お知らせ生成
