@@ -7,10 +7,10 @@ def replace_strong(str):
     strong_flag = True 
     for i in range(len(str)):
         if str[i] == '`' and strong_flag:
-            str[:i] + '<strong>' + str[i:]
+            str = str[:i] + '<strong>' + str[i:]
             strong_flag = False
         elif str[i] == '`' and not strong_flag:
-            str[:i] + '</strong>' + str[i:]
+            str = str[:i] + '</strong>' + str[i:]
             strong_flag = True
     return str
 
