@@ -39,13 +39,18 @@ https://yusukekato.jp/
 
 加藤祐介ブログ
 
-## YouTube動画の埋め込み
+## YouTube動画の埋め込み（埋め込み用のコードを取得）
 https://www.youtube.com/embed/lGGr4c85bXk?si=AsvAK74PCQKNvleo
 
 ## 画像
 BlueTreeIcon.jpg
 
 Blue Tree
+
+## 動画
+<video src="../../images/2024/20241026_3.mp4" controls="true" width="600"></video>
+
+mp4ファイルを添付
 
 ## おわりに
 おわりの文章
