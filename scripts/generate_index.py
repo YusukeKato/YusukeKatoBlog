@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import re
-version="1002"
+version="1003"
 
 print('start: generate index.html')
 
@@ -113,8 +113,22 @@ write_lines.append('\n')
 # シリーズ記事一覧
 write_lines.append('<h2 id="series">シリーズ記事一覧</h2>\n')
 write_lines.append('<p>各シリーズの記事を下記にまとめてあります。</p>\n')
-series = ["lemon", "alpacahack", "shellgei", "ros2", "book", "cooking", "others"]
-series_name = ["我が家のインコ「れもん＆ぽぽ＆ぐぐ」の日記", "AlpacaHackで始めるCTF入門", "シェル芸", "ROS 2", "読書日記", "料理日記", "その他"]
+series = ["lemon",
+          "alpacahack",
+          "shellgei",
+          "ros2",
+          "book",
+          "movie",
+          "cooking",
+          "others"]
+series_name = ["我が家のインコ「れもん＆ぽぽ＆ぐぐ」の日記",
+               "AlpacaHackで始めるCTF入門",
+               "シェル芸",
+               "ROS 2",
+               "読書日記",
+               "映画日記",
+               "料理日記",
+               "その他"]
 for j in range(len(series)):
     # 一覧作成
     write_lines.append('<details>\n')
