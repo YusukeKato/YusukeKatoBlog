@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import re
-version="1003"
+version="1004"
 
 print('start: generate index.html')
 
@@ -80,11 +80,11 @@ write_lines.append('\n')
 # お知らせ生成
 write_lines.append('<h2 id="news">お知らせ</h2>\n')
 write_lines.append('<ul>\n')
+write_lines.append('<li>2025/01/02: <a href="https://yusukekato.jp/html/2025/0102.html">シェル芸オンラインジャッジの紹介</a></li>\n')
 write_lines.append('<li>2024/09/21: <a href="https://yusukekato.jp/html/2024/0921.html">ズグロシロハラインコ「ぐぐ」我が家へ</a></li>\n')
 write_lines.append('<li>2024/09/07: <a href="https://yusukekato.jp/html/2024/0907.html">ズグロシロハラインコ「ぽぽ」我が家へ</a></li>\n')
 write_lines.append('<li>2024/08/01: <a href="https://yusukekato.jp/html/2024/0801.html">れもんが我が家に来て一ヶ月</a></li>\n')
 write_lines.append('<li>2024/06/29: <a href="https://yusukekato.jp/html/2024/0630.html">セキセイインコ「れもん」我が家へ</a></li>\n')
-write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
 write_lines.append('</ul>\n')
 write_lines.append('<div class="slide">\n')
 write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240921.jpg" class="slide-img">\n')
@@ -96,6 +96,7 @@ write_lines.append('</div>\n')
 write_lines.append('<details>\n')
 write_lines.append('<summary>過去のお知らせ</summary>\n')
 write_lines.append('<ul>\n')
+write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
 write_lines.append('<li>2023/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ開始</a></li>\n')
 write_lines.append('<li>2023/04/08: <a href="https://yusukekato.jp/">加藤祐介ブログ開始</a></li>\n')
 write_lines.append('</ul>\n')
