@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import re
-version="1003"
+version="1004"
 
 def replace_strong(str):
     strong_flag = True
