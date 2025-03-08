@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import re
-version="1004"
+version="1005"
 
 print('start: generate index.html')
 
