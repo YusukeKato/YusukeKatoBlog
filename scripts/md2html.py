@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import re
-version="1004"
+version="1005"
 
 def replace_strong(str):
     strong_flag = True
@@ -239,11 +239,11 @@ for markdown_file in markdown_files:
     write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
     write_lines.append('</ul>\n')
     write_lines.append('<div class="slide">\n')
+    write_lines.append('<img src="https://yusukekato.jp/images/news/news_20250503.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240921.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240907.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240804.jpg" class="slide-img">\n')
     write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240629.jpg" class="slide-img">\n')
-    write_lines.append('<img src="https://yusukekato.jp/images/news/news_20240503.jpg" class="slide-img">\n')
     write_lines.append('</div>\n')
     write_lines.append('<details>\n')
     write_lines.append('<summary>過去のお知らせ</summary>\n')
