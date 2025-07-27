@@ -126,7 +126,7 @@ series = ["lemon",
           "movie",
           "cooking",
           "others"]
-series_name = ["我が家のインコ「れもん＆ぽぽ＆ぐぐ」の日記",
+series_name = ["我が家のインコ「れもん＆ぽぽ＆ぐぐ&さん」の日記",
                "AlpacaHackで始めるCTF入門",
                "シェル芸",
                "ROS 2",
