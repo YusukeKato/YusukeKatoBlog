@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import re
-version="1005"
+version="1006"
 
 print('start: generate index.html')
 
@@ -32,19 +32,19 @@ write_lines.append("gtag('config', 'G-W9H7QJT6XG');\n")
 write_lines.append('</script>\n')
 write_lines.append('<!-- SNS Card -->\n')
 write_lines.append('<meta property="og:type" content="article" />\n')
-write_lines.append('<meta property="og:site_name" content="加藤祐介ブログ / Yusuke Kato Blog" />\n')
+write_lines.append('<meta property="og:site_name" content="YusukeKatoブログ / Yusuke Kato Blog" />\n')
 write_lines.append('<meta property="og:image" content="https://yusukekato.jp/images/summary.jpg" />\n')
 write_lines.append('<meta name="twitter:card" content="summary_large_image" />\n')
 write_lines.append('<meta name="twitter:site" content="@yusukekato_main" />\n')
 write_lines.append('<meta name="twitter:image" content="https://yusukekato.jp/images/summary_large_image.png" />\n')
 write_lines.append('<!-- 変更 -->\n')
-write_lines.append('<meta name="twitter:title" content="加藤祐介ブログ / Yusuke Kato Blog" />\n')
+write_lines.append('<meta name="twitter:title" content="YusukeKatoブログ / Yusuke Kato Blog" />\n')
 write_lines.append('<meta property="og:url" content="https://yusukekato.jp/index.html" />\n')
-write_lines.append('<meta property="og:title" content="加藤祐介ブログ / Yusuke Kato Blog" />\n')
-write_lines.append('<meta property="og:description" content="加藤祐介のブログです。ROS/ROS 2やシェル芸、競技プログラミング、CTF、ゲーム製作などで日々遊んでいます。大学ではロボットについて勉強していました。備忘録的な記事をまとめていくのでよろしくお願いします。ペットの日記も始めました。" />\n')
-write_lines.append('<meta name="twitter:description" content="加藤祐介のブログです。ROS/ROS 2やシェル芸、競技プログラミング、CTF、ゲーム製作などで日々遊んでいます。大学ではロボットについて勉強していました。備忘録的な記事をまとめていくのでよろしくお願いします。ペットの日記も始めました。" />\n')
-write_lines.append('<title>加藤祐介ブログ / Yusuke Kato Blog</title>\n')
-write_lines.append('<meta name="description" content="加藤祐介のブログです。ROS/ROS 2やシェル芸、競技プログラミング、CTF、ゲーム製作などで日々遊んでいます。大学ではロボットについて勉強していました。備忘録的な文章をまとめていくのでよろしくお願いします。ペットの日記も始めました。" />\n')
+write_lines.append('<meta property="og:title" content="YusukeKatoブログ / Yusuke Kato Blog" />\n')
+write_lines.append('<meta property="og:description" content="YusukeKatoのブログです。ROS/ROS 2やシェル芸、競技プログラミング、CTF、ゲーム製作などで日々遊んでいます。大学ではロボットについて勉強していました。備忘録的な記事をまとめていくのでよろしくお願いします。ペットの日記も始めました。" />\n')
+write_lines.append('<meta name="twitter:description" content="YusukeKatoのブログです。ROS/ROS 2やシェル芸、競技プログラミング、CTF、ゲーム製作などで日々遊んでいます。大学ではロボットについて勉強していました。備忘録的な記事をまとめていくのでよろしくお願いします。ペットの日記も始めました。" />\n')
+write_lines.append('<title>YusukeKatoブログ / Yusuke Kato Blog</title>\n')
+write_lines.append('<meta name="description" content="YusukeKatoのブログです。ROS/ROS 2やシェル芸、競技プログラミング、CTF、ゲーム製作などで日々遊んでいます。大学ではロボットについて勉強していました。備忘録的な文章をまとめていくのでよろしくお願いします。ペットの日記も始めました。" />\n')
 write_lines.append('<!-- main -->\n')
 write_lines.append('<meta charset="utf-8">\n')
 write_lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">\n')
@@ -57,7 +57,7 @@ write_lines.append('</head>\n')
 write_lines.append('<body>\n')
 
 # header生成
-write_lines.append('<h1 id="top" class="heading-028" data-label="YUSUKE KATO BLOG">加藤祐介ブログ</h1>\n')
+write_lines.append('<h1 id="top" class="heading-028" data-label="YUSUKE KATO BLOG">YusukeKatoブログ</h1>\n')
 write_lines.append('\n')
 
 # 本文生成
@@ -98,17 +98,17 @@ write_lines.append('<summary>過去のお知らせ</summary>\n')
 write_lines.append('<ul>\n')
 write_lines.append('<li>2024/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ一周年</a></li>\n')
 write_lines.append('<li>2023/05/03: <a href="https://shellgei-online-judge.com/">シェル芸オンラインジャッジ開始</a></li>\n')
-write_lines.append('<li>2023/04/08: <a href="https://yusukekato.jp/">加藤祐介ブログ開始</a></li>\n')
+write_lines.append('<li>2023/04/08: <a href="https://yusukekato.jp/">YusukeKatoブログ開始</a></li>\n')
 write_lines.append('</ul>\n')
 write_lines.append('</details>\n')
 write_lines.append('\n')
 
 # プロフィール生成
-write_lines.append('<h2 id="about-blog">加藤祐介ブログの情報</h2>\n')
-write_lines.append('<p>加藤祐介ブログについては下記をご覧ください。</p>\n')
-write_lines.append('<a href="https://yusukekato.jp/html/about.html" class="aButton">加藤祐介ブログについて</a>\n')
-write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="aButton">加藤祐介ブログのお問い合わせフォーム</a>\n')
-write_lines.append('<a href="https://github.com/YusukeKato/YusukeKatoBlog" class="aButton">加藤祐介ブログのGitHubリポジトリ</a>\n')
+write_lines.append('<h2 id="about-blog">YusukeKatoブログの情報</h2>\n')
+write_lines.append('<p>YusukeKatoブログについては下記をご覧ください。</p>\n')
+write_lines.append('<a href="https://yusukekato.jp/html/about.html" class="aButton">YusukeKatoブログについて</a>\n')
+write_lines.append('<a href="https://yusukekato.jp/html/form.html" class="aButton">YusukeKatoブログのお問い合わせフォーム</a>\n')
+write_lines.append('<a href="https://github.com/YusukeKato/YusukeKatoBlog" class="aButton">YusukeKatoブログのGitHubリポジトリ</a>\n')
 write_lines.append('\n')
 
 # シリーズ記事一覧
@@ -226,8 +226,8 @@ write_lines.append('</footer>\n')
 write_lines.append('</div> <!-- alldiv -->\n')
 
 write_lines.append('<h1 id="bottom" class="heading-028-2" data-label="" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">\n')
-write_lines.append('加藤祐介ブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>\n')
-write_lines.append('加藤祐介ブログのソフトウェアはApache License 2.0で公開されています。<br>\n')
+write_lines.append('YusukeKatoブログの著作物はCC BY-NC-ND 4.0で公開されています。<br>\n')
+write_lines.append('YusukeKatoブログのソフトウェアはApache License 2.0で公開されています。<br>\n')
 write_lines.append('About License: <a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE" class="white-link">GitHub - YusukeKatoBlog/LICENSE</a><br>\n')
 write_lines.append('&copy; 2023 YusukeKato All Rights Reserved.<br><br>\n')
 write_lines.append('<img style="height:22px!important;margin-left:2px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""><br>\n')
@@ -247,7 +247,7 @@ write_lines.insert(index_position+1, '<h2 id="index">目次</h2>\n')
 write_lines.insert(index_position+2, '<ul>\n')
 write_lines.insert(index_position+3, '<li><a href="#news">お知らせ</a></li>\n')
 write_lines.insert(index_position+4, '<li><a href="#index">目次</a></li>\n')
-write_lines.insert(index_position+5, '<li><a href="#about-blog">加藤祐介ブログの情報</a></li>\n')
+write_lines.insert(index_position+5, '<li><a href="#about-blog">YusukeKatoブログの情報</a></li>\n')
 write_lines.insert(index_position+6, '<li><a href="#series">シリーズ記事一覧</a></li>\n')
 for i in range(len(year_arr)):
     write_lines.insert(index_position+7+i, '<li><a href="#' + year_arr[i] + '">' + year_arr[i] + '年の記事</a></li>\n')

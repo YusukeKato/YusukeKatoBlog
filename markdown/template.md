@@ -4,6 +4,7 @@
 - date=article_date
 - update=article_update
 - math=false
+- tag=fixed
 
 ## はじめに
 はじめの文章
@@ -37,7 +38,7 @@
 ## URL
 https://yusukekato.jp/
 
-加藤祐介ブログ
+YusukeKatoブログ
 
 ## YouTube動画の埋め込み（埋め込み用のコードを取得）
 https://www.youtube.com/embed/lGGr4c85bXk?si=AsvAK74PCQKNvleo
