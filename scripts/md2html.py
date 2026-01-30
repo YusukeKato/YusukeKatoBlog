@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import re
-version="1005"
+version="1006"
 
 def replace_strong(str):
     strong_flag = True
@@ -260,6 +260,7 @@ for markdown_file in markdown_files:
     series = ["lemon",
               "alpacahack",
               "shellgei",
+              "shellgei-online-judge",
               "ros2",
               "vrchat",
               "tech",
@@ -273,6 +274,7 @@ for markdown_file in markdown_files:
     series_name = ["我が家のインコ「れもん＆ぽぽ＆ぐぐ&さん」の日記",
                    "AlpacaHackで始めるCTF入門",
                    "シェル芸",
+                   "シェル芸オンラインジャッジ",
                    "ROS 2",
                    "VRChat",
                    "技術ネタ",
