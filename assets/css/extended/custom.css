@@ -1,7 +1,13 @@
-/* --- 全体の背景色を微細なグレーにしてカードの白を際立たせる（ライトモード時） --- */
-body:not(.dark) {
-    --theme: #f4f5f7;
-    --entry: #ffffff;
+/* --- 変数定義（ライトモード） --- */
+:root {
+    --theme: #f4f5f7; /* 全体の背景をほんのりグレーに */
+    --entry: #ffffff; /* カードは真っ白に */
+}
+
+/* --- 変数定義（ダークモード標準色を明示的に指定） --- */
+.dark {
+    --theme: #1d1e20;
+    --entry: #2e2e33;
 }
 
 /* --- 記事一覧のカード型デザイン --- */
@@ -28,8 +34,6 @@ body:not(.dark) {
     padding: 40px 40px;
     margin-top: 20px;
 }
-
-/* スマホ閲覧時は個別ページの余白を少し狭める調整 */
 @media (max-width: 768px) {
     .post-single {
         padding: 24px 20px;
@@ -38,12 +42,11 @@ body:not(.dark) {
 
 /* --- 記事内の見出し（H2, H3）のデザイン --- */
 .post-content h2 {
-    border-bottom: 2px solid var(--border); /* 下線でセクションをはっきり区切る */
+    border-bottom: 2px solid var(--border);
     padding-bottom: 8px;
-    margin-top: 48px;  /* 上の余白を広めにとって区切りを強調 */
+    margin-top: 48px;
     margin-bottom: 24px;
 }
-
 .post-content h3 {
     border-left: 5px solid #666;
     padding-left: 12px;
@@ -52,14 +55,76 @@ body:not(.dark) {
     background: transparent;
 }
 
-/* --- 記事一覧のサムネイル画像のサイズ調整 --- */
+/* --- 記事一覧のサムネイル画像をいい感じのサイズにする --- */
 .entry-cover {
-    margin-bottom: 16px; /* 画像とタイトルの間の余白を整える */
+    margin-bottom: 16px;
+}
+.entry-cover img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
-.entry-cover img {
-    height: 300px;        /* 画像の高さを固定 */
-    width: 100%;          /* 横幅はカードの幅に合わせる */
-    object-fit: cover;    /* 縦横比を崩さず、枠に合わせて綺麗にトリミングする */
-    border-radius: 4px;   /* 画像の角をほんの少し丸くして柔らかい印象にする */
+/* --- ダークモード時のカードと見出しの調整 --- */
+.dark .post-entry,
+.dark .post-single {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.dark .post-content h3 {
+    border-left: 5px solid #aaa;
+}
+
+/* --- スマホ表示時（画面幅768px以下）の文字サイズ調整 --- */
+@media (max-width: 768px) {
+    /* 全体の基本文字サイズを少し小さくする（デフォルトは18px前後） */
+    body {
+        font-size: 15px; 
+    }
+
+    /* 記事本文の文字サイズ */
+    .post-content {
+        font-size: 15px;
+    }
+
+    /* 記事のタイトル（一番上の大きな文字） */
+    .post-single h1 {
+        font-size: 24px;
+    }
+
+    /* 見出し（H2, H3）も本文に合わせて少し小さく */
+    .post-content h2 {
+        font-size: 20px;
+        margin-top: 32px; /* 余白も少し詰める */
+    }
+    .post-content h3 {
+        font-size: 18px;
+        margin-top: 24px;
+    }
+    
+    /* 記事一覧のタイトル */
+    .entry-header h2 {
+        font-size: 20px;
+    }
+}
+
+/* --- 画像の中央揃え --- */
+
+/* 1. 記事の中にあるすべての画像を中央揃え */
+.post-content img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 2. サイト一番上のロゴ画像（ヘッダー）を中央揃え */
+.logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 3. ホーム画面のプロフィール画像 */
+.profile_inner img {
+    display: block;
+    margin: 0 auto;
 }
