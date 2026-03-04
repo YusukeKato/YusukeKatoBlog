@@ -19,6 +19,12 @@
 ## 記事追加
 content/postsにmarkdownを追加
 
+```sh
+hugo new posts/2026/0305.md
+```
+
+[0305.md](https://github.com/YusukeKato/YusukeKatoBlog/blob/main/content/posts/2026/0305.md) を参考にしてページを編集
+
 ## 画像追加
 
 ```sh
@@ -36,7 +42,10 @@ bash resize_images.bash
 ## 動作確認
 
 ```sh
+# 下書きも表示する
 hugo server -D --disableFastRender
+# 本番
+hugo server
 ```
 
 ## デプロイ

@@ -3,6 +3,7 @@ languageCode = 'ja'
 defaultContentLanguage = 'ja'
 title = 'YusukeKatoBlog'
 theme = 'PaperMod'
+metaDataFormat = "yaml"
 
 # Google Analytics
 googleAnalytics = 'G-W9H7QJT6XG'
