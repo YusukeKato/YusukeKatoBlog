@@ -1,0 +1,57 @@
+baseURL = 'https://yusukekato.jp/'
+languageCode = 'ja'
+defaultContentLanguage = 'ja'
+title = 'YusukeKatoBlog'
+theme = 'PaperMod'
+
+# Google Analytics
+googleAnalytics = 'G-W9H7QJT6XG'
+
+# HTMLタグを使用する
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  description = "YusukeKatoのブログです。ロボットやゲーム、技術記事など、備忘録的な記事をまとめていくのでよろしくお願いします。ペットの日記も始めました。"
+  author = "Yusuke Kato"
+  disableSpecial1stPost = true
+
+  [params.cover]
+    hiddenInList = false   # 記事一覧ページでは画像を表示する
+    hiddenInSingle = true  # 記事の個別ページでは二重になるので隠す
+
+  images = ["images/summary_large_image.png"] 
+  # --- PaperModの便利なデザイン設定 ---
+  ShowToc = true              # 記事内に目次（Table of Contents）を自動生成する
+  TocOpen = false             # 目次をデフォルトでは閉じておく
+  ShowBreadCrumbs = true      # 記事上部にパンくずリストを表示する
+  ShowPostNavLinks = true     # 記事下部に「前/次の記事」へのリンクを表示する
+  ShowCodeCopyButtons = true  # ソースコードの右上に「コピー」ボタンを追加する
+
+# --- サイト上部のナビゲーションメニュー ---
+[[menu.main]]
+  identifier = "home"
+  name = "HOME"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "about"
+  name = "ABOUT"
+  url = "/html/about.html"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "TAGS"
+  url = "/tags/"
+  weight = 40
+
+[permalinks]
+  posts = "/html/:year/:filename.html"
+
+[[menu.main]]
+  identifier = "archives"
+  name = "ARCHIVES"
+  url = "/archives/"
+  weight = 35 

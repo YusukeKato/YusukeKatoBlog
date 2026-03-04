@@ -1,0 +1,65 @@
+/* --- 全体の背景色を微細なグレーにしてカードの白を際立たせる（ライトモード時） --- */
+body:not(.dark) {
+    --theme: #f4f5f7;
+    --entry: #ffffff;
+}
+
+/* --- 記事一覧のカード型デザイン --- */
+.post-entry {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.post-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 個別記事・ABOUTページ等もカード型にする --- */
+.post-single {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 40px 40px;
+    margin-top: 20px;
+}
+
+/* スマホ閲覧時は個別ページの余白を少し狭める調整 */
+@media (max-width: 768px) {
+    .post-single {
+        padding: 24px 20px;
+    }
+}
+
+/* --- 記事内の見出し（H2, H3）のデザイン --- */
+.post-content h2 {
+    border-bottom: 2px solid var(--border); /* 下線でセクションをはっきり区切る */
+    padding-bottom: 8px;
+    margin-top: 48px;  /* 上の余白を広めにとって区切りを強調 */
+    margin-bottom: 24px;
+}
+
+.post-content h3 {
+    border-left: 5px solid #666;
+    padding-left: 12px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    background: transparent;
+}
+
+/* --- 記事一覧のサムネイル画像のサイズ調整 --- */
+.entry-cover {
+    margin-bottom: 16px; /* 画像とタイトルの間の余白を整える */
+}
+
+.entry-cover img {
+    height: 300px;        /* 画像の高さを固定 */
+    width: 100%;          /* 横幅はカードの幅に合わせる */
+    object-fit: cover;    /* 縦横比を崩さず、枠に合わせて綺麗にトリミングする */
+    border-radius: 4px;   /* 画像の角をほんの少し丸くして柔らかい印象にする */
+}
