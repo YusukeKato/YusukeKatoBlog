@@ -17,10 +17,6 @@ googleAnalytics = 'G-W9H7QJT6XG'
   author = "Yusuke Kato"
   disableSpecial1stPost = true
 
-  [params.cover]
-    hiddenInList = false   # 記事一覧ページでは画像を表示する
-    hiddenInSingle = true  # 記事の個別ページでは二重になるので隠す
-
   images = ["images/summary_large_image.png"] 
   # --- PaperModの便利なデザイン設定 ---
   ShowToc = true              # 記事内に目次（Table of Contents）を自動生成する
@@ -28,6 +24,10 @@ googleAnalytics = 'G-W9H7QJT6XG'
   ShowBreadCrumbs = true      # 記事上部にパンくずリストを表示する
   ShowPostNavLinks = true     # 記事下部に「前/次の記事」へのリンクを表示する
   ShowCodeCopyButtons = true  # ソースコードの右上に「コピー」ボタンを追加する
+
+  [params.cover]
+    hiddenInList = false   # 記事一覧ページでは画像を表示する
+    hiddenInSingle = true  # 記事の個別ページでは二重になるので隠す
 
 # --- サイト上部のナビゲーションメニュー ---
 [[menu.main]]

@@ -3,11 +3,14 @@
     --theme: #f4f5f7; /* 全体の背景をほんのりグレーに */
     --entry: #ffffff; /* カードは真っ白に */
 }
-
 /* --- 変数定義（ダークモード標準色を明示的に指定） --- */
 .dark {
     --theme: #1d1e20;
     --entry: #2e2e33;
+}
+
+.main {
+    max-width: 800px;
 }
 
 /* --- 記事一覧のカード型デザイン --- */
@@ -74,6 +77,29 @@
 }
 .dark .post-content h3 {
     border-left: 5px solid #aaa;
+}
+
+body {
+    font-size: 16px; 
+}
+/* 記事本文の文字サイズ */
+.post-content {
+    font-size: 16px;
+}
+/* 記事のタイトル（一番上の大きな文字） */
+.post-single h1 {
+    font-size: 28px;
+}
+/* 見出し（H2, H3）も本文に合わせて少し小さく */
+.post-content h2 {
+    font-size: 24px;
+}
+.post-content h3 {
+    font-size: 20px;
+}
+/* 記事一覧のタイトル */
+.entry-header h2 {
+    font-size: 24px;
 }
 
 /* --- スマホ表示時（画面幅768px以下）の文字サイズ調整 --- */
