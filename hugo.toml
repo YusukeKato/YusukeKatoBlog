@@ -25,9 +25,12 @@ googleAnalytics = 'G-W9H7QJT6XG'
   ShowPostNavLinks = true     # 記事下部に「前/次の記事」へのリンクを表示する
   ShowCodeCopyButtons = true  # ソースコードの右上に「コピー」ボタンを追加する
 
-  [params.cover]
-    hiddenInList = false   # 記事一覧ページでは画像を表示する
-    hiddenInSingle = true  # 記事の個別ページでは二重になるので隠す
+[params.cover]
+  hiddenInList = false   # 記事一覧ページでは画像を表示する
+  hiddenInSingle = true  # 記事の個別ページでは二重になるので隠す
+
+[params.assets]
+  favicon = "/images/BlueTreeIcon.jpg"
 
 # --- サイト上部のナビゲーションメニュー ---
 [[menu.main]]

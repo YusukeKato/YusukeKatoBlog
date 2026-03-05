@@ -1,8 +1,8 @@
 ---
-title: "YusukeKatoブログ"
-description: "私と本ブログについての情報ページです。私の自己紹介やリンク集、利用規約、免責事項、プライバシーポリシーについて記載してあります。"
+title: "YusukeKatoBlog"
+description: "私とこのブログについての情報ページです。自己紹介やリンク集、利用規約、免責事項、プライバシーポリシーについて記載してあります。"
 date: 2023-04-14
-lastmod: 2026-01-04
+lastmod: 2026-03-05
 math: false
 url: "/html/about.html"
 tags: ["fixed"]
@@ -44,7 +44,7 @@ tags: ["fixed"]
 本ブログを利用する上で生じる損害等の一切の責任を負いかねますのでご了承ください。
 
 ### ライセンス
-本ブログにおける全ての著作権は著作者（私）が所有します。
+本ブログにおける全ての著作物の権利はYusukeKatoが所有します。
 本ブログのソースコードは
 <a href="https://github.com/YusukeKato/YusukeKatoBlog/blob/main/LICENSE">Apache License 2.0</a>
 で公開されています。

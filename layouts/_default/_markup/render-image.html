@@ -1,0 +1,18 @@
+{{- $imgSrc := .Destination -}}
+{{- /* MarkdownのURL（例: /images/xxx.jpg）の先頭の "/" を取り除いて assets フォルダ内を検索 */ -}}
+{{- $image := resources.Get (strings.TrimPrefix "/" $imgSrc) -}}
+
+{{- if $image -}}
+  {{- $resized := $image -}}
+  
+  {{- /* 画像の横幅が800pxより大きい場合のみ、幅800pxにリサイズ */ -}}
+  {{- if gt $image.Width 800 -}}
+    {{- $resized = $image.Resize "800x" -}}
+  {{- end -}}
+  
+  {{- /* リサイズした（またはそのままの）画像を出力 */ -}}
+  <img src="{{ $resized.RelPermalink }}" alt="{{ .Text }}" title="{{ .Title }}" loading="lazy" />
+{{- else -}}
+  {{- /* assets内に見つからない場合（外部リンク等）や、画像以外のファイルはそのまま出力 */ -}}
+  <img src="{{ $imgSrc | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" loading="lazy" />
+{{- end -}}
