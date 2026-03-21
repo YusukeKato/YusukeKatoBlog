@@ -31,7 +31,10 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify
+        run: |
+          mkdir -p static/images
+          cp -R assets/images/* static/images/ || true
+          hugo --minify
 
       - name: Deploy to Server via rsync
         uses: Burnett01/rsync-deployments@7.0.0
