@@ -52,7 +52,7 @@ googleAnalytics = 'G-W9H7QJT6XG'
   weight = 40
 
 [permalinks]
-  posts = "/html/:year/:filename.html"
+  posts = "/html/:year/:contentbasename.html"
 
 [[menu.main]]
   identifier = "archives"
