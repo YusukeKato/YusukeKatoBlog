@@ -102,6 +102,11 @@ body {
     font-size: 24px;
 }
 
+/* タグページのサムネイル画像表示 */
+.tag-entry .entry-cover {
+    display: block;
+}
+
 /* --- スマホ表示時（画面幅768px以下）の文字サイズ調整 --- */
 @media (max-width: 768px) {
     /* 全体の基本文字サイズを少し小さくする（デフォルトは18px前後） */
