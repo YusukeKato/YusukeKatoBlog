@@ -1,19 +1,40 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "error: Argument is not specified." >&2
+    exit 1
+fi
+
+TARGET="$1"
+IMG_DIR="../assets/images"
+
 echo "start: resize images"
 
 # delete
-find ../assets/images | grep "^../assets/images/20.*/" | grep -e "Zone.Identifier$" | xargs -I@ rm @
-find ../assets/images | grep "^../assets/images/20.*/"$1 | grep -e ".png.png$" -e ".jpg.png$" -e ".jpg.jpg$" -e ".png.jpg$" -e ".gif.gif$" -e ".mp4.mp4$" | xargs -I@ rm @
+find "$IMG_DIR" -type f -path "*/20*/*" -name "*Zone.Identifier" -delete
+find "$IMG_DIR" -type f -path "*/20*/*${TARGET}*" \( -name "*.png.png" -o -name "*.jpg.png" -o -name "*.jpg.jpg" -o -name "*.png.jpg" -o -name "*.gif.gif" -o -name "*.mp4.mp4" \) -delete
 
 # rename
-find ../assets/images | grep "^../assets/images/20.*/"$1 | grep -e ".jpeg$" | sed 's/.jpeg//g' | xargs -I@ mv @".jpeg" @".jpg"
-find ../assets/images | grep "^../assets/images/20.*/"$1 | grep -e ".JPEG$" | sed 's/.JPEG//g' | xargs -I@ mv @".JPEG" @".jpg"
+find "$IMG_DIR" -type f -path "*/20*/*${TARGET}*" \( -name "*.jpeg" -o -name "*.JPEG" \) -print0 | while IFS= read -r -d '' file; do
+    mv "$file" "${file%.*}.jpg"
+done
 
 # resize
-find ../assets/images | grep "^../assets/images/20.*/"$1 | grep -e ".png$" -e ".jpg$" | xargs -I@ ffmpeg -y -i @ -vf scale=600:-1 @".jpg"
-find ../assets/images | grep "^../assets/images/20.*/"$1 | grep -e ".gif$" | xargs -I@ ffmpeg -y -i @ -r 10 -vf scale=400:-1 @".gif"
-find ../assets/images | grep "^../assets/images/20.*/"$1 | grep -e ".mp4$" | xargs -I@ ffmpeg -y -i @ -movflags faststart -r 10 -vf scale=600:-1 @".mp4"
-
-# Optimize
-find ../assets/images | grep "^../assets/images/20.*/"$1 | grep -e ".gif.gif$" | xargs -I@ convert @ -layers Optimize @
+find "$IMG_DIR" -type f -path "*/20*/*${TARGET}*" \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.gif" -o -iname "*.mp4" \) -print0 | while IFS= read -r -d '' file; do
+    ext="${file##*.}"
+    ext_lower=$(echo "$ext" | tr '[:upper:]' '[:lower:]')
+    case "$ext_lower" in
+        png|jpg)
+            ffmpeg -y -i "$file" -vf scale=600:-1 "${file}.jpg" </dev/null
+            ;;
+        gif)
+            ffmpeg -y -i "$file" -r 10 -vf scale=400:-1 "${file}.gif" </dev/null
+            convert "${file}.gif" -layers Optimize "${file}.gif"
+            ;;
+        mp4)
+            ffmpeg -y -i "$file" -movflags faststart -r 10 -vf scale=600:-1 "${file}.mp4" </dev/null
+            ;;
+    esac
+done
 
 echo "finish: resize images"
