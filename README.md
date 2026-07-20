@@ -8,9 +8,9 @@
 
 # ディレクトリ構成
 - hugo.toml：サイト設定
-- assets：css
+- assets：記事内画像、css
 - content：記事markdown
-- static：画像
+- static：汎用画像
 - scripts：画像変換スクリプト
 - public：ビルド後の公開HTML
 
@@ -42,10 +42,12 @@ bash resize_images.bash
 ## 動作確認
 
 ```sh
-# 下書きも表示する
+# 下書きも表示する（ローカル用）
 hugo server -D --disableFastRender
-# 本番
+# 下書きなし（ローカル用）
 hugo server
+# 本番環境用
+hugo
 ```
 
 ## デプロイ
