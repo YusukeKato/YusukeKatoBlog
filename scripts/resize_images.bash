@@ -25,14 +25,14 @@ find "$IMG_DIR" -type f -path "*/20*/*${TARGET}*" \( -iname "*.png" -o -iname "*
     ext_lower=$(echo "$ext" | tr '[:upper:]' '[:lower:]')
     case "$ext_lower" in
         png|jpg)
-            ffmpeg -y -i "$file" -vf scale=600:-1 "${file}.jpg" </dev/null
+            ffmpeg -y -i "$file" -vf scale=1200:-1 "${file}.jpg" </dev/null
             ;;
         gif)
-            ffmpeg -y -i "$file" -r 10 -vf scale=400:-1 "${file}.gif" </dev/null
+            ffmpeg -y -i "$file" -r 10 -vf scale=600:-1 "${file}.gif" </dev/null
             convert "${file}.gif" -layers Optimize "${file}.gif"
             ;;
         mp4)
-            ffmpeg -y -i "$file" -movflags faststart -r 10 -vf scale=600:-1 "${file}.mp4" </dev/null
+            ffmpeg -y -i "$file" -movflags faststart -r 10 -vf scale=800:-1 "${file}.mp4" </dev/null
             ;;
     esac
 done
