@@ -1,0 +1,22 @@
+{{- $scratch := newScratch }}
+
+{{- /* 記事作成日 */ -}}
+{{- if not .Date.IsZero -}}
+  {{- $scratch.Add "meta" (slice (printf "作成日: %s" (.Date.Format "2006年1月2日"))) }}
+{{- end -}}
+
+{{- /* 最終更新日 */ -}}
+{{- if and (not .Lastmod.IsZero) (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) -}}
+  {{- $scratch.Add "meta" (slice (printf "最終更新日: %s" (.Lastmod.Format "2006年1月2日"))) }}
+{{- end -}}
+
+{{- /* 著者情報 */ -}}
+{{- $author := (.Params.author | default .Site.Params.author) -}}
+{{- if $author -}}
+  {{- $scratch.Add "meta" (slice $author) -}}
+{{- end -}}
+
+{{- /* まとめて出力 */ -}}
+{{- with ($scratch.Get "meta") }}
+  {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}

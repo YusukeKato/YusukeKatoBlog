@@ -1,8 +1,8 @@
 ---
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 description: "description"
-date = {{ .Date }}
-lastmod: 2026-03-05
+date: '{{ .Date }}'
+lastmod: '{{ .Date }}'
 draft: false
 math: false
 tags: ["others"]

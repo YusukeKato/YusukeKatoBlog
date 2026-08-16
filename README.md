@@ -14,6 +14,13 @@
 - scripts：画像変換スクリプト
 - public：ビルド後の公開HTML
 
+# 環境
+- hugo v0.154.5
+
+```sh
+sudo apt install hugo
+```
+
 # 記事追加方法
 
 ## 記事追加
@@ -40,6 +47,12 @@ bash resize_images.bash
 ```
 
 ## 動作確認
+
+初回のみ、PaperModサブモジュールを取得する。
+
+```sh
+git submodule update --init --recursive
+```
 
 ```sh
 # 下書きも表示する（ローカル用）
