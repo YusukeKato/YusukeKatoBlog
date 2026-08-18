@@ -107,6 +107,11 @@ body {
     display: block;
 }
 
+/* 個別記事上部のタグ */
+.post-tags-header {
+    margin-top: 12px;
+}
+
 /* --- スマホ表示時（画面幅768px以下）の文字サイズ調整 --- */
 @media (max-width: 768px) {
     /* 全体の基本文字サイズを少し小さくする（デフォルトは18px前後） */
