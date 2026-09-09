@@ -178,8 +178,10 @@ button#theme-toggle:hover {
 .post-entry {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
     gap: 8px 28px;
     align-content: start;
+    align-items: start;
     margin: 0;
     padding: 28px 0;
     border: 0;
@@ -190,7 +192,7 @@ button#theme-toggle:hover {
 }
 
 .post-entry:has(.entry-cover) {
-    grid-template-columns: minmax(0, 1fr) 164px;
+    grid-template-columns: minmax(0, 1fr) 260px;
 }
 
 .post-entry:active {
@@ -226,6 +228,13 @@ button#theme-toggle:hover {
     margin: 0;
     font-size: 14px;
     line-height: 1.85;
+}
+
+/* 画像と横並びの説明は、拡大したサムネイルの高さに合わせて4行まで表示する。 */
+@media (min-width: 601px) {
+    .post-entry:has(.entry-cover) > .entry-content {
+        -webkit-line-clamp: 4;
+    }
 }
 
 .post-entry > .entry-cover {
@@ -805,7 +814,7 @@ button#theme-toggle:hover {
     }
 
     .post-entry:has(.entry-cover) {
-        grid-template-columns: minmax(0, 1fr) 88px;
+        grid-template-columns: minmax(0, 1fr) 120px;
     }
 
     .entry-header h2 {
