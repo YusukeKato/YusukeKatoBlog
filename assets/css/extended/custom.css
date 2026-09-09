@@ -1,166 +1,848 @@
-/* --- 変数定義（ライトモード） --- */
+/* PaperModの拡張。色と寸法をここで管理し、テーマ本体は変更しない。 */
 :root {
-    --theme: #f4f5f7; /* 全体の背景をほんのりグレーに */
-    --entry: #ffffff; /* カードは真っ白に */
+    --gap: 24px;
+    --content-gap: 1.6em;
+    --main-width: 900px;
+    --nav-width: 900px;
+    --reading-width: 720px;
+    --radius: 4px;
+    --theme: #fafaf9;
+    --entry: #fafaf9;
+    --primary: #252a2c;
+    --content: #343a3c;
+    --secondary: #687174;
+    --tertiary: #dce1df;
+    --border: #dce1df;
+    --code-bg: #eef1ef;
+    --code-block-bg: #25282b;
+    --accent: #326b66;
 }
-/* --- 変数定義（ダークモード標準色を明示的に指定） --- */
-.dark {
-    --theme: #1d1e20;
-    --entry: #2e2e33;
+
+:root[data-theme="dark"] {
+    --theme: #1c2022;
+    --entry: #1c2022;
+    --primary: #e7eae8;
+    --content: #d0d6d3;
+    --secondary: #a0aba7;
+    --tertiary: #39423f;
+    --border: #39423f;
+    --code-bg: #282f2d;
+    --code-block-bg: #171b1d;
+    --accent: #93c5ba;
+}
+
+/* 共通レイアウトと操作時のフィードバック */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    word-break: normal;
+    overflow-wrap: anywhere;
+}
+
+body.list {
+    background: var(--theme);
 }
 
 .main {
-    max-width: 800px;
-}
-
-/* --- 記事一覧のカード型デザイン --- */
-.post-entry {
-    background: var(--entry);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 24px;
-    margin-bottom: 24px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.post-entry:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* --- 個別記事・ABOUTページ等もカード型にする --- */
-.post-single {
-    background: var(--entry);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 40px 40px;
-    margin-top: 20px;
-}
-@media (max-width: 768px) {
-    .post-single {
-        padding: 24px 20px;
-    }
-}
-
-/* --- 記事内の見出し（H2, H3）のデザイン --- */
-.post-content h2 {
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 8px;
-    margin-top: 48px;
-    margin-bottom: 24px;
-}
-.post-content h3 {
-    border-left: 5px solid #666;
-    padding-left: 12px;
-    margin-top: 32px;
-    margin-bottom: 16px;
-    background: transparent;
-}
-
-/* --- 記事一覧のサムネイル画像をいい感じのサイズにする --- */
-.entry-cover {
-    margin-bottom: 16px;
-}
-.entry-cover img {
-    height: 250px;
+    flex: 1;
     width: 100%;
+    min-height: 0;
+    padding: 48px var(--gap) 72px;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible,
+pre:focus-visible,
+.toc summary:focus-visible,
+#theme-toggle:focus-visible,
+.top-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* ヘッダーは本文と軸を揃え、狭い画面ではナビを折り返す。 */
+.header {
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    align-items: center;
+    gap: 8px 24px;
+    padding: 14px var(--gap);
+    line-height: 1.5;
+}
+
+.logo,
+#menu {
+    margin: 0;
+}
+
+.logo {
+    align-items: center;
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+
+.logo a {
+    padding: 8px 0;
+    font-size: 19px;
+    letter-spacing: -0.035em;
+}
+
+.logo-switches {
+    margin-inline-start: 12px;
+}
+
+button#theme-toggle {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    color: var(--secondary);
+    border-radius: var(--radius);
+}
+
+button#theme-toggle:hover {
+    color: var(--accent);
+    background: var(--code-bg);
+}
+
+#menu {
+    flex-wrap: wrap;
+    gap: 4px 24px;
+    overflow: visible;
+    white-space: normal;
+}
+
+#menu li + li {
+    margin: 0;
+}
+
+#menu a {
+    padding: 12px 0;
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+#menu a:hover,
+#menu .active {
+    color: var(--primary);
+}
+
+#menu .active {
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--accent);
+}
+
+/* ホームの既存画像・タイトル。装飾をコンテンツから分離する。 */
+.main > .post-content:has(.home-intro) {
+    margin: 0;
+}
+
+.home-intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 0 40px;
+}
+
+.post-content .home-intro img {
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    border-radius: 50%;
     object-fit: cover;
-    border-radius: 4px;
 }
 
-/* --- ダークモード時のカードと見出しの調整 --- */
-.dark .post-entry,
-.dark .post-single {
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-.dark .post-content h3 {
-    border-left: 5px solid #aaa;
+.post-content .home-intro h2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 26px;
 }
 
-body {
-    font-size: 16px; 
+/* 記事一覧。本文情報を優先し、画像は右側の補助要素にする。 */
+.post-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px 28px;
+    align-content: start;
+    margin: 0;
+    padding: 28px 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    background: transparent;
+    transition: none;
 }
-/* 記事本文の文字サイズ */
-.post-content {
-    font-size: 16px;
+
+.post-entry:has(.entry-cover) {
+    grid-template-columns: minmax(0, 1fr) 164px;
 }
-/* 記事のタイトル（一番上の大きな文字） */
-.post-single h1 {
-    font-size: 28px;
+
+.post-entry:active {
+    transform: none;
 }
-/* 見出し（H2, H3）も本文に合わせて少し小さく */
-.post-content h2 {
-    font-size: 24px;
+
+.post-entry > .entry-header {
+    grid-area: 1 / 1;
 }
-.post-content h3 {
-    font-size: 20px;
-}
-/* 記事一覧のタイトル */
+
 .entry-header h2 {
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
 }
 
-/* タグページのサムネイル画像表示 */
-.tag-entry .entry-cover {
+.post-entry:hover .entry-header h2,
+.post-entry:focus-within .entry-header h2,
+.archive-entry:hover .archive-entry-title,
+.archive-entry:focus-within .archive-entry-title {
+    color: var(--accent);
+}
+
+.post-entry > .entry-footer {
+    grid-area: 2 / 1;
+    font-size: 12px;
+    line-height: 1.9;
+    font-variant-numeric: tabular-nums;
+}
+
+.post-entry > .entry-content {
+    grid-area: 3 / 1;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.post-entry > .entry-cover {
     display: block;
+    grid-area: 1 / 2 / 4;
+    align-self: start;
+    margin: 4px 0 0;
 }
 
-/* 個別記事上部のタグ */
+.post-entry .entry-cover img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+/* 記事のタイトル・メタ情報・本文 */
+.post-single {
+    max-width: var(--reading-width);
+    margin: 0 auto;
+}
+
+.page-header,
+.post-header {
+    margin: 0 0 32px;
+}
+
+.page-header h1,
+.post-title {
+    font-size: clamp(26px, 3.5vw, 34px);
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+}
+
+.post-title {
+    margin: 0 0 16px;
+}
+
+.post-description {
+    margin: 12px 0 16px;
+    color: var(--secondary);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.post-meta,
+.breadcrumbs,
+.breadcrumbs a {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.post-meta,
+.archive-meta {
+    font-variant-numeric: tabular-nums;
+}
+
+.meta-item {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.breadcrumbs {
+    gap: 4px;
+    margin-bottom: 24px;
+}
+
+.breadcrumbs a {
+    color: inherit;
+}
+
+.post-tags {
+    gap: 4px 16px;
+}
+
 .post-tags-header {
     margin-top: 12px;
 }
 
-/* --- スマホ表示時（画面幅768px以下）の文字サイズ調整 --- */
+.post-tags a {
+    padding: 4px 0;
+    color: var(--accent);
+    font-size: 13px;
+    line-height: 1.8;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.post-tags a::before {
+    content: "#";
+    margin-inline-end: 3px;
+    color: var(--secondary);
+}
+
+.post-tags a:hover {
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.post-content {
+    margin: 36px 0;
+    font-size: 17px;
+    line-height: 2;
+    line-break: strict;
+}
+
+.post-content :is(h1, h2, h3, h4, h5, h6) {
+    line-height: 1.6;
+    letter-spacing: 0.015em;
+    scroll-margin-top: 24px;
+}
+
+.post-content h1 {
+    margin: 2.4em 0 1em;
+    font-size: 1.8em;
+}
+
+.post-content h2 {
+    margin: 2.4em 0 1em;
+    padding-bottom: 0.45em;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.45em;
+}
+
+.post-content h3 {
+    margin: 2em 0 0.8em;
+    font-size: 1.2em;
+}
+
+.post-content :is(h4, h5, h6) {
+    margin: 1.8em 0 0.7em;
+    font-size: 1em;
+}
+
+.post-content h6 {
+    color: var(--secondary);
+}
+
+.post-content > :first-child {
+    margin-top: 0;
+}
+
+.post-content a {
+    color: var(--accent);
+    box-shadow: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+.post-content a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.post-content :is(ol, ul) {
+    padding-inline-start: 1.6em;
+}
+
+.post-content li {
+    margin-top: 0.35em;
+}
+
+.post-content li > :is(ol, ul) {
+    margin: 0.5em 0;
+}
+
+.post-content li p + p {
+    margin-top: 0.8em;
+}
+
+.post-content blockquote {
+    margin: 1.8em 0;
+    padding: 0.2em 0 0.2em 1.2em;
+    color: var(--secondary);
+    border-inline-start: 2px solid var(--accent);
+}
+
+.post-content blockquote > :last-child {
+    margin-bottom: 0;
+}
+
+.post-content hr {
+    height: 1px;
+    margin: 3em 0;
+    background: var(--border);
+}
+
+.post-content :is(img, video, iframe) {
+    max-width: 100%;
+}
+
+.post-content :is(img, video) {
+    height: auto;
+    margin: 1.8em auto;
+    border-radius: var(--radius);
+}
+
+.post-content video {
+    display: block;
+}
+
+.post-content img.in-text {
+    display: inline;
+    margin: 0;
+}
+
+.post-content figure > figcaption {
+    margin: 12px 0 24px;
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* コードの横スクロールはpre内に閉じ込め、コピー領域を確保する。 */
+.post-content code {
+    margin: 0;
+    padding: 0.15em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 0.88em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.post-content a code {
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+.post-content .highlight:not(table),
+.post-content pre {
+    max-width: 100%;
+    margin: 1.6em 0;
+    border-radius: var(--radius);
+}
+
+.post-content pre {
+    overflow-x: auto;
+    /* Hugoが生成するインライン背景色に、共通のコード背景を適用する。 */
+    background: var(--code-block-bg) !important;
+    line-height: 1.8;
+    tab-size: 4;
+}
+
+.post-content .highlight pre {
+    margin: 0;
+}
+
+.post-content ul pre {
+    margin-inline-start: 0;
+}
+
+.post-content pre code,
+.post-content .highlight pre.chroma code {
+    display: block;
+    width: max-content;
+    min-width: 100%;
+    margin: 0;
+    padding: 40px 20px 20px;
+    color: #e1e6e3;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow: visible;
+    overflow-wrap: normal;
+    word-break: normal;
+    white-space: pre;
+    border-radius: 0;
+}
+
+.copy-code {
+    display: block;
+    top: 8px;
+    right: 8px;
+    padding: 3px 8px;
+    color: #e1e6e3;
+    background: #363e40;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.copy-code:hover {
+    background: #465153;
+}
+
+/* データ表だけに適用し、構文ハイライトの行番号用tableには干渉しない。 */
+.post-content table:not(.highlight table, .highlighttable) {
+    max-width: 100%;
+    margin: 1.8em 0;
+    font-size: 14px;
+    line-height: 1.7;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+.post-content table:not(.highlight table, .highlighttable) :is(th, td) {
+    min-width: 100px;
+    padding: 12px 16px;
+    vertical-align: top;
+    line-height: 1.7;
+    border-bottom: 1px solid var(--border);
+}
+
+.post-content table:not(.highlight table, .highlighttable) th {
+    background: var(--code-bg);
+    font-weight: 600;
+}
+
+/* 目次と前後の記事。本文から細い線と余白で区切る。 */
+.toc,
+[data-theme="dark"] .toc {
+    margin: 28px 0 36px;
+    padding: 12px 0;
+    background: transparent;
+    border: 0;
+    border-block: 1px solid var(--border);
+    border-radius: 0;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.toc details summary {
+    margin: 0;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.toc details[open] summary {
+    cursor: pointer;
+}
+
+.toc .inner {
+    margin: 12px 0 8px;
+    padding-inline: 22px 0;
+    opacity: 1;
+}
+
+.toc li {
+    margin: 6px 0;
+}
+
+.toc li ul {
+    margin-inline-start: 18px;
+}
+
+.post-footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.paginav {
+    gap: 24px;
+    margin-top: 24px;
+    padding-top: 24px;
+    background: transparent;
+    border: 0;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    line-height: 1.8;
+}
+
+.paginav a {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.paginav a:hover {
+    background: transparent;
+}
+
+.paginav .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.pagination {
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.pagination a {
+    padding: 4px 16px;
+    color: var(--primary);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 14px;
+}
+
+.pagination a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* タグとアーカイブも同じ線・文字・余白のルールを使う。 */
+.terms-tags {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px;
+    list-style: none;
+}
+
+.terms-tags li {
+    display: block;
+    min-width: 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+}
+
+.terms-tags a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    height: 100%;
+    padding: 16px 0;
+    background: transparent;
+    border-radius: 0;
+    transition: none;
+}
+
+.terms-tags a:active {
+    background: transparent;
+    transform: none;
+}
+
+.term-count,
+.archive-total {
+    color: var(--secondary);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+}
+
+.archive-year {
+    margin-top: 40px;
+}
+
+.archive-year:not(:last-of-type) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.archive-year-header {
+    margin-bottom: 12px;
+    font-size: 26px;
+}
+
+.archive-month {
+    gap: 24px;
+    padding: 16px 0;
+}
+
+.archive-month-header {
+    flex: 0 0 112px;
+    width: auto;
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.archive-posts {
+    min-width: 0;
+}
+
+.archive-entry {
+    margin: 0;
+    padding: 12px 0;
+}
+
+.archive-entry-title {
+    margin: 0 0 6px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.archive-meta {
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* フッター */
+.footer {
+    width: calc(100% - var(--gap) * 2);
+    max-width: var(--main-width);
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    text-align: start;
+}
+
+.footer span:last-child {
+    white-space: normal;
+}
+
+.footer a {
+    border-bottom-color: var(--border);
+}
+
+.top-link {
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--theme);
+    filter: none;
+    transition: none;
+}
+
+.list .top-link {
+    transform: none;
+}
+
+/* スマートフォンでも本文16px、左右20pxを確保する。 */
 @media (max-width: 768px) {
-    /* 全体の基本文字サイズを少し小さくする（デフォルトは18px前後） */
-    body {
-        font-size: 15px; 
+    :root {
+        --gap: 20px;
     }
 
-    /* 記事本文の文字サイズ */
-    .post-content {
-        font-size: 15px;
+    .main {
+        padding-block: 32px 48px;
     }
 
-    /* 記事のタイトル（一番上の大きな文字） */
-    .post-single h1 {
-        font-size: 24px;
+    .archive-month {
+        gap: 0;
     }
 
-    /* 見出し（H2, H3）も本文に合わせて少し小さく */
-    .post-content h2 {
-        font-size: 20px;
-        margin-top: 32px; /* 余白も少し詰める */
+    .archive-month-header {
+        flex-basis: auto;
+        margin: 8px 0;
     }
-    .post-content h3 {
-        font-size: 18px;
-        margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+    .nav {
+        gap: 0;
+        padding-block: 10px 4px;
     }
-    
-    /* 記事一覧のタイトル */
+
+    .logo {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #menu {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0 16px;
+    }
+
+    .home-intro {
+        gap: 16px;
+        padding-bottom: 28px;
+    }
+
+    .post-content .home-intro img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .post-content .home-intro h2 {
+        font-size: 21px;
+    }
+
+    .post-entry {
+        gap: 8px 16px;
+        padding-block: 24px;
+    }
+
+    .post-entry:has(.entry-cover) {
+        grid-template-columns: minmax(0, 1fr) 88px;
+    }
+
     .entry-header h2 {
-        font-size: 20px;
+        font-size: 19px;
     }
-}
 
-/* --- 画像の中央揃え --- */
+    .post-entry > .entry-cover {
+        grid-row: 1;
+    }
 
-/* 1. 記事の中にあるすべての画像を中央揃え */
-.post-content img {
-    display: block;
-    margin: 0 auto;
-}
+    .post-entry > :is(.entry-footer, .entry-content) {
+        grid-column: 1 / -1;
+    }
 
-/* 2. サイト一番上のロゴ画像（ヘッダー）を中央揃え */
-.logo img {
-    display: block;
-    margin: 0 auto;
-}
+    .post-entry > .entry-content {
+        font-size: 13px;
+    }
 
-/* 3. ホーム画面のプロフィール画像 */
-.profile_inner img {
-    display: block;
-    margin: 0 auto;
+    .post-content {
+        font-size: 16px;
+    }
+
+    .post-description {
+        font-size: 14px;
+    }
+
+    .terms-tags {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .paginav {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .paginav .prev,
+    .paginav .next {
+        width: 100%;
+    }
 }

@@ -18,5 +18,8 @@
 
 {{- /* まとめて出力 */ -}}
 {{- with ($scratch.Get "meta") }}
-  {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+  {{- range $index, $item := . -}}
+    {{- if $index }}&nbsp;·&nbsp;{{ end -}}
+    <span class="meta-item">{{ $item | safeHTML }}</span>
+  {{- end -}}
 {{- end -}}

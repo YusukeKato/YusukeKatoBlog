@@ -1,0 +1,11 @@
+<ul class="terms-tags">
+  {{- range $key, $term := .terms }}
+  {{- $name := $term.Page.Title }}
+  {{- if $.useKeyFallback }}
+    {{- $name = $name | default ($key | markdownify | title) }}
+  {{- end }}
+  <li>
+    <a href="{{ $term.Page.Permalink }}"><span class="term-name">{{ $name }}</span> <span class="term-count">{{ $term.Count }}</span></a>
+  </li>
+  {{- end }}
+</ul>
