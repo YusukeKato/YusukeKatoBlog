@@ -32,6 +32,25 @@ hugo new posts/2026/0305.md
 
 [0305.md](https://github.com/YusukeKato/YusukeKatoBlog/blob/main/content/posts/2026/0305.md) を参考にしてページを編集
 
+## 数式
+
+数式を使う記事は、冒頭のフロントマターに `math: true` を設定してください。
+`math: false` または未指定の記事では数式表示を有効にしません。
+有効な記事だけMathJaxをCDNから読み込みます。
+
+文章中は `\(...\)`、独立した数式は `$$...$$` または `\[...\]` で囲みます。
+コードとして扱われるため、数式をバッククォートで囲まないでください。
+
+```markdown
+標準化には \( Z = \frac{x - \mu}{\sigma} \) を使います。
+
+$$
+S = \sum_{i=1}^{n} x_i^2 - \frac{\left(\sum_{i=1}^{n} x_i\right)^2}{n}
+$$
+```
+
+設定の参考：[Hugo公式ドキュメント](https://gohugo.io/content-management/mathematics/)
+
 ## 画像追加
 
 ```sh

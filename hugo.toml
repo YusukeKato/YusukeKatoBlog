@@ -11,6 +11,13 @@ googleAnalytics = 'G-W9H7QJT6XG'
 [markup.goldmark.renderer]
   unsafe = true
 
+# 数式のLaTeX記法をMarkdownの変換対象から除外する
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)']]
+
 [params]
   description = "YusukeKatoのブログです。ロボットやゲーム、技術記事など、備忘録的な記事をまとめていくのでよろしくお願いします。ペットの日記も始めました。"
   author = "Yusuke Kato"
