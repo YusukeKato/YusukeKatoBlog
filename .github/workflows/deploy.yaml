@@ -1,20 +1,22 @@
-# 参考1: GitHub Actionsの設定方法
-# https://qiita.com/caesar2015/items/139da7e6eacd72b030c8
-# 参考2: レンタルサーバにsshする方法
-# https://qiita.com/numatti9361/items/5391546e1ef2306517f7
-# 参考3: Deploy Keysの設定
-# https://qiita.com/tamorieeeen/items/c24f8285448b607b12dd
-# 参考4: お名前ドットコムのレンタルサーバにsshで接続する方法
-# https://highfivecreate.com/blog/tips/4943.html
-# 参考5: appleboy/ssh-action
-# https://github.com/appleboy/ssh-action
-
 name: deploy
 on:
   push:
     branches:
-      - main 
+      - main
+  pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
+
+# デプロイを途中で止めず、同じブランチの並列実行を防ぐ。
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  HUGO_VERSION: '0.154.5'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,21 +25,21 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: true
-          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
       - name: Build
-        run: |
-          mkdir -p static/images
-          cp -R assets/images/* static/images/ || true
-          hugo --minify
+        run: hugo --minify --printPathWarnings --panicOnWarning
+
+      - name: Test image conversion script
+        run: bash scripts/tests/resize_images.bash
 
       - name: Deploy to Server via rsync
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: Burnett01/rsync-deployments@7.0.0
         with:
           switches: -avzr --delete

@@ -4,8 +4,25 @@ defaultContentLanguage = 'ja'
 title = 'YusukeKatoBlog'
 theme = 'PaperMod'
 
+# 記事画像を加工用リソースと /images/ の配信元で共有する。
+# ローカル確認とCIで同じ画像を公開し、staticへの事前コピーを不要にする。
+[[module.mounts]]
+  source = 'assets'
+  target = 'assets'
+[[module.mounts]]
+  source = 'static'
+  target = 'static'
+[[module.mounts]]
+  source = 'assets/images'
+  target = 'static/images'
+# 共通アイコンの原本を、ブラウザー用アイコンの生成にも使う。
+[[module.mounts]]
+  source = 'static/images/BlueTreeIcon.jpg'
+  target = 'assets/site-icon.jpg'
+
 # Google Analytics
-googleAnalytics = 'G-W9H7QJT6XG'
+[services.googleAnalytics]
+  id = 'G-W9H7QJT6XG'
 
 # HTMLタグを使用する
 [markup.goldmark.renderer]
@@ -23,7 +40,7 @@ googleAnalytics = 'G-W9H7QJT6XG'
   author = "Yusuke Kato"
   disableSpecial1stPost = true
 
-  images = ["images/summary_large_image.png"] 
+  images = ["images/summary_large_image.png"]
   # --- PaperModの便利なデザイン設定 ---
   ShowToc = true              # 記事内に目次（Table of Contents）を自動生成する
   TocOpen = false             # 目次をデフォルトでは閉じておく
@@ -57,11 +74,11 @@ googleAnalytics = 'G-W9H7QJT6XG'
   url = "/tags/"
   weight = 40
 
-[permalinks]
-  posts = "/html/:year/:contentbasename.html"
-
 [[menu.main]]
   identifier = "archives"
   name = "ARCHIVES"
   url = "/archives/"
-  weight = 35 
+  weight = 35
+
+[permalinks]
+  posts = "/html/:year/:contentbasename.html"

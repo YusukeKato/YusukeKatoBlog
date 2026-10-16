@@ -5,14 +5,15 @@
 {{- if $image -}}
   {{- $resized := $image -}}
   
-  {{- /* 画像の横幅が800pxより大きい場合のみ、幅800pxにリサイズ */ -}}
-  {{- if gt $image.Width 800 -}}
+  {{- /* Hugoで処理できる画像だけ幅を調べる。SVGなどは元のリソースを使う。 */ -}}
+  {{- $processableFormats := slice "bmp" "gif" "jpeg" "png" "tiff" "webp" -}}
+  {{- if and (in $processableFormats $image.MediaType.SubType) (gt $image.Width 800) -}}
     {{- $resized = $image.Resize "800x" -}}
   {{- end -}}
   
   {{- /* リサイズした（またはそのままの）画像を出力 */ -}}
   <img src="{{ $resized.RelPermalink }}" alt="{{ .Text }}" title="{{ .Title }}" loading="lazy" />
 {{- else -}}
-  {{- /* assets内に見つからない場合（外部リンク等）や、画像以外のファイルはそのまま出力 */ -}}
+  {{- /* assets内に見つからない場合（外部リンク等）は元のURLを使う。 */ -}}
   <img src="{{ $imgSrc | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" loading="lazy" />
 {{- end -}}

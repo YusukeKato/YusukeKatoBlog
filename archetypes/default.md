@@ -1,11 +1,11 @@
 ---
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
-description: "description"
+description: ""
 date: '{{ .Date }}'
 lastmod: '{{ .Date }}'
-draft: false
+draft: true
 math: false
 tags: ["others"]
 cover:
-  image: "/images/2026/20260305_01.jpg"
+  image: ""
 ---
