@@ -1,0 +1,30 @@
+{
+  "filters": {
+    "comments": true,
+    "allowlist": {
+      "allow": [
+        "/\\{\\{<[\\s\\S]*?>\\}\\}/g",
+        "/\\{\\{%[\\s\\S]*?%\\}\\}/g"
+      ]
+    }
+  },
+  "rules": {
+    "preset-ja-technical-writing": {
+      "sentence-length": {
+        "max": 90
+      },
+      "no-exclamation-question-mark": false,
+      "ja-no-weak-phrase": false,
+      "ja-no-mixed-period": {
+        "periodMark": "。",
+        "allowPeriodMarks": ["！", "？", "!", "?"]
+      }
+    },
+    "preset-jtf-style": {
+      "1.1.1.本文": false,
+      "1.1.2.見出し": false,
+      "1.1.3.箇条書き": false,
+      "2.2.2.算用数字と漢数字の使い分け": false
+    }
+  }
+}
